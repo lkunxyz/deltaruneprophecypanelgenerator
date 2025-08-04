@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "title": "Ship Any AI SaaS Startups in hours | ShipAny",
+    "title": "deltaruneprophecypanelgenerator AI SaaS Startups in hours | ShipAny",
     "description": "ShipAny is a NextJS boilerplate for building AI SaaS startups, Ship Fast with a variety of templates and components.",
     "keywords": "ShipAny, AI SaaS Boilerplate, NextJS Boilerplate"
   },
@@ -31,6 +31,21 @@
     "github_sign_in": "Sign in with GitHub",
     "close_title": "Close",
     "cancel_title": "Cancel"
+  },
+  "prophecy_generator": {
+    "upload_image": "Upload Image",
+    "style": "Style",
+    "image_scale": "Image Scale",
+    "image_y_offset": "Image Y Offset",
+    "font_scale": "Font Scale",
+    "prophecy_text": "Prophecy Text (use \\n for line breaks)",
+    "advanced_settings": "Advanced Settings",
+    "custom_font": "Custom Font",
+    "text_texture": "Text Texture",
+    "panel_texture": "Panel Texture",
+    "background_texture": "Background Texture",
+    "download_panel": "Download Panel",
+    "enter_prophecy": "Enter your prophecy..."
   },
   "my_orders": {
     "title": "My Orders",

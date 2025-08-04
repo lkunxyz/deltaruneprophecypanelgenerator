@@ -1,5 +1,5 @@
 {
-  "template": "shipany-template-one",
+  "template": "deltaruneprophecypanelgenerator-template-one",
   "theme": "light",
   "header": {
     "brand": {
@@ -37,7 +37,7 @@
     "buttons": [
       {
         "title": "Get ShipAny",
-        "url": "https://shipany.ai",
+        "url": "https://deltaruneprophecypanelgenerator.com",
         "target": "_blank",
         "variant": "link",
         "icon": "RiArrowRightUpLine"
@@ -48,8 +48,8 @@
     "show_locale": true
   },
   "hero": {
-    "title": "Ship Any AI Startups in hours, not days",
-    "highlight_text": "Ship Any",
+    "title": "deltaruneprophecypanelgenerator AI Startups in hours, not days",
+    "highlight_text": "deltaruneprophecypanelgenerator",
     "description": "ShipAny is a NextJS boilerplate for building AI SaaS startups.<br/>Ship Fast with a variety of templates and components.",
     "announcement": {
       "label": "2025",
@@ -68,7 +68,7 @@
       {
         "title": "Read Document",
         "icon": "RiBookOpenLine",
-        "url": "https://docs.shipany.ai",
+        "url": "https://docs.deltaruneprophecypanelgenerator.com",
         "target": "_blank",
         "variant": "outline"
       }
@@ -251,6 +251,11 @@
       }
     ]
   },
+  "prophecyGenerator": {
+    "name": "prophecy-generator",
+    "title": "Deltarune Prophecy Panel Generator",
+    "description": "Create your own mystical prophecy panels inspired by Deltarune's iconic visual style."
+  },
   "stats": {
     "name": "stats",
     "label": "Stats",
@@ -371,13 +376,13 @@
     "buttons": [
       {
         "title": "Get ShipAny",
-        "url": "https://shipany.ai",
+        "url": "https://deltaruneprophecypanelgenerator.com",
         "target": "_blank",
         "icon": "GoArrowUpRight"
       },
       {
         "title": "Read Document",
-        "url": "https://docs.shipany.ai",
+        "url": "https://docs.deltaruneprophecypanelgenerator.com",
         "target": "_blank",
         "variant": "outline"
       }
@@ -422,17 +427,17 @@
           "children": [
             {
               "title": "Documents",
-              "url": "https://docs.shipany.ai",
+              "url": "https://docs.deltaruneprophecypanelgenerator.com",
               "target": "_blank"
             },
             {
               "title": "Components",
-              "url": "https://shipany.ai/components",
+              "url": "https://deltaruneprophecypanelgenerator.com/components",
               "target": "_blank"
             },
             {
               "title": "Templates",
-              "url": "https://shipany.ai/templates",
+              "url": "https://deltaruneprophecypanelgenerator.com/templates",
               "target": "_blank"
             }
           ]
@@ -482,7 +487,7 @@
         {
           "title": "Email",
           "icon": "RiMailLine",
-          "url": "mailto:support@shipany.ai",
+          "url": "mailto:support@deltaruneprophecypanelgenerator.com",
           "target": "_self"
         }
       ]

@@ -1,5 +1,5 @@
 {
-  "template": "shipany-template-one",
+  "template": "deltaruneprophecypanelgenerator-template-one",
   "theme": "light",
   "header": {
     "brand": {
@@ -37,7 +37,7 @@
     "buttons": [
       {
         "title": "获取 ShipAny",
-        "url": "https://shipany.ai",
+        "url": "https://deltaruneprophecypanelgenerator.com",
         "target": "_blank",
         "variant": "link",
         "icon": "RiArrowRightUpLine"
@@ -68,7 +68,7 @@
       {
         "title": "阅读文档",
         "icon": "RiBookOpenLine",
-        "url": "https://docs.shipany.ai",
+        "url": "https://docs.deltaruneprophecypanelgenerator.com",
         "target": "_blank",
         "variant": "outline"
       }
@@ -251,6 +251,11 @@
       }
     ]
   },
+  "prophecyGenerator": {
+    "name": "prophecy-generator",
+    "title": "Deltarune 预言面板生成器",
+    "description": "创建属于你自己的神秘预言面板，灵感来自 Deltarune 的标志性视觉风格。"
+  },
   "stats": {
     "name": "stats",
     "label": "统计",
@@ -371,13 +376,13 @@
     "buttons": [
       {
         "title": "获取 ShipAny",
-        "url": "https://shipany.ai",
+        "url": "https://deltaruneprophecypanelgenerator.com",
         "target": "_blank",
         "icon": "GoArrowUpRight"
       },
       {
         "title": "阅读文档",
-        "url": "https://docs.shipany.ai",
+        "url": "https://docs.deltaruneprophecypanelgenerator.com",
         "target": "_blank",
         "variant": "outline"
       }
@@ -422,17 +427,17 @@
           "children": [
             {
               "title": "文档",
-              "url": "https://docs.shipany.ai",
+              "url": "https://docs.deltaruneprophecypanelgenerator.com",
               "target": "_blank"
             },
             {
               "title": "组件",
-              "url": "https://shipany.ai/components",
+              "url": "https://deltaruneprophecypanelgenerator.com/components",
               "target": "_blank"
             },
             {
               "title": "模板",
-              "url": "https://shipany.ai/templates",
+              "url": "https://deltaruneprophecypanelgenerator.com/templates",
               "target": "_blank"
             }
           ]
@@ -482,7 +487,7 @@
         {
           "title": "邮箱",
           "icon": "RiMailLine",
-          "url": "mailto:support@shipany.ai",
+          "url": "mailto:support@deltaruneprophecypanelgenerator.com",
           "target": "_self"
         }
       ]

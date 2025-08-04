@@ -7,6 +7,7 @@ import Feature2 from "@/components/blocks/feature2";
 import Feature3 from "@/components/blocks/feature3";
 import Hero from "@/components/blocks/hero";
 import Pricing from "@/components/blocks/pricing";
+import ProphecyGenerator from "@/components/blocks/prophecy-generator";
 import Showcase from "@/components/blocks/showcase";
 import Stats from "@/components/blocks/stats";
 import Testimonial from "@/components/blocks/testimonial";
@@ -47,6 +48,7 @@ export default async function LandingPage({
       {page.benefit && <Feature2 section={page.benefit} />}
       {page.usage && <Feature3 section={page.usage} />}
       {page.feature && <Feature section={page.feature} />}
+      {page.prophecyGenerator && <ProphecyGenerator section={page.prophecyGenerator} />}
       {page.showcase && <Showcase section={page.showcase} />}
       {page.stats && <Stats section={page.stats} />}
       {page.pricing && <Pricing pricing={page.pricing} />}

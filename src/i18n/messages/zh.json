@@ -32,6 +32,21 @@
     "close_title": "关闭",
     "cancel_title": "取消"
   },
+  "prophecy_generator": {
+    "upload_image": "上传图片",
+    "style": "样式",
+    "image_scale": "图片缩放",
+    "image_y_offset": "图片Y轴偏移",
+    "font_scale": "字体缩放",
+    "prophecy_text": "预言文本（使用 \\n 换行）",
+    "advanced_settings": "高级设置",
+    "custom_font": "自定义字体",
+    "text_texture": "文字纹理",
+    "panel_texture": "面板纹理",
+    "background_texture": "背景纹理",
+    "download_panel": "下载面板",
+    "enter_prophecy": "输入你的预言..."
+  },
   "my_orders": {
     "title": "我的订单",
     "description": "在 ShipAny 上购买的订单。",
