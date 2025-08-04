@@ -1,9 +1,77 @@
 "use client";
 
-import { useEffect, useRef, useState, useCallback } from "react";
+import React, { useEffect, useRef, useState, useCallback } from "react";
 import { Section } from "@/types/blocks/section";
 import { presetPanels } from "./presets";
 import "./styles.css";
+
+// Types for preset panels
+interface PanelPreset {
+  text: string;
+  style: string;
+  yOffset?: number;
+}
+
+const panelPresets: Record<string, PanelPreset> = {
+  'roots': {
+    text: 'Roots',
+    style: 'default',
+    yOffset: 38
+  },
+  'gallery': {
+    text: 'Gallery',
+    style: 'default',
+    yOffset: 20
+  },
+  'initial-1': {
+    text: 'The prophecy, which whispers \\n among the shadows.',
+    style: 'default',
+    yOffset: 16
+  },
+  'initial-2': {
+    text: 'The legend of this world. \\n < Deltarune. >',
+    style: 'default',
+    yOffset: 52
+  },
+  'main-1': {
+    text: 'A world basked in purest light. \\n Beneath it grew eternal night.',
+    style: 'default'
+  },
+  'main-2': {
+    text: 'If fountains freed, the roaring cries. \\n And titans shape from darkened eyes.',
+    style: 'default',
+    yOffset: 20
+  },
+  'main-3': {
+    text: 'The light and dark, both burning dire. \\n A countdown to the earth\'s expire.',
+    style: 'default',
+    yOffset: 32
+  },
+  'heroes-1': {
+    text: 'But lo, on hopes and dreams they send. \\n Three heroes at the world\'s end.',
+    style: 'default'
+  },
+  'heroes-4': {
+    text: 'The first hero. \\n The cage, with human soul and parts.',
+    style: 'susie',
+    yOffset: 36
+  },
+  'heroes-2': {
+    text: 'The second hero. \\n The girl, with hope crossed on her heart.',
+    style: 'susie',
+    yOffset: 25
+  },
+  'heroes-3': {
+    text: 'The third hero. \\n The prince, alone in deepest dark.',
+    style: 'susie',
+    yOffset: 54
+  },
+  'end': {
+    text: 'The final tragedy unveils.',
+    style: 'final',
+    yOffset: 55
+  }
+};
 
 export default function ProphecyGenerator({ section }: { section: Section }) {
   if (section.disabled) return null;
@@ -21,7 +89,7 @@ export default function ProphecyGenerator({ section }: { section: Section }) {
   const advancedSettingsRef = useRef<HTMLDivElement>(null);
 
   // State
-  const [uploadedImage, setUploadedImage] = useState<HTMLImageElement | null>(null);
+  const [maskImage, setMaskImage] = useState<HTMLImageElement | null>(null);
   const [prophecyText, setProphecyText] = useState("");
   const [selectedStyle, setSelectedStyle] = useState("default");
   const [imageScale, setImageScale] = useState(1);
@@ -29,19 +97,49 @@ export default function ProphecyGenerator({ section }: { section: Section }) {
   const [fontScale, setFontScale] = useState(1);
   const [isAdvancedOpen, setIsAdvancedOpen] = useState(false);
   const [customFont, setCustomFont] = useState<string | null>(null);
-  const [textTexture, setTextTexture] = useState<string>("/assets/depth/depth-text.png");
-  const [panelTexture, setPanelTexture] = useState<string>("/assets/depth/depth-blue.png");
-  const [bgTexture, setBgTexture] = useState<string>("/assets/depth/depth-darker-new.png");
+  
+  // Texture state
+  const [placeholder, setPlaceholder] = useState<HTMLCanvasElement | null>(null);
+  const [placeholderRed, setPlaceholderRed] = useState<HTMLCanvasElement | null>(null);
+  const [backgroundTile, setBackgroundTile] = useState<HTMLCanvasElement | null>(null);
+  const [backgroundTileRed, setBackgroundTileRed] = useState<HTMLCanvasElement | null>(null);
+  const [textTexture, setTextTexture] = useState<HTMLCanvasElement | null>(null);
+  const [textTextureRed, setTextTextureRed] = useState<HTMLCanvasElement | null>(null);
+  
+  // Custom textures
+  const [customTextTexture, setCustomTextTexture] = useState<HTMLCanvasElement | null>(null);
+  const [customBackgroundTile, setCustomBackgroundTile] = useState<HTMLCanvasElement | null>(null);
+  const [customPanelTexture, setCustomPanelTexture] = useState<HTMLCanvasElement | null>(null);
   
   // Animation state
+  const scrollOffsetRef = useRef(0);
+  const backgroundScrollOffsetRef = useRef(0);
+  const sineTimeRef = useRef(0);
+  const ghostTimeRef = useRef(0);
+  const ghostStartedRef = useRef(false);
   const animationFrameRef = useRef<number>();
-  const timeRef = useRef(0);
 
   // Initialize with random preset
   useEffect(() => {
     const randomPreset = presetPanels[Math.floor(Math.random() * presetPanels.length)];
     setProphecyText(randomPreset.text.replace(/\\n/g, '\n'));
     setSelectedStyle(randomPreset.style || "default");
+    
+    // Try to use a panel preset instead
+    const panelNames = Object.keys(panelPresets);
+    const randomPanelName = panelNames[Math.floor(Math.random() * panelNames.length)];
+    const randomPanel = panelPresets[randomPanelName];
+    
+    setProphecyText(randomPanel.text.replace(/\\n/g, '\n'));
+    setSelectedStyle(randomPanel.style);
+    setImageYOffset(randomPanel.yOffset || 0);
+    
+    // Load default mask image
+    const defaultImg = new Image();
+    defaultImg.onload = () => {
+      setMaskImage(defaultImg);
+    };
+    defaultImg.src = '/assets/base-panels/main-2.png';
   }, []);
 
   // Apply theme class to body
@@ -52,17 +150,430 @@ export default function ProphecyGenerator({ section }: { section: Section }) {
     };
   }, [selectedStyle]);
 
+  // Load image from path or create procedural texture
+  const loadImageFromFile = useCallback((imagePath: string): Promise<HTMLCanvasElement> => {
+    return new Promise(resolve => {
+      const img = new Image();
+      img.onload = () => {
+        const tileSize = 256;
+        const canvas = document.createElement('canvas');
+        canvas.width = canvas.height = tileSize;
+        const ctx = canvas.getContext('2d');
+        if (ctx) {
+          ctx.imageSmoothingEnabled = false;
+          ctx.drawImage(img, 0, 0, tileSize, tileSize);
+        }
+        resolve(canvas);
+      };
+      img.onerror = () => {
+        // Create procedural texture as fallback
+        const canvas = document.createElement('canvas');
+        canvas.width = canvas.height = 256;
+        const ctx = canvas.getContext('2d');
+        if (ctx) {
+          const imageData = ctx.createImageData(256, 256);
+          const data = imageData.data;
+          
+          // Create noise pattern based on path
+          const isText = imagePath.includes('text');
+          const isDark = imagePath.includes('darker');
+          
+          for (let i = 0; i < data.length; i += 4) {
+            const noise = Math.random();
+            let value = 0;
+            
+            if (isText) {
+              value = 180 + noise * 75;
+            } else if (isDark) {
+              value = noise * 60;
+            } else {
+              value = 80 + noise * 100;
+            }
+            
+            data[i] = value;
+            data[i + 1] = value;
+            data[i + 2] = value;
+            data[i + 3] = 255;
+          }
+          
+          ctx.putImageData(imageData, 0, 0);
+        }
+        resolve(canvas);
+      };
+      img.src = imagePath;
+    });
+  }, []);
+
+  // Get asset paths based on style
+  const getAssetPath = useCallback((name: string) => {
+    const style = selectedStyle;
+    let suffix = '';
+    if (style === 'susie') suffix = '-susie';
+    else if (style === 'final') suffix = '-final';
+    return `/assets/depth/${name}${suffix}.png`;
+  }, [selectedStyle]);
+
+  const getRedAssetPath = useCallback((name: string) => {
+    return `/assets/depth/${name}-final-red.png`;
+  }, []);
+
+  // Reload assets when style changes
+  const reloadAssetsAndRedraw = useCallback(() => {
+    const isFinalStyle = selectedStyle === 'final';
+    const isCustom = customTextTexture || customBackgroundTile || customPanelTexture;
+
+    const promises = [
+      customPanelTexture ? Promise.resolve(customPanelTexture) : loadImageFromFile(getAssetPath('depth-blue')),
+      customTextTexture ? Promise.resolve(customTextTexture) : loadImageFromFile(getAssetPath('depth-text')),
+      customBackgroundTile ? Promise.resolve(customBackgroundTile) : loadImageFromFile(getAssetPath('depth-darker-new'))
+    ];
+
+    if (isFinalStyle && !isCustom) {
+      promises.push(
+        loadImageFromFile(getRedAssetPath('depth-blue')),
+        loadImageFromFile(getRedAssetPath('depth-text')),
+        loadImageFromFile(getRedAssetPath('depth-darker-new'))
+      );
+    }
+
+    Promise.all(promises).then((results) => {
+      const [tile, textBG, bgTile, redTile, redTextBG, redBgTile] = results;
+
+      setPlaceholder(tile);
+      setBackgroundTile(bgTile);
+      setTextTexture(textBG);
+
+      if (isFinalStyle && !isCustom && redTile && redTextBG && redBgTile) {
+        setPlaceholderRed(redTile);
+        setBackgroundTileRed(redBgTile);
+        setTextTextureRed(redTextBG);
+      } else {
+        setPlaceholderRed(null);
+        setBackgroundTileRed(null);
+        setTextTextureRed(null);
+      }
+    });
+  }, [selectedStyle, customTextTexture, customBackgroundTile, customPanelTexture, loadImageFromFile, getAssetPath, getRedAssetPath]);
+
+  useEffect(() => {
+    reloadAssetsAndRedraw();
+  }, [reloadAssetsAndRedraw]);
+
+  // Create result canvas with mask
+  const createResultCanvas = useCallback((placeholderTexture: HTMLCanvasElement, canvasSize: number) => {
+    if (!maskImage || !placeholderTexture) return null;
+
+    const tempCanvas = document.createElement('canvas');
+    tempCanvas.width = tempCanvas.height = canvasSize;
+    const tempCtx = tempCanvas.getContext('2d');
+    if (!tempCtx) return null;
+    
+    tempCtx.imageSmoothingEnabled = false;
+
+    const offset = scrollOffsetRef.current % placeholderTexture.width;
+
+    // Draw tiled scrolling texture
+    for (let y = -offset; y < canvasSize + placeholderTexture.height; y += placeholderTexture.height) {
+      for (let x = -offset; x < canvasSize + placeholderTexture.width; x += placeholderTexture.width) {
+        tempCtx.drawImage(placeholderTexture, x, y);
+      }
+    }
+
+    // Create mask
+    const maskCanvas = document.createElement('canvas');
+    maskCanvas.width = maskCanvas.height = canvasSize;
+    const maskCtx = maskCanvas.getContext('2d');
+    if (!maskCtx) return null;
+    
+    maskCtx.clearRect(0, 0, canvasSize, canvasSize);
+    maskCtx.imageSmoothingEnabled = false;
+
+    // Scale mask to fit
+    const scale = Math.min(canvasSize / maskImage.width, canvasSize / maskImage.height);
+    const dw = maskImage.width * scale;
+    const dh = maskImage.height * scale;
+    const dx = (canvasSize - dw) / 2;
+    const dy = (canvasSize - dh) / 2;
+
+    maskCtx.drawImage(maskImage, dx, dy, dw, dh);
+
+    // Apply mask
+    const maskData = maskCtx.getImageData(0, 0, canvasSize, canvasSize);
+    const texData = tempCtx.getImageData(0, 0, canvasSize, canvasSize);
+    const result = tempCtx.createImageData(canvasSize, canvasSize);
+
+    for (let i = 0; i < maskData.data.length; i += 4) {
+      const r = maskData.data[i];
+      const g = maskData.data[i + 1];
+      const b = maskData.data[i + 2];
+      const a = maskData.data[i + 3];
+      const brightness = (r + g + b) / 3;
+
+      if (brightness > 200 && a > 0) {
+        result.data[i] = texData.data[i];
+        result.data[i + 1] = texData.data[i + 1];
+        result.data[i + 2] = texData.data[i + 2];
+        result.data[i + 3] = 255;
+      } else {
+        result.data[i + 3] = 0;
+      }
+    }
+
+    const resultCanvas = document.createElement('canvas');
+    resultCanvas.width = resultCanvas.height = canvasSize;
+    const resultCtx = resultCanvas.getContext('2d');
+    if (resultCtx) {
+      resultCtx.putImageData(result, 0, 0);
+    }
+    return resultCanvas;
+  }, [maskImage]);
+
+  // Draw panel
+  const drawPanel = useCallback(() => {
+    if (!maskImage || !placeholder || !panelRef.current) return;
+
+    const ctx = panelRef.current.getContext('2d');
+    if (!ctx) return;
+
+    const canvasSize = 256;
+
+    ctx.clearRect(0, 0, 512, 256);
+    ctx.imageSmoothingEnabled = false;
+    
+    const resultCanvas = createResultCanvas(placeholder, canvasSize);
+
+    if (resultCanvas) {
+      const scale = imageScale;
+      const scaledW = resultCanvas.width * scale;
+      const scaledH = resultCanvas.height * scale;
+      const scaledX = (512 - scaledW) / 2;
+      const scaledY = (256 - scaledH) / 2 - imageYOffset;
+      ctx.drawImage(resultCanvas, 0, 0, resultCanvas.width, resultCanvas.height, scaledX, scaledY, scaledW, scaledH);
+    }
+
+    // Draw red version if needed
+    if (placeholderRed && panelRedRef.current) {
+      const ctxRed = panelRedRef.current.getContext('2d');
+      if (ctxRed) {
+        ctxRed.clearRect(0, 0, 512, 256);
+        ctxRed.imageSmoothingEnabled = false;
+        
+        const resultCanvasRed = createResultCanvas(placeholderRed, canvasSize);
+
+        if (resultCanvasRed) {
+          const scale = imageScale;
+          const scaledW = resultCanvasRed.width * scale;
+          const scaledH = resultCanvasRed.height * scale;
+          const scaledX = (512 - scaledW) / 2;
+          const scaledY = (256 - scaledH) / 2 - imageYOffset;
+          ctxRed.drawImage(resultCanvasRed, 0, 0, resultCanvasRed.width, resultCanvasRed.height, scaledX, scaledY, scaledW, scaledH);
+        }
+      }
+    }
+  }, [maskImage, placeholder, placeholderRed, imageScale, imageYOffset, createResultCanvas]);
+
+  // Draw ghost icons
+  const drawGhostIcon = useCallback(() => {
+    if (!maskImage || !placeholder) return;
+
+    const t = ghostTimeRef.current;
+    const offset1 = Math.sin(t * 2) * 6;
+    const offset2 = offset1 * 2;
+
+    const canvasSize = 256;
+    const resultCanvas = createResultCanvas(placeholder, canvasSize);
+    
+    if (!resultCanvas) return;
+
+    const scale = imageScale;
+    const scaledW = resultCanvas.width * scale;
+    const scaledH = resultCanvas.height * scale;
+    const scaledX = (512 - scaledW) / 2;
+    const scaledY = (256 - scaledH) / 2 - imageYOffset;
+
+    // Ghost icon 1
+    if (ghostIconRef.current) {
+      const gtx = ghostIconRef.current.getContext('2d');
+      if (gtx) {
+        gtx.clearRect(0, 0, 512, 256);
+        gtx.imageSmoothingEnabled = false;
+        gtx.save();
+        gtx.translate(offset1, offset1);
+        gtx.drawImage(resultCanvas, 0, 0, resultCanvas.width, resultCanvas.height, scaledX, scaledY, scaledW, scaledH);
+        gtx.restore();
+      }
+    }
+
+    // Ghost icon 2
+    if (ghostIcon2Ref.current) {
+      const gtx2 = ghostIcon2Ref.current.getContext('2d');
+      if (gtx2) {
+        gtx2.clearRect(0, 0, 512, 256);
+        gtx2.imageSmoothingEnabled = false;
+        gtx2.save();
+        gtx2.translate(offset2, offset2);
+        gtx2.drawImage(resultCanvas, 0, 0, resultCanvas.width, resultCanvas.height, scaledX, scaledY, scaledW, scaledH);
+        gtx2.restore();
+      }
+    }
+
+    // Red versions
+    if (placeholderRed) {
+      const resultCanvasRed = createResultCanvas(placeholderRed, canvasSize);
+      
+      if (resultCanvasRed) {
+        if (ghostIconRedRef.current) {
+          const gtxRed = ghostIconRedRef.current.getContext('2d');
+          if (gtxRed) {
+            gtxRed.clearRect(0, 0, 512, 256);
+            gtxRed.imageSmoothingEnabled = false;
+            gtxRed.save();
+            gtxRed.translate(offset1, offset1);
+            gtxRed.drawImage(resultCanvasRed, 0, 0, resultCanvasRed.width, resultCanvasRed.height, scaledX, scaledY, scaledW, scaledH);
+            gtxRed.restore();
+          }
+        }
+
+        if (ghostIcon2RedRef.current) {
+          const gtx2Red = ghostIcon2RedRef.current.getContext('2d');
+          if (gtx2Red) {
+            gtx2Red.clearRect(0, 0, 512, 256);
+            gtx2Red.imageSmoothingEnabled = false;
+            gtx2Red.save();
+            gtx2Red.translate(offset2, offset2);
+            gtx2Red.drawImage(resultCanvasRed, 0, 0, resultCanvasRed.width, resultCanvasRed.height, scaledX, scaledY, scaledW, scaledH);
+            gtx2Red.restore();
+          }
+        }
+      }
+    }
+  }, [maskImage, placeholder, placeholderRed, imageScale, imageYOffset, createResultCanvas]);
+
+  // Draw background
+  const drawBackground = useCallback(() => {
+    if (!backgroundTile || !backgroundRef.current) return;
+
+    const bgCtx = backgroundRef.current.getContext('2d');
+    if (!bgCtx) return;
+
+    const offset = (backgroundScrollOffsetRef.current * imageScale) % (backgroundTile.width * imageScale);
+    
+    bgCtx.clearRect(0, 0, 512, 256);
+    bgCtx.imageSmoothingEnabled = false;
+
+    const scale = imageScale;
+    const yOffset = -imageYOffset;
+
+    const scaledTileWidth = backgroundTile.width * scale;
+    const scaledTileHeight = backgroundTile.height * scale;
+
+    // Draw tiled background
+    for (let y = -offset + yOffset; y < 256 + scaledTileHeight + yOffset; y += scaledTileHeight) {
+      for (let x = -offset; x < 512 + scaledTileWidth; x += scaledTileWidth) {
+        bgCtx.drawImage(backgroundTile, x, y, scaledTileWidth, scaledTileHeight);
+      }
+    }
+
+    // Draw radial gradient mask
+    const canvasSize = 256;
+    const scaledW = canvasSize * scale;
+    const imageX = (512 - scaledW) / 2;
+    const imageY = 64 + yOffset;
+
+    const radiusX = 160 * scale;
+    const radiusY = 100 * scale;
+
+    bgCtx.save();
+    bgCtx.translate(imageX + scaledW/2, imageY);
+    bgCtx.scale(radiusX / radiusY, 1);
+    bgCtx.translate(-(imageX + scaledW/2), -imageY);
+
+    const gradient = bgCtx.createRadialGradient(imageX + scaledW/2, imageY, 0, imageX + scaledW/2, imageY, radiusY);
+    gradient.addColorStop(0, 'rgba(0,0,0,0)');
+    gradient.addColorStop(0.6, 'rgba(0,0,0,0)');
+    gradient.addColorStop(1, 'rgba(0,0,0,1)');
+
+    bgCtx.fillStyle = gradient;
+    bgCtx.fillRect(0, 0, 512, 256);
+    bgCtx.restore();
+
+    // Red version
+    if (backgroundTileRed && backgroundRedRef.current) {
+      const bgRedCtx = backgroundRedRef.current.getContext('2d');
+      if (bgRedCtx) {
+        bgRedCtx.clearRect(0, 0, 512, 256);
+        bgRedCtx.imageSmoothingEnabled = false;
+
+        for (let y = -offset + yOffset; y < 256 + scaledTileHeight + yOffset; y += scaledTileHeight) {
+          for (let x = -offset; x < 512 + scaledTileWidth; x += scaledTileWidth) {
+            bgRedCtx.drawImage(backgroundTileRed, x, y, scaledTileWidth, scaledTileHeight);
+          }
+        }
+
+        bgRedCtx.save();
+        bgRedCtx.translate(imageX + scaledW/2, imageY);
+        bgRedCtx.scale(radiusX / radiusY, 1);
+        bgRedCtx.translate(-(imageX + scaledW/2), -imageY);
+
+        const redGradient = bgRedCtx.createRadialGradient(imageX + scaledW/2, imageY, 0, imageX + scaledW/2, imageY, radiusY);
+        redGradient.addColorStop(0, 'rgba(0,0,0,0)');
+        redGradient.addColorStop(0.6, 'rgba(0,0,0,0)');
+        redGradient.addColorStop(1, 'rgba(0,0,0,1)');
+
+        bgRedCtx.fillStyle = redGradient;
+        bgRedCtx.fillRect(0, 0, 512, 256);
+        bgRedCtx.restore();
+      }
+    }
+  }, [backgroundTile, backgroundTileRed, imageScale, imageYOffset]);
+
+  // Animation loop
+  useEffect(() => {
+    let animationId: number;
+
+    const animate = () => {
+      // Update scroll offsets
+      scrollOffsetRef.current = (scrollOffsetRef.current + 1) % 256;
+      backgroundScrollOffsetRef.current = (backgroundScrollOffsetRef.current + 0.5) % 256;
+      sineTimeRef.current += 0.016;
+      ghostTimeRef.current += 0.016;
+
+      // Draw everything
+      drawPanel();
+      drawBackground();
+      
+      // Start ghost animation if needed
+      if (maskImage && placeholder && !ghostStartedRef.current) {
+        ghostStartedRef.current = true;
+      }
+      
+      if (ghostStartedRef.current) {
+        drawGhostIcon();
+      }
+
+      animationId = requestAnimationFrame(animate);
+    };
+
+    animate();
+
+    return () => {
+      if (animationId) {
+        cancelAnimationFrame(animationId);
+      }
+    };
+  }, [drawPanel, drawBackground, drawGhostIcon, maskImage, placeholder]);
+
   // Sine wave animation for wrapper
   useEffect(() => {
-    const animate = () => {
-      timeRef.current += 0.016;
+    const animateSine = () => {
+      const offset = Math.sin(sineTimeRef.current * 1.5) * 10;
       if (sineWrapperRef.current) {
-        const y = Math.sin(timeRef.current * 0.5) * 10;
-        sineWrapperRef.current.style.transform = `translateY(${y}px)`;
+        sineWrapperRef.current.style.transform = `translateY(${offset}px)`;
       }
-      animationFrameRef.current = requestAnimationFrame(animate);
+      animationFrameRef.current = requestAnimationFrame(animateSine);
     };
-    animate();
+    
+    animateSine();
     
     return () => {
       if (animationFrameRef.current) {
@@ -71,188 +582,20 @@ export default function ProphecyGenerator({ section }: { section: Section }) {
     };
   }, []);
 
-  // Draw ghost icons with animation
-  useEffect(() => {
-    let ghostTime = 0;
-    const animateGhosts = () => {
-      ghostTime += 0.016;
-      
-      // Ghost icon 1
-      if (ghostIconRef.current) {
-        const ctx = ghostIconRef.current.getContext('2d');
-        if (ctx) {
-          ctx.clearRect(0, 0, 512, 256);
-          ctx.save();
-          
-          const offsetY = Math.sin(ghostTime * 2) * 5;
-          const opacity = selectedStyle === "final" ? 0.4 + Math.sin(ghostTime * 3) * 0.2 : 0.4;
-          
-          ctx.globalAlpha = opacity;
-          ctx.fillStyle = selectedStyle === "susie" ? '#FF99FF' : 
-                          selectedStyle === "final" ? '#FF6666' : '#FFFFFF';
-          
-          // Draw ghost body
-          ctx.beginPath();
-          ctx.arc(400, 80 + offsetY, 30, 0, Math.PI * 2);
-          ctx.fill();
-          
-          // Draw ghost tail
-          ctx.beginPath();
-          ctx.moveTo(370, 80 + offsetY);
-          ctx.quadraticCurveTo(380, 100 + offsetY, 370, 110 + offsetY);
-          ctx.quadraticCurveTo(385, 105 + offsetY, 400, 110 + offsetY);
-          ctx.quadraticCurveTo(415, 105 + offsetY, 430, 110 + offsetY);
-          ctx.quadraticCurveTo(420, 100 + offsetY, 430, 80 + offsetY);
-          ctx.closePath();
-          ctx.fill();
-          
-          // Draw eyes
-          ctx.fillStyle = selectedStyle === "final" ? '#330000' : '#000000';
-          ctx.beginPath();
-          ctx.arc(390, 75 + offsetY, 3, 0, Math.PI * 2);
-          ctx.arc(410, 75 + offsetY, 3, 0, Math.PI * 2);
-          ctx.fill();
-          
-          ctx.restore();
-        }
-      }
-      
-      // Ghost icon 2
-      if (ghostIcon2Ref.current) {
-        const ctx = ghostIcon2Ref.current.getContext('2d');
-        if (ctx) {
-          ctx.clearRect(0, 0, 512, 256);
-          ctx.save();
-          
-          const offsetY = Math.sin(ghostTime * 1.5 + 1) * 7;
-          const opacity = selectedStyle === "final" ? 0.2 + Math.sin(ghostTime * 2.5) * 0.1 : 0.2;
-          
-          ctx.globalAlpha = opacity;
-          ctx.fillStyle = selectedStyle === "susie" ? '#FF99FF' : 
-                          selectedStyle === "final" ? '#FF6666' : '#FFFFFF';
-          
-          // Draw smaller ghost
-          ctx.beginPath();
-          ctx.arc(120, 100 + offsetY, 20, 0, Math.PI * 2);
-          ctx.fill();
-          
-          // Ghost tail
-          ctx.beginPath();
-          ctx.moveTo(100, 100 + offsetY);
-          ctx.quadraticCurveTo(105, 115 + offsetY, 100, 120 + offsetY);
-          ctx.quadraticCurveTo(110, 117 + offsetY, 120, 120 + offsetY);
-          ctx.quadraticCurveTo(130, 117 + offsetY, 140, 120 + offsetY);
-          ctx.quadraticCurveTo(135, 115 + offsetY, 140, 100 + offsetY);
-          ctx.closePath();
-          ctx.fill();
-          
-          ctx.restore();
-        }
-      }
-      
-      requestAnimationFrame(animateGhosts);
-    };
-    
-    animateGhosts();
-  }, [selectedStyle]);
-
-  // Main rendering function
-  const renderPanel = useCallback(() => {
-    if (!panelRef.current) return;
-    
-    const ctx = panelRef.current.getContext('2d');
-    if (!ctx) return;
-    
-    // Clear canvas
-    ctx.clearRect(0, 0, 512, 256);
-    
-    // Draw background
-    ctx.fillStyle = selectedStyle === "susie" ? '#1a0033' : 
-                    selectedStyle === "final" ? '#330000' : '#000000';
-    ctx.fillRect(0, 0, 512, 256);
-    
-    // Draw uploaded image if exists
-    if (uploadedImage) {
-      ctx.save();
-      ctx.globalCompositeOperation = 'screen';
-      ctx.translate(256, 128);
-      ctx.scale(imageScale, imageScale);
-      ctx.translate(0, imageYOffset);
-      ctx.drawImage(uploadedImage, -uploadedImage.width / 2, -uploadedImage.height / 2);
-      ctx.restore();
-    }
-    
-    // Draw text
-    if (prophecyText) {
-      ctx.save();
-      ctx.font = `${28 * fontScale}px ${customFont || 'ProphecyType'}, serif`;
-      ctx.textAlign = 'center';
-      ctx.textBaseline = 'middle';
-      ctx.fillStyle = selectedStyle === "susie" ? '#FF99FF' : 
-                      selectedStyle === "final" ? '#FFCCCC' : '#FFFFFF';
-      
-      const lines = prophecyText.split('\n');
-      const lineHeight = 35 * fontScale;
-      const startY = 128 - (lines.length - 1) * lineHeight / 2;
-      
-      lines.forEach((line, index) => {
-        ctx.fillText(line, 256, startY + index * lineHeight);
-      });
-      
-      ctx.restore();
-    }
-  }, [uploadedImage, prophecyText, selectedStyle, imageScale, imageYOffset, fontScale, customFont]);
-
-  // Re-render when dependencies change
-  useEffect(() => {
-    renderPanel();
-  }, [renderPanel]);
-
   // Handle image upload
   const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (!file) return;
     
-    const reader = new FileReader();
-    reader.onload = (event) => {
-      const img = new Image();
-      img.onload = () => {
-        // Create monochrome version
-        const canvas = document.createElement('canvas');
-        canvas.width = img.width;
-        canvas.height = img.height;
-        const ctx = canvas.getContext('2d');
-        
-        if (ctx) {
-          ctx.drawImage(img, 0, 0);
-          const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
-          const data = imageData.data;
-          
-          // Convert to monochrome
-          for (let i = 0; i < data.length; i += 4) {
-            const brightness = (data[i] + data[i + 1] + data[i + 2]) / 3;
-            const value = brightness > 128 ? 255 : 0;
-            data[i] = value;     // R
-            data[i + 1] = value; // G
-            data[i + 2] = value; // B
-          }
-          
-          ctx.putImageData(imageData, 0, 0);
-          
-          const monoImg = new Image();
-          monoImg.onload = () => {
-            setUploadedImage(monoImg);
-          };
-          monoImg.src = canvas.toDataURL();
-        }
-      };
-      img.src = event.target?.result as string;
+    const img = new Image();
+    img.onload = () => {
+      setMaskImage(img);
     };
-    reader.readAsDataURL(file);
+    img.src = URL.createObjectURL(file);
   };
 
   // Handle font upload
-  const handleFontUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleFontUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (!file) return;
     
@@ -260,7 +603,7 @@ export default function ProphecyGenerator({ section }: { section: Section }) {
     reader.onload = async (event) => {
       try {
         const fontData = event.target?.result as string;
-        const fontName = `CustomFont_${Date.now()}`;
+        const fontName = file.name.replace(/\.[^/.]+$/, "");
         const customFontFace = new FontFace(fontName, `url(${fontData})`);
         await customFontFace.load();
         document.fonts.add(customFontFace);
@@ -272,14 +615,79 @@ export default function ProphecyGenerator({ section }: { section: Section }) {
     reader.readAsDataURL(file);
   };
 
-  // Download panel
-  const handleDownload = () => {
-    if (!panelRef.current) return;
+  // Handle texture uploads
+  const handleTextureUpload = (type: 'text' | 'panel' | 'bg') => async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
     
-    const link = document.createElement('a');
-    link.download = `prophecy-panel-${Date.now()}.png`;
-    link.href = panelRef.current.toDataURL();
-    link.click();
+    const img = new Image();
+    img.onload = () => {
+      const canvas = document.createElement("canvas");
+      canvas.width = canvas.height = 256;
+      const ctx = canvas.getContext("2d");
+      if (ctx) {
+        ctx.imageSmoothingEnabled = false;
+        ctx.drawImage(img, 0, 0, 256, 256);
+        
+        if (type === 'text') {
+          setCustomTextTexture(canvas);
+        } else if (type === 'panel') {
+          setCustomPanelTexture(canvas);
+        } else if (type === 'bg') {
+          setCustomBackgroundTile(canvas);
+        }
+        
+        reloadAssetsAndRedraw();
+      }
+    };
+    img.src = URL.createObjectURL(file);
+  };
+
+  // Download composite image
+  const handleDownload = () => {
+    const compositeCanvas = document.createElement('canvas');
+    compositeCanvas.width = 512;
+    compositeCanvas.height = 256;
+    const ctx = compositeCanvas.getContext('2d');
+    
+    if (ctx && backgroundRef.current && panelRef.current) {
+      // Draw all layers
+      ctx.drawImage(backgroundRef.current, 0, 0);
+      
+      if (ghostIcon2Ref.current) {
+        ctx.globalAlpha = 0.2;
+        ctx.drawImage(ghostIcon2Ref.current, 0, 0);
+      }
+      
+      if (ghostIconRef.current) {
+        ctx.globalAlpha = 0.4;
+        ctx.drawImage(ghostIconRef.current, 0, 0);
+      }
+      
+      ctx.globalAlpha = 1;
+      ctx.drawImage(panelRef.current, 0, 0);
+      
+      // Add red overlays if final theme
+      if (selectedStyle === 'final') {
+        if (backgroundRedRef.current) {
+          ctx.globalAlpha = 0.5;
+          ctx.globalCompositeOperation = 'screen';
+          ctx.drawImage(backgroundRedRef.current, 0, 0);
+        }
+        
+        if (panelRedRef.current) {
+          ctx.globalAlpha = 0.3;
+          ctx.globalCompositeOperation = 'screen';
+          ctx.drawImage(panelRedRef.current, 0, 0);
+        }
+      }
+      
+      // Download
+      const link = document.createElement('a');
+      link.download = `prophecy-panel-${Date.now()}.png`;
+      link.href = compositeCanvas.toDataURL();
+      link.click();
+    }
   };
 
   return (
@@ -287,149 +695,229 @@ export default function ProphecyGenerator({ section }: { section: Section }) {
       <div className="prophecy-generator-container">
         <h1 className="text-3xl font-bold text-white">{section.title || "Deltarune Prophecy Panel Generator"}</h1>
       
-      {/* Controls */}
-      <input 
-        type="file" 
-        id="imgInput" 
-        accept="image/*" 
-        style={{ display: 'none' }}
-        onChange={handleImageUpload}
-      />
-      <label htmlFor="imgInput" className="custom-file-upload">Upload Image</label>
-      
-      <input 
-        type="text" 
-        id="textInput" 
-        placeholder="Enter prophecy text"
-        value={prophecyText}
-        onChange={(e) => setProphecyText(e.target.value)}
-      />
-      
-      <div style={{ marginTop: '10px' }}>
-        <label htmlFor="styleSelect">Style:</label>
-        <select 
-          id="styleSelect" 
-          value={selectedStyle} 
-          onChange={(e) => setSelectedStyle(e.target.value)}
-        >
-          <option value="default">Default</option>
-          <option value="susie">Susie's Dark World</option>
-          <option value="final">The Final Prophecy</option>
-        </select>
-      </div>
-      
-      <div style={{ display: 'flex', justifyContent: 'center', width: '100%' }}>
-        <div className="checkbox-container">
-          <label htmlFor="imgScale">Image Scale:</label>
-          <input 
-            type="range" 
-            id="imgScale" 
-            min="0.1" 
-            max="3" 
-            value={imageScale} 
-            step="0.01"
-            onChange={(e) => setImageScale(parseFloat(e.target.value))}
-          />
-          <span id="imgScaleValue">{imageScale.toFixed(2)}×</span>
+        {/* Controls */}
+        <input 
+          type="file" 
+          id="imgInput" 
+          accept="image/*" 
+          style={{ display: 'none' }}
+          onChange={handleImageUpload}
+        />
+        <label htmlFor="imgInput" className="custom-file-upload">Upload Image</label>
+        
+        <textarea
+          id="textInput" 
+          placeholder="Enter prophecy text"
+          value={prophecyText}
+          onChange={(e) => setProphecyText(e.target.value)}
+          style={{ 
+            width: '75vw',
+            maxWidth: '512px',
+            height: '60px',
+            resize: 'vertical',
+            fontFamily: 'DTMSans, sans-serif',
+            backgroundColor: 'black',
+            color: 'white',
+            border: '2px solid white',
+            borderRadius: '0',
+            padding: '5px',
+            marginTop: '10px'
+          }}
+        />
+        
+        <div style={{ marginTop: '10px' }}>
+          <label htmlFor="styleSelect">Style:</label>
+          <select 
+            id="styleSelect" 
+            value={selectedStyle} 
+            onChange={(e) => setSelectedStyle(e.target.value)}
+          >
+            <option value="default">Default</option>
+            <option value="susie">Susie's Dark World</option>
+            <option value="final">The Final Prophecy</option>
+          </select>
         </div>
-      </div>
-      
-      <div style={{ display: 'flex', justifyContent: 'center', width: '100%' }}>
-        <div className="checkbox-container">
-          <label htmlFor="imgYOffset">Image Y Offset:</label>
-          <input 
-            type="range" 
-            id="imgYOffset" 
-            min="-100" 
-            max="100" 
-            value={imageYOffset}
-            onChange={(e) => setImageYOffset(parseInt(e.target.value))}
-          />
-          <span id="imgYOffsetValue">{imageYOffset}px</span>
-        </div>
-      </div>
-      
-      <div style={{ height: '10px' }}></div>
-      <button 
-        className="custom-file-upload"
-        onClick={() => setIsAdvancedOpen(!isAdvancedOpen)}
-      >
-        Advanced Settings
-      </button>
-      
-      {/* Advanced Settings */}
-      <div 
-        id="advancedSettings" 
-        ref={advancedSettingsRef}
-        style={{ display: isAdvancedOpen ? 'block' : 'none', marginTop: '10px' }}
-      >
-        <div id="advancedGrid">
-          <div className="advancedCell">
-            <div id="fontPreview" className="previewBox" style={{ fontFamily: customFont || 'ProphecyType' }}>
-              <span id="fontPreviewText">Aa</span>
-            </div>
-            <div id="fontLabel" className="fileLabel" style={{ fontFamily: customFont || 'ProphecyType' }}>
-              {customFont || 'ProphecyType'}
-            </div>
-            <label className="custom-file-upload small">
-              Upload Font
-              <input type="file" id="fontUpload" accept=".ttf,.otf" style={{ display: 'none' }} onChange={handleFontUpload} />
-            </label>
-          </div>
-          
-          <div className="sliderWrapper">
-            <label htmlFor="fontScale" className="fileLabel">Font Scale</label>
+        
+        <div style={{ display: 'flex', justifyContent: 'center', width: '100%' }}>
+          <div className="checkbox-container">
+            <label htmlFor="imgScale">Image Scale:</label>
             <input 
               type="range" 
-              id="fontScale" 
-              min="0.5" 
-              max="2" 
-              step="0.05" 
-              value={fontScale}
-              onChange={(e) => setFontScale(parseFloat(e.target.value))}
+              id="imgScale" 
+              min="0.1" 
+              max="3" 
+              value={imageScale} 
+              step="0.01"
+              onChange={(e) => setImageScale(parseFloat(e.target.value))}
             />
-            <span id="fontScaleValue" className="fileLabel">{fontScale.toFixed(2)}×</span>
+            <span id="imgScaleValue">{imageScale.toFixed(2)}×</span>
           </div>
         </div>
-      </div>
-      
-      <div style={{ height: '30px' }}></div>
-      
-      {/* Canvas Container */}
-      <div id="sineWrapper" ref={sineWrapperRef}>
-        <div id="overlayWrapper">
-          <div id="textContainer" style={{ 
-            backgroundImage: `url(${textTexture})`,
-            display: 'none' // Hidden in our implementation
-          }}>
-            {prophecyText}
-          </div>
-          <div id="output">
-            <canvas ref={backgroundRef} id="background" width={512} height={256}></canvas>
-            <canvas ref={backgroundRedRef} id="backgroundRed" width={512} height={256} style={{ display: 'none' }}></canvas>
-            <canvas ref={ghostIcon2Ref} id="ghostIcon2" width={512} height={256}></canvas>
-            <canvas ref={ghostIconRef} id="ghostIcon" width={512} height={256}></canvas>
-            <canvas ref={panelRef} id="panel" width={512} height={256}></canvas>
-            <canvas ref={ghostIcon2RedRef} id="ghostIcon2Red" width={512} height={256} style={{ display: 'none' }}></canvas>
-            <canvas ref={ghostIconRedRef} id="ghostIconRed" width={512} height={256} style={{ display: 'none' }}></canvas>
-            <canvas ref={panelRedRef} id="panelRed" width={512} height={256} style={{ display: 'none' }}></canvas>
+        
+        <div style={{ display: 'flex', justifyContent: 'center', width: '100%' }}>
+          <div className="checkbox-container">
+            <label htmlFor="imgYOffset">Image Y Offset:</label>
+            <input 
+              type="range" 
+              id="imgYOffset" 
+              min="-100" 
+              max="100" 
+              value={imageYOffset}
+              onChange={(e) => setImageYOffset(parseInt(e.target.value))}
+            />
+            <span id="imgYOffsetValue">{imageYOffset}px</span>
           </div>
         </div>
-      </div>
-      
-      {/* Directions */}
-      <div id="directions">
-        <p>{section.description || "Upload a white-only or black-and-white image above to begin. Type your prophecy text in the box. You can use \\n to move to a new line."}</p>
-      </div>
-      
-      {/* Download Button */}
-      <button className="custom-file-upload" onClick={handleDownload} style={{ marginTop: '20px' }}>
-        Download Panel
-      </button>
-      
-      <footer>
-        <p>© HippoWaterMelon 2025 - DELTARUNE © 2025 Toby Fox</p>
-      </footer>
+        
+        <div style={{ height: '10px' }}></div>
+        <button 
+          className="custom-file-upload"
+          onClick={() => setIsAdvancedOpen(!isAdvancedOpen)}
+        >
+          Advanced Settings
+        </button>
+        
+        {/* Advanced Settings */}
+        <div 
+          id="advancedSettings" 
+          ref={advancedSettingsRef}
+          style={{ display: isAdvancedOpen ? 'block' : 'none', marginTop: '10px' }}
+        >
+          <div id="advancedGrid">
+            <div className="advancedCell">
+              <div id="fontPreview" className="previewBox" style={{ fontFamily: customFont || 'ProphecyType' }}>
+                <span id="fontPreviewText" style={{ fontSize: `${36 * fontScale}px` }}>Aa</span>
+              </div>
+              <div id="fontLabel" className="fileLabel" style={{ fontFamily: customFont || 'ProphecyType' }}>
+                {customFont || 'ProphecyType'}
+              </div>
+              <label className="custom-file-upload small">
+                Upload Font
+                <input type="file" id="fontUpload" accept=".ttf,.otf" style={{ display: 'none' }} onChange={handleFontUpload} />
+              </label>
+            </div>
+            
+            <div className="advancedCell">
+              <div className="previewBox" style={{ 
+                backgroundImage: textTexture ? `url(${textTexture.toDataURL()})` : undefined,
+                backgroundSize: 'cover'
+              }} />
+              <div className="fileLabel">Text Texture</div>
+              <label className="custom-file-upload small">
+                Upload Texture
+                <input type="file" accept="image/*" style={{ display: 'none' }} onChange={handleTextureUpload('text')} />
+              </label>
+            </div>
+            
+            <div className="advancedCell">
+              <div className="previewBox" style={{ 
+                backgroundImage: placeholder ? `url(${placeholder.toDataURL()})` : undefined,
+                backgroundSize: 'cover'
+              }} />
+              <div className="fileLabel">Panel Texture</div>
+              <label className="custom-file-upload small">
+                Upload Texture
+                <input type="file" accept="image/*" style={{ display: 'none' }} onChange={handleTextureUpload('panel')} />
+              </label>
+            </div>
+            
+            <div className="advancedCell">
+              <div className="previewBox" style={{ 
+                backgroundImage: backgroundTile ? `url(${backgroundTile.toDataURL()})` : undefined,
+                backgroundSize: 'cover'
+              }} />
+              <div className="fileLabel">Background Texture</div>
+              <label className="custom-file-upload small">
+                Upload Texture
+                <input type="file" accept="image/*" style={{ display: 'none' }} onChange={handleTextureUpload('bg')} />
+              </label>
+            </div>
+            
+            <div className="sliderWrapper">
+              <label htmlFor="fontScale" className="fileLabel">Font Scale</label>
+              <input 
+                type="range" 
+                id="fontScale" 
+                min="0.5" 
+                max="2" 
+                step="0.05" 
+                value={fontScale}
+                onChange={(e) => setFontScale(parseFloat(e.target.value))}
+              />
+              <span id="fontScaleValue" className="fileLabel">{fontScale.toFixed(2)}×</span>
+            </div>
+          </div>
+        </div>
+        
+        <div style={{ height: '30px' }}></div>
+        
+        {/* Canvas Container */}
+        <div id="sineWrapper" ref={sineWrapperRef}>
+          <div id="overlayWrapper">
+            <div id="textContainer" 
+              style={{ 
+                backgroundImage: textTexture ? `url(${textTexture.toDataURL()})` : undefined,
+                transform: `scale(${fontScale})`,
+                fontFamily: `${customFont || 'ProphecyType'}, serif`
+              }}
+            >
+              {prophecyText.split('\n').map((line, i) => (
+                <React.Fragment key={i}>
+                  {line}
+                  {i < prophecyText.split('\n').length - 1 && <br />}
+                </React.Fragment>
+              ))}
+            </div>
+            {selectedStyle === 'final' && !customTextTexture && (
+              <div id="textContainerRed"
+                style={{ 
+                  backgroundImage: textTextureRed ? `url(${textTextureRed.toDataURL()})` : undefined,
+                  transform: `scale(${fontScale})`,
+                  fontFamily: `${customFont || 'ProphecyType'}, serif`
+                }}
+              >
+                {prophecyText.split('\n').map((line, i) => (
+                  <React.Fragment key={i}>
+                    {line}
+                    {i < prophecyText.split('\n').length - 1 && <br />}
+                  </React.Fragment>
+                ))}
+              </div>
+            )}
+            <div id="output">
+              <canvas ref={backgroundRef} id="background" width={512} height={256}></canvas>
+              <canvas ref={backgroundRedRef} id="backgroundRed" width={512} height={256} 
+                style={{ display: selectedStyle === 'final' && !customBackgroundTile ? 'block' : 'none' }}
+              ></canvas>
+              <canvas ref={ghostIcon2Ref} id="ghostIcon2" width={512} height={256}></canvas>
+              <canvas ref={ghostIconRef} id="ghostIcon" width={512} height={256}></canvas>
+              <canvas ref={panelRef} id="panel" width={512} height={256}></canvas>
+              <canvas ref={ghostIcon2RedRef} id="ghostIcon2Red" width={512} height={256} 
+                style={{ display: selectedStyle === 'final' && !customPanelTexture ? 'block' : 'none' }}
+              ></canvas>
+              <canvas ref={ghostIconRedRef} id="ghostIconRed" width={512} height={256} 
+                style={{ display: selectedStyle === 'final' && !customPanelTexture ? 'block' : 'none' }}
+              ></canvas>
+              <canvas ref={panelRedRef} id="panelRed" width={512} height={256} 
+                style={{ display: selectedStyle === 'final' && !customPanelTexture ? 'block' : 'none' }}
+              ></canvas>
+            </div>
+          </div>
+        </div>
+        
+        {/* Directions */}
+        <div id="directions">
+          <p>{section.description || "Upload a white-only or black-and-white image above to begin. Type your prophecy text in the box. You can use \\n to move to a new line."}</p>
+        </div>
+        
+        {/* Download Button */}
+        <button className="custom-file-upload" onClick={handleDownload} style={{ marginTop: '20px' }}>
+          Download Panel
+        </button>
+        
+        <footer>
+          <p>© HippoWaterMelon 2025 - DELTARUNE © 2025 Toby Fox</p>
+        </footer>
       </div>
     </section>
   );
