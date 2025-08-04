@@ -3,7 +3,7 @@
   "theme": "dark",
   "header": {
     "brand": {
-      "title": "Deltarune Prophecy Panel Generator",
+      "title": "DeltaruneProphecyPanelGenerator",
       "logo": {
         "src": "/logo.png",
         "alt": "Deltarune Prophecy Panel Generator Logo"
