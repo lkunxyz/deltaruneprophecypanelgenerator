@@ -20,7 +20,7 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
   return (
     <NextThemesProvider
       attribute="class"
-      defaultTheme={process.env.NEXT_PUBLIC_DEFAULT_THEME || "system"}
+      defaultTheme={process.env.NEXT_PUBLIC_DEFAULT_THEME || "dark"}
       enableSystem
       disableTransitionOnChange
     >
