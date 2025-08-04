@@ -335,9 +335,9 @@ export default function ProphecyGenerator({ section }: { section: Section }) {
     const ctx = panelRef.current.getContext('2d');
     if (!ctx) return;
 
-    const canvasSize = 256;
+    const canvasSize = 384;
 
-    ctx.clearRect(0, 0, 512, 256);
+    ctx.clearRect(0, 0, 768, 384);
     ctx.imageSmoothingEnabled = false;
     
     const resultCanvas = createResultCanvas(placeholder, canvasSize);
@@ -346,8 +346,8 @@ export default function ProphecyGenerator({ section }: { section: Section }) {
       const scale = imageScale;
       const scaledW = resultCanvas.width * scale;
       const scaledH = resultCanvas.height * scale;
-      const scaledX = (512 - scaledW) / 2;
-      const scaledY = (256 - scaledH) / 2 - imageYOffset;
+      const scaledX = (768 - scaledW) / 2;
+      const scaledY = (384 - scaledH) / 2 - imageYOffset;
       ctx.drawImage(resultCanvas, 0, 0, resultCanvas.width, resultCanvas.height, scaledX, scaledY, scaledW, scaledH);
     }
 
@@ -355,7 +355,7 @@ export default function ProphecyGenerator({ section }: { section: Section }) {
     if (placeholderRed && panelRedRef.current) {
       const ctxRed = panelRedRef.current.getContext('2d');
       if (ctxRed) {
-        ctxRed.clearRect(0, 0, 512, 256);
+        ctxRed.clearRect(0, 0, 768, 384);
         ctxRed.imageSmoothingEnabled = false;
         
         const resultCanvasRed = createResultCanvas(placeholderRed, canvasSize);
@@ -364,8 +364,8 @@ export default function ProphecyGenerator({ section }: { section: Section }) {
           const scale = imageScale;
           const scaledW = resultCanvasRed.width * scale;
           const scaledH = resultCanvasRed.height * scale;
-          const scaledX = (512 - scaledW) / 2;
-          const scaledY = (256 - scaledH) / 2 - imageYOffset;
+          const scaledX = (768 - scaledW) / 2;
+          const scaledY = (384 - scaledH) / 2 - imageYOffset;
           ctxRed.drawImage(resultCanvasRed, 0, 0, resultCanvasRed.width, resultCanvasRed.height, scaledX, scaledY, scaledW, scaledH);
         }
       }
@@ -380,7 +380,7 @@ export default function ProphecyGenerator({ section }: { section: Section }) {
     const offset1 = Math.sin(t * 2) * 6;
     const offset2 = offset1 * 2;
 
-    const canvasSize = 256;
+    const canvasSize = 384;
     const resultCanvas = createResultCanvas(placeholder, canvasSize);
     
     if (!resultCanvas) return;
@@ -395,7 +395,7 @@ export default function ProphecyGenerator({ section }: { section: Section }) {
     if (ghostIconRef.current) {
       const gtx = ghostIconRef.current.getContext('2d');
       if (gtx) {
-        gtx.clearRect(0, 0, 512, 256);
+        gtx.clearRect(0, 0, 768, 384);
         gtx.imageSmoothingEnabled = false;
         gtx.save();
         gtx.translate(offset1, offset1);
@@ -408,7 +408,7 @@ export default function ProphecyGenerator({ section }: { section: Section }) {
     if (ghostIcon2Ref.current) {
       const gtx2 = ghostIcon2Ref.current.getContext('2d');
       if (gtx2) {
-        gtx2.clearRect(0, 0, 512, 256);
+        gtx2.clearRect(0, 0, 768, 384);
         gtx2.imageSmoothingEnabled = false;
         gtx2.save();
         gtx2.translate(offset2, offset2);
@@ -425,7 +425,7 @@ export default function ProphecyGenerator({ section }: { section: Section }) {
         if (ghostIconRedRef.current) {
           const gtxRed = ghostIconRedRef.current.getContext('2d');
           if (gtxRed) {
-            gtxRed.clearRect(0, 0, 512, 256);
+            gtxRed.clearRect(0, 0, 768, 384);
             gtxRed.imageSmoothingEnabled = false;
             gtxRed.save();
             gtxRed.translate(offset1, offset1);
@@ -437,7 +437,7 @@ export default function ProphecyGenerator({ section }: { section: Section }) {
         if (ghostIcon2RedRef.current) {
           const gtx2Red = ghostIcon2RedRef.current.getContext('2d');
           if (gtx2Red) {
-            gtx2Red.clearRect(0, 0, 512, 256);
+            gtx2Red.clearRect(0, 0, 768, 384);
             gtx2Red.imageSmoothingEnabled = false;
             gtx2Red.save();
             gtx2Red.translate(offset2, offset2);
@@ -458,7 +458,7 @@ export default function ProphecyGenerator({ section }: { section: Section }) {
 
     const offset = (backgroundScrollOffsetRef.current * imageScale) % (backgroundTile.width * imageScale);
     
-    bgCtx.clearRect(0, 0, 512, 256);
+    bgCtx.clearRect(0, 0, 768, 384);
     bgCtx.imageSmoothingEnabled = false;
 
     const scale = imageScale;
@@ -468,20 +468,20 @@ export default function ProphecyGenerator({ section }: { section: Section }) {
     const scaledTileHeight = backgroundTile.height * scale;
 
     // Draw tiled background
-    for (let y = -offset + yOffset; y < 256 + scaledTileHeight + yOffset; y += scaledTileHeight) {
-      for (let x = -offset; x < 512 + scaledTileWidth; x += scaledTileWidth) {
+    for (let y = -offset + yOffset; y < 384 + scaledTileHeight + yOffset; y += scaledTileHeight) {
+      for (let x = -offset; x < 768 + scaledTileWidth; x += scaledTileWidth) {
         bgCtx.drawImage(backgroundTile, x, y, scaledTileWidth, scaledTileHeight);
       }
     }
 
     // Draw radial gradient mask
-    const canvasSize = 256;
+    const canvasSize = 384;
     const scaledW = canvasSize * scale;
-    const imageX = (512 - scaledW) / 2;
-    const imageY = 64 + yOffset;
+    const imageX = (768 - scaledW) / 2;
+    const imageY = 96 + yOffset;
 
-    const radiusX = 160 * scale;
-    const radiusY = 100 * scale;
+    const radiusX = 240 * scale;
+    const radiusY = 150 * scale;
 
     bgCtx.save();
     bgCtx.translate(imageX + scaledW/2, imageY);
@@ -494,18 +494,18 @@ export default function ProphecyGenerator({ section }: { section: Section }) {
     gradient.addColorStop(1, 'rgba(0,0,0,1)');
 
     bgCtx.fillStyle = gradient;
-    bgCtx.fillRect(0, 0, 512, 256);
+    bgCtx.fillRect(0, 0, 768, 384);
     bgCtx.restore();
 
     // Red version
     if (backgroundTileRed && backgroundRedRef.current) {
       const bgRedCtx = backgroundRedRef.current.getContext('2d');
       if (bgRedCtx) {
-        bgRedCtx.clearRect(0, 0, 512, 256);
+        bgRedCtx.clearRect(0, 0, 768, 384);
         bgRedCtx.imageSmoothingEnabled = false;
 
-        for (let y = -offset + yOffset; y < 256 + scaledTileHeight + yOffset; y += scaledTileHeight) {
-          for (let x = -offset; x < 512 + scaledTileWidth; x += scaledTileWidth) {
+        for (let y = -offset + yOffset; y < 384 + scaledTileHeight + yOffset; y += scaledTileHeight) {
+          for (let x = -offset; x < 768 + scaledTileWidth; x += scaledTileWidth) {
             bgRedCtx.drawImage(backgroundTileRed, x, y, scaledTileWidth, scaledTileHeight);
           }
         }
@@ -521,7 +521,7 @@ export default function ProphecyGenerator({ section }: { section: Section }) {
         redGradient.addColorStop(1, 'rgba(0,0,0,1)');
 
         bgRedCtx.fillStyle = redGradient;
-        bgRedCtx.fillRect(0, 0, 512, 256);
+        bgRedCtx.fillRect(0, 0, 768, 384);
         bgRedCtx.restore();
       }
     }
@@ -646,8 +646,8 @@ export default function ProphecyGenerator({ section }: { section: Section }) {
   // Download composite image
   const handleDownload = () => {
     const compositeCanvas = document.createElement('canvas');
-    compositeCanvas.width = 512;
-    compositeCanvas.height = 256;
+    compositeCanvas.width = 768;
+    compositeCanvas.height = 384;
     const ctx = compositeCanvas.getContext('2d');
     
     if (ctx && backgroundRef.current && panelRef.current) {
@@ -691,7 +691,7 @@ export default function ProphecyGenerator({ section }: { section: Section }) {
   };
 
   return (
-    <section id={section.name} className="py-16 bg-black">
+    <section id={section.name} className="py-6 bg-black">
       <div className="prophecy-generator-container">
         <h1 className="text-3xl font-bold text-white">{section.title || "Deltarune Prophecy Panel Generator"}</h1>
       
@@ -711,21 +711,21 @@ export default function ProphecyGenerator({ section }: { section: Section }) {
           value={prophecyText}
           onChange={(e) => setProphecyText(e.target.value)}
           style={{ 
-            width: '75vw',
-            maxWidth: '512px',
-            height: '60px',
+            width: '85vw',
+            maxWidth: '640px',
+            height: '50px',
             resize: 'vertical',
             fontFamily: 'DTMSans, sans-serif',
             backgroundColor: 'black',
             color: 'white',
             border: '2px solid white',
             borderRadius: '0',
-            padding: '5px',
-            marginTop: '10px'
+            padding: '4px 6px',
+            marginTop: '6px'
           }}
         />
         
-        <div style={{ marginTop: '10px' }}>
+        <div style={{ marginTop: '6px' }}>
           <label htmlFor="styleSelect">Style:</label>
           <select 
             id="styleSelect" 
@@ -769,7 +769,7 @@ export default function ProphecyGenerator({ section }: { section: Section }) {
           </div>
         </div>
         
-        <div style={{ height: '10px' }}></div>
+        <div style={{ height: '6px' }}></div>
         <button 
           className="custom-file-upload"
           onClick={() => setIsAdvancedOpen(!isAdvancedOpen)}
@@ -781,12 +781,12 @@ export default function ProphecyGenerator({ section }: { section: Section }) {
         <div 
           id="advancedSettings" 
           ref={advancedSettingsRef}
-          style={{ display: isAdvancedOpen ? 'block' : 'none', marginTop: '10px' }}
+          style={{ display: isAdvancedOpen ? 'block' : 'none', marginTop: '6px' }}
         >
           <div id="advancedGrid">
             <div className="advancedCell">
               <div id="fontPreview" className="previewBox" style={{ fontFamily: customFont || 'ProphecyType' }}>
-                <span id="fontPreviewText" style={{ fontSize: `${36 * fontScale}px` }}>Aa</span>
+                <span id="fontPreviewText" style={{ fontSize: `${28 * fontScale}px` }}>Aa</span>
               </div>
               <div id="fontLabel" className="fileLabel" style={{ fontFamily: customFont || 'ProphecyType' }}>
                 {customFont || 'ProphecyType'}
@@ -849,7 +849,7 @@ export default function ProphecyGenerator({ section }: { section: Section }) {
           </div>
         </div>
         
-        <div style={{ height: '30px' }}></div>
+        <div style={{ height: '16px' }}></div>
         
         {/* Canvas Container */}
         <div id="sineWrapper" ref={sineWrapperRef}>
@@ -885,20 +885,20 @@ export default function ProphecyGenerator({ section }: { section: Section }) {
               </div>
             )}
             <div id="output">
-              <canvas ref={backgroundRef} id="background" width={512} height={256}></canvas>
-              <canvas ref={backgroundRedRef} id="backgroundRed" width={512} height={256} 
+              <canvas ref={backgroundRef} id="background" width={768} height={384}></canvas>
+              <canvas ref={backgroundRedRef} id="backgroundRed" width={768} height={384} 
                 style={{ display: selectedStyle === 'final' && !customBackgroundTile ? 'block' : 'none' }}
               ></canvas>
-              <canvas ref={ghostIcon2Ref} id="ghostIcon2" width={512} height={256}></canvas>
-              <canvas ref={ghostIconRef} id="ghostIcon" width={512} height={256}></canvas>
-              <canvas ref={panelRef} id="panel" width={512} height={256}></canvas>
-              <canvas ref={ghostIcon2RedRef} id="ghostIcon2Red" width={512} height={256} 
+              <canvas ref={ghostIcon2Ref} id="ghostIcon2" width={768} height={384}></canvas>
+              <canvas ref={ghostIconRef} id="ghostIcon" width={768} height={384}></canvas>
+              <canvas ref={panelRef} id="panel" width={768} height={384}></canvas>
+              <canvas ref={ghostIcon2RedRef} id="ghostIcon2Red" width={768} height={384} 
                 style={{ display: selectedStyle === 'final' && !customPanelTexture ? 'block' : 'none' }}
               ></canvas>
-              <canvas ref={ghostIconRedRef} id="ghostIconRed" width={512} height={256} 
+              <canvas ref={ghostIconRedRef} id="ghostIconRed" width={768} height={384} 
                 style={{ display: selectedStyle === 'final' && !customPanelTexture ? 'block' : 'none' }}
               ></canvas>
-              <canvas ref={panelRedRef} id="panelRed" width={512} height={256} 
+              <canvas ref={panelRedRef} id="panelRed" width={768} height={384} 
                 style={{ display: selectedStyle === 'final' && !customPanelTexture ? 'block' : 'none' }}
               ></canvas>
             </div>
@@ -911,7 +911,7 @@ export default function ProphecyGenerator({ section }: { section: Section }) {
         </div>
         
         {/* Download Button */}
-        <button className="custom-file-upload" onClick={handleDownload} style={{ marginTop: '20px' }}>
+        <button className="custom-file-upload" onClick={handleDownload} style={{ marginTop: '12px' }}>
           Download Panel
         </button>
         

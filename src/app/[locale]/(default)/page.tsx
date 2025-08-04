@@ -42,13 +42,18 @@ export default async function LandingPage({
 
   return (
     <>
+    {page.prophecyGenerator && <ProphecyGenerator section={page.prophecyGenerator} />}
+    {page.introduce && <Feature1 section={page.introduce} />}
+    {page.usage && <Feature3 section={page.usage} />}
+    {page.faq && <FAQ section={page.faq} />}
+
       {/* {page.hero && <Hero hero={page.hero} />}
       {page.branding && <Branding section={page.branding} />}
       {page.introduce && <Feature1 section={page.introduce} />}
       {page.benefit && <Feature2 section={page.benefit} />}
       {page.usage && <Feature3 section={page.usage} />}
       {page.feature && <Feature section={page.feature} />} */}
-      {page.prophecyGenerator && <ProphecyGenerator section={page.prophecyGenerator} />}
+      
       {/* {page.showcase && <Showcase section={page.showcase} />}
       {page.stats && <Stats section={page.stats} />}
       {page.pricing && <Pricing pricing={page.pricing} />}

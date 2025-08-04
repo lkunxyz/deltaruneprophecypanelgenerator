@@ -9,23 +9,24 @@
   color: white;
   width: 100%;
   max-width: 1200px;
+  gap: 4px;
 }
 
 .prophecy-generator-container h1 {
-  margin-top: 15px;
-  margin-bottom: 20px;
+  margin-top: 10px;
+  margin-bottom: 12px;
   text-align: center;
 }
 
 /* Text container with scrolling background */
 #textContainer {
-  width: 75vw;
-  max-width: 425px;
-  margin-top: 20px;
-  margin-bottom: 10px;
+  width: 85vw;
+  max-width: 640px;
+  margin-top: 12px;
+  margin-bottom: 8px;
   text-align: center;
   font-family: ProphecyType, serif;
-  font-size: 32px;
+  font-size: 36px;
   line-height: 1;
   color: transparent;
   background-size: 256px 256px;
@@ -44,17 +45,17 @@
 /* Output container */
 #output {
   position: relative;
-  width: 90vw;
-  max-width: 512px;
+  width: 95vw;
+  max-width: 768px;
   aspect-ratio: 2 / 1;
-  max-height: 256px;
+  max-height: 384px;
 }
 
 /* Canvas styling */
 .prophecy-generator-container canvas {
   position: absolute;
-  width: 90vw;
-  max-width: 512px;
+  width: 95vw;
+  max-width: 768px;
   height: auto;
   top: 0;
   left: 50%;
@@ -83,8 +84,8 @@
 
 #background {
   position: absolute;
-  width: 90vw;
-  max-width: 512px;
+  width: 95vw;
+  max-width: 768px;
   height: auto;
   top: 0;
   left: 50%;
@@ -127,10 +128,10 @@ body.final-theme #background {
 .prophecy-generator-container input[type="file"],
 .prophecy-generator-container input[type="text"],
 .prophecy-generator-container textarea {
-  margin-top: 10px;
-  padding: 5px;
-  width: 75vw;
-  max-width: 512px;
+  margin-top: 6px;
+  padding: 4px 6px;
+  width: 85vw;
+  max-width: 640px;
 }
 
 .prophecy-generator-container input[type="text"],
@@ -154,16 +155,16 @@ body.final-theme #background {
   -webkit-appearance: none;
   width: 125px;
   max-width: 512px;
-  height: 10px;
+  height: 8px;
   background: black;
   outline: none;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: 6px;
+  margin-right: 6px;
 }
 
 .prophecy-generator-container input[type="range"]::-webkit-slider-runnable-track {
   width: 100%;
-  height: 10px;
+  height: 8px;
   background: white;
   border-radius: 0;
 }
@@ -171,13 +172,13 @@ body.final-theme #background {
 .prophecy-generator-container input[type="range"]::-webkit-slider-thumb {
   appearance: none;
   -webkit-appearance: none;
-  width: 15px;
-  height: 15px;
+  width: 12px;
+  height: 12px;
   background: white;
   cursor: pointer;
   border: 2px solid black;
   border-radius: 0;
-  margin-top: -3px;
+  margin-top: -2px;
 }
 
 /* Select dropdown */
@@ -186,15 +187,17 @@ body.final-theme #background {
   background-color: black;
   color: white;
   border: 2px solid white;
-  padding: 5px 10px;
+  padding: 3px 8px;
   border-radius: 0;
   cursor: pointer;
   appearance: none;
   -webkit-appearance: none;
   text-align: center;
-  margin-top: 10px;
+  margin-top: 4px;
+  margin-left: 6px;
   width: 125px;
   max-width: 512px;
+  font-size: 14px;
 }
 
 #styleSelect:hover {
@@ -209,11 +212,12 @@ body.final-theme #background {
   background-color: black;
   color: white;
   border: 2px solid white;
-  padding: 5px 10px;
+  padding: 4px 8px;
   cursor: pointer;
   border-radius: 0;
   user-select: none;
   text-align: center;
+  font-size: 14px;
 }
 
 .custom-file-upload:hover {
@@ -235,8 +239,8 @@ body.final-theme #background {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  margin-top: 10px;
+  gap: 6px;
+  margin-top: 6px;
   text-align: center;
   width: 100%;
 }
@@ -252,15 +256,15 @@ body.final-theme #background {
 
 /* Advanced settings */
 #advancedSettings {
-  width: 75vw;
-  max-width: 512px;
+  width: 85vw;
+  max-width: 640px;
 }
 
 #advancedGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  gap: 10px;
-  margin-top: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  gap: 6px;
+  margin-top: 6px;
 }
 
 .advancedCell {
@@ -271,16 +275,16 @@ body.final-theme #background {
 }
 
 .previewBox {
-  width: 80px;
-  height: 80px;
-  border: 2px solid white;
+  width: 60px;
+  height: 60px;
+  border: 1px solid white;
   border-radius: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
-  font-size: 36px;
-  margin-bottom: 8px;
+  font-size: 28px;
+  margin-bottom: 4px;
   image-rendering: pixelated;
   object-fit: contain;
   overflow: hidden;
@@ -288,8 +292,8 @@ body.final-theme #background {
 
 .fileLabel {
   font-family: DTMSans, sans-serif;
-  font-size: 12px;
-  margin-bottom: 4px;
+  font-size: 11px;
+  margin-bottom: 2px;
   color: white;
 }
 
@@ -298,7 +302,7 @@ body.final-theme #background {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  gap: 8px;
+  gap: 4px;
 }
 
 #fontScale::-webkit-slider-runnable-track {
@@ -321,16 +325,16 @@ body.final-theme #background {
 
 /* Directions */
 #directions {
-  margin-top: 20px;
-  padding: 0 20px;
+  margin-top: 12px;
+  padding: 0 15px;
   text-align: center;
-  width: 75vw;
-  max-width: 512px;
+  width: 85vw;
+  max-width: 640px;
 }
 
 #directions p {
-  font-size: 14px;
-  line-height: 1.5;
+  font-size: 13px;
+  line-height: 1.4;
 }
 
 #directions a {
@@ -340,10 +344,10 @@ body.final-theme #background {
 
 /* Footer */
 .prophecy-generator-container footer {
-  margin-top: 20px;
-  padding: 10px;
+  margin-top: 15px;
+  padding: 8px;
   color: rgb(255, 255, 255);
-  font-size: 14px;
+  font-size: 13px;
   text-align: center;
   width: 100%;
   max-width: 512px;
@@ -374,7 +378,7 @@ body.final-theme #background {
 #overlayWrapper {
   position: relative;
   width: 100%;
-  max-width: 512px;
+  max-width: 768px;
   display: flex;
   flex-direction: column;
   align-items: center;
