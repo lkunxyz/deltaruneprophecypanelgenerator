@@ -1,4 +1,38 @@
-User-agent: *
+# 允许 AI 搜索引擎访问
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: PerplexityBot
+User-agent: FirecrawlAgent
+User-agent: AndiBot
+User-agent: ExaBot
+User-agent: PhindBot
+User-agent: YouBot
+Allow: /
+
+
+# 禁止 AI 训练数据爬取
+User-agent: GPTBot
+User-agent: CCBot
+User-agent: Google-Extended
 Disallow: /*?*q=
+Disallow: /lora/*
+Disallow: /my-lora/*
 Disallow: /privacy-policy
 Disallow: /terms-of-service
+
+# 允许传统搜索引擎索引
+User-agent: Googlebot
+User-agent: Bingbot
+Allow: /
+
+# 阻止所有爬虫访问后台管理页面
+User-agent: *
+Disallow: /admin/
+
+Sitemap: https://deltaruneprophecypanelgenerator.com/sitemap.xml
+
+# AI Search Optimization Files
+# Updated: 2025-08-01
+# llms.txt: Concise AI-readable platform summary (compliant with llmstxt.org spec)
+# llms-full.txt: Comprehensive technical documentation for AI indexing
+# Both files optimized for AI search engines and language models

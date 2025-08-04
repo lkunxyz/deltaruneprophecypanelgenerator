@@ -1,12 +1,12 @@
 {
-  "template": "deltaruneprophecypanelgenerator",
-  "theme": "light",
+  "template": "deltarune-prophecy-generator",
+  "theme": "dark",
   "header": {
     "brand": {
-      "title": "deltaruneprophecypanelgenerator.com",
+      "title": "Deltarune Prophecy Panel Generator",
       "logo": {
         "src": "/logo.png",
-        "alt": "deltaruneprophecypanelgenerator"
+        "alt": "Deltarune Prophecy Panel Generator Logo"
       },
       "url": "/"
     },
@@ -18,8 +18,13 @@
           "icon": ""
         },
         {
-          "title": "How to use",
+          "title": "How to Create",
           "url": "/#usage",
+          "icon": ""
+        },
+        {
+          "title": "Examples",
+          "url": "/#examples",
           "icon": ""
         }
       ]
@@ -30,66 +35,66 @@
   },
   "introduce": {
     "name": "introduce",
-    "title": "What is deltaruneprophecypanelgenerator",
-    "label": "Introduce",
-    "description": "deltaruneprophecypanelgenerator is a NextJS boilerplate for building AI SaaS startups. Built in a variety of templates and components.",
+    "title": "Create Mystical Prophecy Panels with the Deltarune Prophecy Panel Generator",
+    "label": "About",
+    "description": "The Deltarune Prophecy Panel Generator brings the enchanting visual style of Toby Fox's Deltarune to life. Design custom prophecy panels with animated textures, mystical overlays, and authentic game-inspired typography that captures the essence of Deltarune's mysterious prophecies.",
     "image": {
-      "src": "/imgs/features/1.png"
+      "src": "/imgs/features/prophecy-preview.png"
     },
     "items": [
       {
-        "title": "Ready-to-use Templates",
-        "description": "Choose from dozens of production-ready AI SaaS templates to quickly start your project.",
-        "icon": "RiNextjsFill"
+        "title": "Authentic Deltarune Aesthetics",
+        "description": "Recreate the iconic prophecy panel style from Deltarune with pixel-perfect accuracy, featuring original game textures and fonts.",
+        "icon": "RiPaletteFill"
       },
       {
-        "title": "Infrastructure Setup",
-        "description": "Get instant access to scalable infrastructure with best practices built-in.",
-        "icon": "RiDatabase2Line"
+        "title": "Interactive Customization Tools",
+        "description": "Upload images, write prophecy text, and fine-tune visual settings to create unique panels that tell your own mystical story.",
+        "icon": "RiMagicFill"
       },
       {
-        "title": "Quick Deployment",
-        "description": "Deploy your AI SaaS application to production in hours, not days.",
-        "icon": "RiCloudyFill"
+        "title": "Multiple Theme Variations",
+        "description": "Choose from Default, Susie's Dark World, or The Final Prophecy themes, each with distinct visual characteristics from the game.",
+        "icon": "RiContrastDrop2Fill"
       }
     ]
   },
   "usage": {
     "name": "usage",
-    "title": "How to Launch with deltaruneprophecypanelgenerator",
-    "description": "Get your AI SaaS startup running in three simple steps:",
+    "title": "How to Use the Deltarune Prophecy Panel Generator",
+    "description": "Create your own mystical prophecy in four simple steps with our intuitive generator:",
     "image": {
-      "src": "/imgs/features/1.png"
+      "src": "/imgs/features/generator-demo.png"
     },
-    "image_position": "left",
+    "image_position": "right",
     "text_align": "center",
     "items": [
       {
-        "title": "Get deltaruneprophecypanelgenerator",
-        "description": "Buy deltaruneprophecypanelgenerator with a one-time payment. Check your email for the code and documentation.",
+        "title": "Upload Your Image",
+        "description": "Choose a black-and-white or monochrome image as your prophecy mask. The Deltarune Prophecy Panel Generator works best with high-contrast silhouettes.",
         "image": {
-          "src": "/imgs/features/5.png"
+          "src": "/imgs/features/step1.png"
         }
       },
       {
-        "title": "Start Your Project",
-        "description": "Read the documentation and clone the code of deltaruneprophecypanelgenerator. Start building your AI SaaS startup.",
+        "title": "Write Your Prophecy",
+        "description": "Enter your mystical text in the prophecy field. Channel the cryptic wisdom of Deltarune's original prophecies or create entirely new predictions.",
         "image": {
-          "src": "/imgs/features/6.png"
+          "src": "/imgs/features/step2.png"
         }
       },
       {
-        "title": "Customize Your Project",
-        "description": "Modify the template with your data and contents. Specific AI functionality needs.",
+        "title": "Customize Visual Settings",
+        "description": "Adjust image scale, vertical offset, and choose your preferred theme. The generator offers real-time preview for perfect results.",
         "image": {
-          "src": "/imgs/features/7.png"
+          "src": "/imgs/features/step3.png"
         }
       },
       {
-        "title": "Deploy to Production",
-        "description": "Deploy your project to production with a few steps and start serving customers immediately.",
+        "title": "Download and Share",
+        "description": "Save your completed prophecy panel as a high-quality image. Share your creation with the Deltarune community or use it in fan projects.",
         "image": {
-          "src": "/imgs/features/8.png"
+          "src": "/imgs/features/step4.png"
         }
       }
     ]
@@ -97,111 +102,143 @@
   "prophecyGenerator": {
     "name": "prophecy-generator",
     "title": "Deltarune Prophecy Panel Generator",
-    "description": "Create your own mystical prophecy panels inspired by Deltarune's iconic visual style."
+    "description": "Transform your ideas into mystical prophecies with authentic Deltarune visual effects, including animated scrolling textures, ethereal overlays, and the signature pixelated aesthetic that fans love."
+  },
+  "features": {
+    "name": "features",
+    "title": "Professional Features for Creative Expression",
+    "label": "Features",
+    "description": "The Deltarune Prophecy Panel Generator combines authentic game assets with powerful customization tools, giving creators everything needed to craft compelling prophecy panels.",
+    "items": [
+      {
+        "title": "Animated Visual Effects",
+        "description": "Dynamic scrolling textures and blending effects bring your prophecies to life, just like in the original Deltarune scenes.",
+        "icon": "RiSparklingFill"
+      },
+      {
+        "title": "Ghost Image Overlays",
+        "description": "Subtle floating animations add depth and mystery to your uploaded images, creating an otherworldly atmosphere.",
+        "icon": "RiGhostFill"
+      },
+      {
+        "title": "Responsive Pixel Rendering",
+        "description": "Maintains crisp pixel art quality across all screen sizes while preserving the nostalgic aesthetic of Deltarune.",
+        "icon": "RiComputerFill"
+      },
+      {
+        "title": "Custom Font Support",
+        "description": "Uses authentic Deltarune fonts including 8bitoperator and Determination Mono for genuine prophecy text styling.",
+        "icon": "RiFontSize"
+      },
+      {
+        "title": "Real-time Preview",
+        "description": "See your changes instantly as you create, ensuring your prophecy panel looks exactly as envisioned.",
+        "icon": "RiEye2Fill"
+      },
+      {
+        "title": "High-Quality Export",
+        "description": "Download your creations in optimal resolution for sharing on social media or incorporating into fan projects.",
+        "icon": "RiDownload2Fill"
+      }
+    ]
+  },
+  "examples": {
+    "name": "examples",
+    "title": "Inspiring Creations from the Community",
+    "label": "Gallery",
+    "description": "See what fellow Deltarune fans have created with the Prophecy Panel Generator:",
+    "items": []
   },
   "faq": {
     "name": "faq",
     "label": "FAQ",
-    "title": "Frequently Asked Questions About deltaruneprophecypanelgenerator",
-    "description": "Have another question? Contact us on Discord or by email.",
+    "title": "Frequently Asked Questions About Deltarune Prophecy Panel Generator",
+    "description": "Learn more about creating mystical prophecies with our generator tool.",
     "items": [
       {
-        "title": "What exactly is deltaruneprophecypanelgenerator and how does it work?",
-        "description": "deltaruneprophecypanelgenerator is a comprehensive NextJS boilerplate designed specifically for building AI SaaS startups. It provides ready-to-use templates, infrastructure setup, and deployment tools that help you launch your AI business in hours instead of days."
+        "title": "What is the Deltarune Prophecy Panel Generator and how does it relate to the game?",
+        "description": "The Deltarune Prophecy Panel Generator is a fan-made creative tool that recreates the iconic prophecy panel aesthetic from Toby Fox's Deltarune. It allows fans to design custom prophecy panels using the same visual style, fonts, and animated effects found in the original game's mysterious prophecy sequences."
       },
       {
-        "title": "Do I need advanced technical skills to use deltaruneprophecypanelgenerator?",
-        "description": "While basic programming knowledge is helpful, deltaruneprophecypanelgenerator is designed to be developer-friendly. Our templates and documentation make it easy to get started, even if you're not an expert in AI or cloud infrastructure."
+        "title": "What image formats work best with the generator?",
+        "description": "The Deltarune Prophecy Panel Generator works optimally with black-and-white or monochrome images in PNG or JPG format. High-contrast silhouettes produce the most authentic results, mimicking the ethereal mask effect seen in Deltarune's original prophecy panels."
       },
       {
-        "title": "What types of AI SaaS can I build with deltaruneprophecypanelgenerator?",
-        "description": "deltaruneprophecypanelgenerator supports a wide range of AI applications, from content generation to data analysis tools. Our templates cover popular use cases like AI chatbots, content generators, image processing apps, and more."
+        "title": "Can I use my creations for fan projects or social media?",
+        "description": "Yes! Prophecy panels created with our generator are perfect for fan art, social media posts, and community projects. We encourage sharing your mystical creations while respecting Deltarune's intellectual property and always crediting the original game by Toby Fox."
       },
       {
-        "title": "How long does it typically take to launch with deltaruneprophecypanelgenerator?",
-        "description": "With deltaruneprophecypanelgenerator, you can have a working prototype in hours and a production-ready application in hours. Our one-click deployment and pre-configured infrastructure significantly reduce the traditional months-long development cycle."
+        "title": "What are the different theme options available?",
+        "description": "The Deltarune Prophecy Panel Generator offers three distinct themes: Default (classic prophecy style), Susie's Dark World (darker tones with purple accents), and The Final Prophecy (dramatic end-game aesthetic). Each theme includes unique textures and color schemes from different parts of Deltarune."
       },
       {
-        "title": "What's included in the deltaruneprophecypanelgenerator infrastructure?",
-        "description": "deltaruneprophecypanelgenerator provides a complete infrastructure stack including authentication, database setup, API integration, payment processing, and scalable cloud deployment. Everything is pre-configured following industry best practices."
+        "title": "How can I achieve the best visual results?",
+        "description": "For optimal results with the Deltarune Prophecy Panel Generator, use high-contrast images with clear silhouettes, keep prophecy text concise and mystical, experiment with scale and offset settings, and try different themes to match your creative vision. The real-time preview helps perfect your design."
       },
       {
-        "title": "Can I customize the templates to match my brand?",
-        "description": "Absolutely! All deltaruneprophecypanelgenerator templates are fully customizable. You can modify the design, features, and functionality to match your brand identity and specific business requirements while maintaining the robust underlying infrastructure."
+        "title": "Is this tool officially affiliated with Deltarune or Toby Fox?",
+        "description": "No, the Deltarune Prophecy Panel Generator is a fan-made project created to celebrate the artistry of Deltarune. It's not officially affiliated with or endorsed by Toby Fox or the Deltarune development team. All game assets are credited to their original creators, and this tool exists purely for creative fan expression."
       }
     ]
   },
   "footer": {
     "name": "footer",
     "brand": {
-      "title": "deltaruneprophecypanelgenerator",
-      "description": "deltaruneprophecypanelgenerator is a NextJS boilerplate for building AI SaaS startups. Ship Fast with a variety of templates and components.",
+      "title": "Deltarune Prophecy Panel Generator",
+      "description": "Create authentic Deltarune-inspired prophecy panels with our free online generator. Featuring animated effects, multiple themes, and the mystical aesthetic that captures the magic of Toby Fox's beloved game.",
       "logo": {
         "src": "/logo.png",
-        "alt": "deltaruneprophecypanelgenerator"
+        "alt": "Deltarune Prophecy Panel Generator"
       },
       "url": "/"
     },
-    "copyright": "© 2025 • deltaruneprophecypanelgenerator All rights reserved.",
+    "copyright": "© 2025 • Fan-made Deltarune Prophecy Panel Generator • Not affiliated with Toby Fox",
     "nav": {
       "items": [
         {
-          "title": "About",
+          "title": "Create",
           "children": [
             {
               "title": "Features",
-              "url": "/#feature",
+              "url": "/#features",
+              "target": "_self"
+            },
+            {
+              "title": "Tutorial",
+              "url": "/#usage",
               "target": "_self"
             }
           ]
         },
         {
-          "title": "Resources",
+          "title": "Community",
           "children": [
+            {
+              "title": "Deltarune Reddit",
+              "url": "https://reddit.com/r/deltarune",
+              "target": "_blank"
+            },
             {
               "title": "AI Image Generator",
-              "url": "https://deltaruneprophecypanelgenerator.com",
-              "target": "_blank"
-            }
-          ]
-        },
-        {
-          "title": "Friends",
-          "children": [
-            {
-              "title": "Lora",
               "url": "https://loraai.io",
               "target": "_blank"
             }
           ]
-        }
-      ]
-    },
-    "social": {
-      "items": [
-        {
-          "title": "X",
-          "icon": "RiTwitterXFill",
-          "url": "https://x.com/deltaruneprophecypanelgenerator",
-          "target": "_blank"
         },
         {
-          "title": "Github",
-          "icon": "RiGithubFill",
-          "url": "https://github.com/deltaruneprophecypanelgenerator",
-          "target": "_blank"
-        },
-        {
-          "title": "Discord",
-          "icon": "RiDiscordFill",
-          "url": "https://discord.gg/deltaruneprophecypanelgenerator",
-          "target": "_blank"
-        },
-        {
-          "title": "Email",
-          "icon": "RiMailLine",
-          "url": "mailto:support@deltaruneprophecypanelgenerator.com",
-          "target": "_self"
+          "title": "Credits",
+          "children": [
+            {
+              "title": "Toby Fox",
+              "url": "https://tobyfox.net",
+              "target": "_blank"
+            },
+            {
+              "title": "Deltarune Prophecy Panel",
+              "url": "/",
+              "target": "_self"
+            }
+          ]
         }
       ]
     },
@@ -212,8 +249,12 @@
           "url": "/privacy-policy"
         },
         {
-          "title": "Terms of Service",
+          "title": "Terms of Use",
           "url": "/terms-of-service"
+        },
+        {
+          "title": "Fan Content Policy",
+          "url": "/fan-content-policy"
         }
       ]
     }

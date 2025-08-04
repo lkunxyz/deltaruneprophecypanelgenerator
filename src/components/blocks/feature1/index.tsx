@@ -7,47 +7,43 @@ export default function Feature1({ section }: { section: SectionType }) {
   }
 
   return (
-    <section id={section.name} className="py-16">
+    <section id={section.name} className="py-20">
       <div className="container">
-        <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-16">
-          {section.image && (
-            <img
-              src={section.image?.src}
-              alt="placeholder hero"
-              className="max-h-full w-full rounded-md object-cover"
-            />
-          )}
-          <div className="flex flex-col lg:text-left">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-20">
             {section.title && (
-              <h2 className="mb-6 text-pretty text-3xl font-bold lg:text-4xl">
+              <h2 className="mb-6 text-pretty text-4xl font-bold lg:text-5xl">
                 {section.title}
               </h2>
             )}
             {section.description && (
-              <p className="mb-8 max-w-xl text-muted-foreground lg:max-w-none lg:text-lg">
+              <p className="max-w-3xl mx-auto text-lg text-muted-foreground lg:text-xl">
                 {section.description}
               </p>
             )}
-            <ul className="flex flex-col justify-center gap-y-8">
-              {section.items?.map((item, i) => (
-                <li key={i} className="flex">
-                  {item.icon && (
+          </div>
+          <div className="grid gap-12 md:grid-cols-3">
+            {section.items?.map((item, i) => (
+              <div 
+                key={i} 
+                className="group text-center"
+              >
+                {item.icon && (
+                  <div className="flex size-12 mx-auto mb-4 items-center justify-center rounded-full bg-primary text-primary-foreground">
                     <Icon
                       name={item.icon}
-                      className="mr-2 size-6 shrink-0 lg:mr-2 lg:size-6"
+                      className="size-6"
                     />
-                  )}
-                  <div>
-                    <div className="mb-3 h-5 text-sm font-semibold text-accent-foreground md:text-base">
-                      {item.title}
-                    </div>
-                    <div className="text-sm font-medium text-muted-foreground md:text-base">
-                      {item.description}
-                    </div>
                   </div>
-                </li>
-              ))}
-            </ul>
+                )}
+                <h3 className="mb-3 text-lg font-semibold">
+                  {item.title}
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  {item.description}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </div>
