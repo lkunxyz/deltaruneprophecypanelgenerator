@@ -1,24 +1,24 @@
 {
-  "template": "deltaruneprophecypanelgenerator-template-one",
-  "theme": "light",
+  "template": "deltarune-prophecy-generator",
+  "theme": "dark",
   "header": {
     "brand": {
-      "title": "DeltaruneProphecyPanelGenerator",
+      "title": "Deltarune预言面板生成器",
       "logo": {
         "src": "/logo.png",
-        "alt": "Deltarune 预言面板生成器 Logo"
+        "alt": "Deltarune预言面板生成器Logo"
       },
       "url": "/"
     },
     "nav": {
       "items": [
         {
-          "title": "功能特点",
+          "title": "功能特性",
           "url": "/#feature",
           "icon": ""
         },
         {
-          "title": "如何创建",
+          "title": "使用教程",
           "url": "/#usage",
           "icon": ""
         },
@@ -28,7 +28,7 @@
           "icon": ""
         },
         {
-          "title": "示例",
+          "title": "示例展示",
           "url": "/#examples",
           "icon": ""
         }
@@ -38,448 +38,217 @@
     "show_theme": false,
     "show_locale": true
   },
-  "hero": {
-    "title": "几小时内快速构建 AI 创业项目，而不是几天",
-    "highlight_text": "快速构建",
-    "description": "ShipAny 是一个用于构建 AI SaaS 创业项目的 NextJS 模板。<br/>通过丰富的模板和组件快速启动。",
-    "announcement": {
-      "label": "2025",
-      "title": "🎉 新年快乐",
-      "url": "/pricing"
-    },
-    "tip": "🎁 2025年前五折优惠",
-    "buttons": [
-      {
-        "title": "立即开始",
-        "icon": "RiFlashlightFill",
-        "url": "/pricing",
-        "target": "_self",
-        "variant": "default"
-      },
-      {
-        "title": "阅读文档",
-        "icon": "RiBookOpenLine",
-        "url": "https://docs.deltaruneprophecypanelgenerator.com",
-        "target": "_blank",
-        "variant": "outline"
-      }
-    ],
-    "show_happy_users": true,
-    "show_badge": false
-  },
-  "branding": {
-    "title": "ShipAny 建立在巨人的肩膀上",
-    "items": [
-      {
-        "title": "Next.js",
-        "image": {
-          "src": "/imgs/logos/nextjs.svg",
-          "alt": "Next.js"
-        }
-      },
-      {
-        "title": "React",
-        "image": {
-          "src": "/imgs/logos/react.svg",
-          "alt": "React"
-        }
-      },
-      {
-        "title": "TailwindCSS",
-        "image": {
-          "src": "/imgs/logos/tailwindcss.svg",
-          "alt": "TailwindCSS"
-        }
-      },
-      {
-        "title": "Shadcn/UI",
-        "image": {
-          "src": "/imgs/logos/shadcn.svg",
-          "alt": "Shadcn/UI"
-        }
-      },
-      {
-        "title": "Vercel",
-        "image": {
-          "src": "/imgs/logos/vercel.svg",
-          "alt": "Vercel"
-        }
-      }
-    ]
-  },
   "introduce": {
     "name": "introduce",
-    "title": "什么是 ShipAny",
-    "label": "介绍",
-    "description": "ShipAny 是一个用于构建 AI SaaS 创业项目的 NextJS 模板，内置多种模板和组件。",
+    "title": "使用Deltarune预言面板生成器创建神秘预言面板",
+    "label": "关于",
+    "description": "Deltarune预言面板生成器将Toby Fox的Deltarune迷人的视觉风格带入生活。设计带有动画纹理、神秘叠加层和真实游戏启发字体的自定义预言面板，捕捉Deltarune神秘预言的精髓。",
     "image": {
-      "src": "/imgs/features/1.png"
+      "src": "/imgs/features/prophecy-preview.png"
     },
     "items": [
       {
-        "title": "即用型模板",
-        "description": "从数十个生产就绪的 AI SaaS 模板中选择，快速启动您的项目。",
-        "icon": "RiNextjsFill"
+        "title": "正宗的Deltarune美学",
+        "description": "以像素级精度重现Deltarune标志性的预言面板风格，采用原始游戏纹理和字体。",
+        "icon": "RiPaletteFill"
       },
       {
-        "title": "基础设施配置",
-        "description": "立即获取内置最佳实践的可扩展基础设施。",
-        "icon": "RiDatabase2Line"
+        "title": "交互式自定义工具",
+        "description": "上传图片、编写预言文本并微调视觉设置，创建讲述您自己神秘故事的独特面板。",
+        "icon": "RiMagicFill"
       },
       {
-        "title": "快速部署",
-        "description": "在几小时内将您的 AI SaaS 应用部署到生产环境，而不是几天。",
-        "icon": "RiCloudyFill"
-      }
-    ]
-  },
-  "benefit": {
-    "name": "benefit",
-    "title": "为什么选择 ShipAny",
-    "label": "优势",
-    "description": "获取启动 AI 创业所需的一切 - 从即用型模板到技术支持。",
-    "items": [
-      {
-        "title": "完整框架",
-        "description": "基于 Next.js 构建，集成身份验证、支付和 AI 功能 - 一切开箱即用。",
-        "icon": "RiNextjsFill",
-        "image": {
-          "src": "/imgs/features/2.png"
-        }
-      },
-      {
-        "title": "丰富的模板库",
-        "description": "选择各种 AI SaaS 模板来启动您的项目 - 聊天机器人、图像生成等。",
-        "icon": "RiClapperboardAiLine",
-        "image": {
-          "src": "/imgs/features/3.png"
-        }
-      },
-      {
-        "title": "技术指导",
-        "description": "获得专门支持并加入我们的开发者社区，确保您成功启动。",
-        "icon": "RiCodeFill",
-        "image": {
-          "src": "/imgs/features/4.png"
-        }
+        "title": "多种主题变化",
+        "description": "从默认主题、Susie的黑暗世界或最终预言中选择，每个主题都具有游戏中独特的视觉特征。",
+        "icon": "RiContrastDrop2Fill"
       }
     ]
   },
   "usage": {
     "name": "usage",
-    "title": "如何使用 ShipAny 启动项目",
-    "description": "通过三个简单步骤启动您的 AI SaaS 创业项目：",
+    "title": "如何使用Deltarune预言面板生成器",
+    "description": "通过我们直观的生成器，只需四个简单步骤即可创建您自己的神秘预言：",
     "image": {
-      "src": "/imgs/features/1.png"
+      "src": "/imgs/features/generator-demo.png"
     },
-    "image_position": "left",
+    "image_position": "right",
     "text_align": "center",
     "items": [
       {
-        "title": "获取 ShipAny",
-        "description": "一次性付款购买 ShipAny。查收邮件获取代码和文档。",
+        "title": "上传您的图片",
+        "description": "选择黑白或单色图像作为预言遮罩。Deltarune预言面板生成器最适合高对比度剪影。",
         "image": {
-          "src": "/imgs/features/5.png"
+          "src": "/imgs/features/step1.png"
         }
       },
       {
-        "title": "开始您的项目",
-        "description": "阅读文档并克隆 ShipAny 代码。开始构建您的 AI SaaS 创业项目。",
+        "title": "编写您的预言",
+        "description": "在预言字段中输入您的神秘文本。引导Deltarune原始预言的神秘智慧或创造全新的预测。",
         "image": {
-          "src": "/imgs/features/6.png"
+          "src": "/imgs/features/step2.png"
         }
       },
       {
-        "title": "定制您的项目",
-        "description": "使用您的数据和内容修改模板。满足特定的 AI 功能需求。",
+        "title": "自定义视觉设置",
+        "description": "调整图像缩放、垂直偏移并选择您喜欢的主题。生成器提供实时预览以获得完美效果。",
         "image": {
-          "src": "/imgs/features/7.png"
+          "src": "/imgs/features/step3.png"
         }
       },
       {
-        "title": "部署到生产环境",
-        "description": "通过几个步骤将项目部署到生产环境，立即开始服务客户。",
+        "title": "下载并分享",
+        "description": "将完成的预言面板保存为高质量图片。与Deltarune社区分享您的创作或在同人项目中使用。",
         "image": {
-          "src": "/imgs/features/8.png"
+          "src": "/imgs/features/step4.png"
         }
-      }
-    ]
-  },
-  "feature": {
-    "name": "feature",
-    "title": "ShipAny 核心功能",
-    "description": "快速高效启动 AI SaaS 创业所需的一切。",
-    "items": [
-      {
-        "title": "Next.js 模板",
-        "description": "生产就绪的 Next.js 模板，支持 SEO 友好结构和国际化。",
-        "icon": "RiNextjsFill"
-      },
-      {
-        "title": "身份验证和支付",
-        "description": "集成 Google OAuth、一键登录和 Stripe 支付处理。",
-        "icon": "RiKey2Fill"
-      },
-      {
-        "title": "数据基础设施",
-        "description": "内置 Supabase 集成，提供可靠和可扩展的数据存储。",
-        "icon": "RiDatabase2Line"
-      },
-      {
-        "title": "一键部署",
-        "description": "无缝部署到 Vercel 或 Cloudflare，自动化设置。",
-        "icon": "RiCloudy2Fill"
-      },
-      {
-        "title": "业务分析",
-        "description": "集成 Google Analytics 和 Search Console 追踪增长。",
-        "icon": "RiBarChart2Line"
-      },
-      {
-        "title": "AI 就绪基础设施",
-        "description": "预配置 AI 集成，内置积分系统和 API 销售。",
-        "icon": "RiRobot2Line"
       }
     ]
   },
   "prophecyGenerator": {
     "name": "prophecy-generator",
-    "title": "Deltarune 预言面板生成器",
-    "description": "创建属于你自己的神秘预言面板，灵感来自 Deltarune 的标志性视觉风格。"
+    "title": "Deltarune预言面板生成器",
+    "description": "使用真实的Deltarune视觉效果将您的想法转化为神秘预言，包括动画滚动纹理、空灵叠加层和粉丝喜爱的标志性像素化美学。"
   },
-  "stats": {
-    "name": "stats",
-    "label": "统计",
-    "title": "用户喜爱 ShipAny",
-    "description": "因为它易于使用且快速发布。",
-    "icon": "FaRegHeart",
+  "features": {
+    "name": "features",
+    "title": "专业级创意表达功能",
+    "label": "功能",
+    "description": "Deltarune预言面板生成器将真实的游戏资源与强大的自定义工具相结合，为创作者提供制作引人注目的预言面板所需的一切。",
     "items": [
       {
-        "title": "信任",
-        "label": "99+",
-        "description": "客户"
+        "title": "动画视觉效果",
+        "description": "动态滚动纹理和混合效果让您的预言栩栩如生，就像原版Deltarune场景一样。",
+        "icon": "RiSparklingFill"
       },
       {
-        "title": "内置",
-        "label": "20+",
-        "description": "组件"
+        "title": "幽灵图像叠加",
+        "description": "微妙的浮动动画为您上传的图像增添深度和神秘感，营造出超凡脱俗的氛围。",
+        "icon": "RiGhostFill"
       },
       {
-        "title": "快速发布",
-        "label": "5",
-        "description": "分钟"
+        "title": "响应式像素渲染",
+        "description": "在所有屏幕尺寸上保持清晰的像素艺术质量，同时保留Deltarune的怀旧美学。",
+        "icon": "RiComputerFill"
+      },
+      {
+        "title": "自定义字体支持",
+        "description": "使用真实的Deltarune字体，包括8bitoperator和Determination Mono，实现真正的预言文本样式。",
+        "icon": "RiFontSize"
+      },
+      {
+        "title": "实时预览",
+        "description": "在创建时即时查看您的更改，确保您的预言面板看起来完全符合设想。",
+        "icon": "RiEye2Fill"
+      },
+      {
+        "title": "高质量导出",
+        "description": "以最佳分辨率下载您的创作，用于在社交媒体上分享或整合到同人项目中。",
+        "icon": "RiDownload2Fill"
       }
     ]
   },
-  "testimonial": {
-    "name": "testimonial",
-    "label": "用户评价",
-    "title": "用户如何评价 ShipAny",
-    "description": "听听使用 ShipAny 启动 AI 创业项目的开发者和创始人怎么说。",
-    "icon": "GoThumbsup",
-    "items": [
-      {
-        "title": "陈大卫",
-        "label": "AIWallpaper.shop 创始人",
-        "description": "ShipAny 为我们节省了数月的开发时间。我们仅用 2 天就启动了 AI 壁纸业务，一周内就获得了第一个付费客户！",
-        "image": {
-          "src": "/imgs/users/1.png"
-        }
-      },
-      {
-        "title": "金瑞秋",
-        "label": "HeyBeauty.ai 技术总监",
-        "description": "预构建的 AI 基础设施是一个游戏规则改变者。我们无需担心架构 - 只需专注于 AI 美容技术并快速上线。",
-        "image": {
-          "src": "/imgs/users/2.png"
-        }
-      },
-      {
-        "title": "马库斯",
-        "label": "独立开发者",
-        "description": "作为独立开发者，ShipAny 给了我所需的一切 - 身份验证、支付、AI 集成和漂亮的 UI。一个周末就启动了我的 SaaS！",
-        "image": {
-          "src": "/imgs/users/3.png"
-        }
-      },
-      {
-        "title": "索菲亚",
-        "label": "Melodisco CEO",
-        "description": "这些模板可直接用于生产且高度可定制。我们用几小时而不是几个月就建立了 AI 音乐平台。上市时间令人难以置信！",
-        "image": {
-          "src": "/imgs/users/4.png"
-        }
-      },
-      {
-        "title": "詹姆斯",
-        "label": "GPTs.works 技术主管",
-        "description": "ShipAny 的基础设施非常稳固。我们从 0 扩展到 1 万用户都没碰后端。这是我们 AI 创业最好的投资。",
-        "image": {
-          "src": "/imgs/users/5.png"
-        }
-      },
-      {
-        "title": "张安娜",
-        "label": "创业者",
-        "description": "从想法到上线只用了 3 天！ShipAny 的模板和部署工具让我们能够以令人难以置信的速度测试 AI 业务概念。",
-        "image": {
-          "src": "/imgs/users/6.png"
-        }
-      }
-    ]
+  "examples": {
+    "name": "examples",
+    "title": "来自社区的精彩创作",
+    "label": "画廊",
+    "description": "看看其他Deltarune粉丝使用预言面板生成器创作了什么：",
+    "items": []
   },
   "faq": {
     "name": "faq",
     "label": "常见问题",
-    "title": "关于 ShipAny 的常见问题",
-    "description": "还有其他问题？通过 Discord 或电子邮件联系我们。",
+    "title": "关于Deltarune预言面板生成器的常见问题",
+    "description": "了解更多关于使用我们的生成器工具创建神秘预言的信息。",
     "items": [
       {
-        "title": "ShipAny 究竟是什么，它是如何工作的？",
-        "description": "ShipAny 是一个专门为构建 AI SaaS 创业项目设计的综合性 NextJS 模板。它提供即用型模板、基础设施设置和部署工具，帮助您在几小时内而不是几天内启动 AI 业务。"
+        "title": "什么是Deltarune预言面板生成器，它与游戏有什么关系？",
+        "description": "Deltarune预言面板生成器是一个粉丝制作的创意工具，它重现了Toby Fox的Deltarune中标志性的预言面板美学。它允许粉丝使用原始游戏神秘预言序列中发现的相同视觉风格、字体和动画效果来设计自定义预言面板。"
       },
       {
-        "title": "使用 ShipAny 需要高级技术技能吗？",
-        "description": "虽然基本的编程知识会有帮助，但 ShipAny 设计得非常开发者友好。我们的模板和文档使您即使不是 AI 或云基础设施专家也能轻松入门。"
+        "title": "哪种图像格式最适合生成器？",
+        "description": "Deltarune预言面板生成器最适合使用PNG或JPG格式的黑白或单色图像。高对比度剪影产生最真实的结果，模仿在Deltarune原始预言面板中看到的空灵遮罩效果。"
       },
       {
-        "title": "我可以用 ShipAny 构建什么类型的 AI SaaS？",
-        "description": "ShipAny 支持广泛的 AI 应用，从内容生成到数据分析工具。我们的模板涵盖流行用例，如 AI 聊天机器人、内容生成器、图像处理应用等。"
+        "title": "我可以将创作用于同人项目或社交媒体吗？",
+        "description": "是的！使用我们的生成器创建的预言面板非常适合同人艺术、社交媒体帖子和社区项目。我们鼓励分享您的神秘创作，同时尊重Deltarune的知识产权，并始终注明原始游戏来自Toby Fox。"
       },
       {
-        "title": "使用 ShipAny 通常需要多长时间才能启动？",
-        "description": "使用 ShipAny，您可以在几小时内完成工作原型，并在几小时内完成生产就绪的应用。我们的一键部署和预配置基础设施显著缩短了传统的数月开发周期。"
+        "title": "有哪些不同的主题选项？",
+        "description": "Deltarune预言面板生成器提供三种不同的主题：默认（经典预言风格）、Susie的黑暗世界（带紫色调的深色调）和最终预言（戏剧性的游戏结局美学）。每个主题都包含来自Deltarune不同部分的独特纹理和配色方案。"
       },
       {
-        "title": "ShipAny 的基础设施包括什么？",
-        "description": "ShipAny 提供完整的基础设施栈，包括身份验证、数据库设置、API 集成、支付处理和可扩展的云部署。一切都按照行业最佳实践预先配置。"
+        "title": "如何获得最佳的视觉效果？",
+        "description": "要使用Deltarune预言面板生成器获得最佳效果，请使用具有清晰剪影的高对比度图像、保持预言文本简洁神秘、尝试缩放和偏移设置，并尝试不同的主题以匹配您的创意愿景。实时预览有助于完善您的设计。"
       },
       {
-        "title": "我可以自定义模板以匹配我的品牌吗？",
-        "description": "当然可以！所有 ShipAny 模板都完全可定制。您可以修改设计、功能和功能性以匹配您的品牌标识和特定业务需求，同时保持强大的底层基础设施。"
-      }
-    ]
-  },
-  "cta": {
-    "name": "cta",
-    "title": "启动您的第一个 AI SaaS 创业项目",
-    "description": "从这里开始，使用 ShipAny 启动。",
-    "buttons": [
-      {
-        "title": "获取 ShipAny",
-        "url": "https://deltaruneprophecypanelgenerator.com",
-        "target": "_blank",
-        "icon": "GoArrowUpRight"
-      },
-      {
-        "title": "阅读文档",
-        "url": "https://docs.deltaruneprophecypanelgenerator.com",
-        "target": "_blank",
-        "variant": "outline"
+        "title": "这个工具是否与Deltarune或Toby Fox官方相关？",
+        "description": "不，Deltarune预言面板生成器是为庆祝Deltarune艺术性而创建的粉丝项目。它与Toby Fox或Deltarune开发团队没有官方关联或认可。所有游戏资产都归原创作者所有，此工具纯粹用于粉丝创意表达。"
       }
     ]
   },
   "footer": {
     "name": "footer",
     "brand": {
-      "title": "ShipAny",
-      "description": "ShipAny 是一个用于构建 AI SaaS 创业项目的 NextJS 模板。通过丰富的模板和组件快速启动。",
+      "title": "Deltarune预言面板生成器",
+      "description": "使用我们的免费在线生成器创建受Deltarune启发的真实预言面板。具有动画效果、多种主题和神秘美学，捕捉Toby Fox心爱游戏的魔力。",
       "logo": {
         "src": "/logo.png",
-        "alt": "ShipAny"
+        "alt": "Deltarune预言面板生成器"
       },
       "url": "/"
     },
-    "copyright": "© 2025 • ShipAny 保留所有权利。",
+    "copyright": "© 2025 • 粉丝制作的Deltarune预言面板生成器 • 与Toby Fox无关",
     "nav": {
       "items": [
         {
-          "title": "关于",
+          "title": "创建",
           "children": [
             {
-              "title": "功能特点",
-              "url": "/#feature",
+              "title": "功能",
+              "url": "/#features",
               "target": "_self"
             },
             {
-              "title": "案例展示",
-              "url": "/#showcase",
+              "title": "教程",
+              "url": "/#usage",
               "target": "_self"
             },
             {
-              "title": "定价",
-              "url": "/#pricing",
+              "title": "黑白转换器",
+              "url": "/monochrome",
               "target": "_self"
             }
           ]
         },
         {
-          "title": "资源",
+          "title": "社区",
           "children": [
             {
-              "title": "文档",
-              "url": "https://docs.deltaruneprophecypanelgenerator.com",
+              "title": "Deltarune Reddit",
+              "url": "https://reddit.com/r/deltarune",
               "target": "_blank"
             },
             {
-              "title": "组件",
-              "url": "https://deltaruneprophecypanelgenerator.com/components",
-              "target": "_blank"
-            },
-            {
-              "title": "模板",
-              "url": "https://deltaruneprophecypanelgenerator.com/templates",
+              "title": "AI图像生成器",
+              "url": "https://loraai.io",
               "target": "_blank"
             }
           ]
         },
         {
-          "title": "友情链接",
+          "title": "致谢",
           "children": [
             {
-              "title": "ThinkAny",
-              "url": "https://thinkany.ai",
+              "title": "Toby Fox",
+              "url": "https://tobyfox.net",
               "target": "_blank"
             },
             {
-              "title": "HeyBeauty",
-              "url": "https://heybeauty.ai",
-              "target": "_blank"
-            },
-            {
-              "title": "Pagen",
-              "url": "https://pagen.so",
-              "target": "_blank"
+              "title": "Deltarune预言面板",
+              "url": "/",
+              "target": "_self"
             }
           ]
-        }
-      ]
-    },
-    "social": {
-      "items": [
-        {
-          "title": "X",
-          "icon": "RiTwitterXFill",
-          "url": "https://x.com/shipanyai",
-          "target": "_blank"
-        },
-        {
-          "title": "Github",
-          "icon": "RiGithubFill",
-          "url": "https://github.com/shipanyai",
-          "target": "_blank"
-        },
-        {
-          "title": "Discord",
-          "icon": "RiDiscordFill",
-          "url": "https://discord.gg/HQNnrzjZQS",
-          "target": "_blank"
-        },
-        {
-          "title": "邮箱",
-          "icon": "RiMailLine",
-          "url": "mailto:support@deltaruneprophecypanelgenerator.com",
-          "target": "_self"
         }
       ]
     },
@@ -490,8 +259,12 @@
           "url": "/privacy-policy"
         },
         {
-          "title": "服务条款",
+          "title": "使用条款",
           "url": "/terms-of-service"
+        },
+        {
+          "title": "粉丝内容政策",
+          "url": "/fan-content-policy"
         }
       ]
     }

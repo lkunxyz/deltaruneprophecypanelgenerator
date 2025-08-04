@@ -1,0 +1,105 @@
+{
+  "hero": {
+    "title": "Conversor de Imagen Monocromática para Paneles de Profecía Deltarune",
+    "description": "Transforma tus imágenes en arte impresionante en blanco y negro con nuestro conversor monocromático avanzado. Perfecto para crear máscaras de paneles de profecía con el algoritmo exclusivo de detección de bordes UltraThink."
+  },
+  "monochromeConverter": {
+    "name": "monochrome-converter",
+    "title": "Conversor de Imagen Monocromática En Línea Gratuito",
+    "description": "Transforma tus imágenes en arte impresionante en blanco y negro con nuestro algoritmo avanzado de detección de bordes UltraThink. Perfecto para crear máscaras de paneles de profecía de alto contraste con preservación superior de detalles."
+  },
+  "introduce": {
+    "name": "introduce",
+    "title": "Conversión Monocromática Avanzada con Tecnología UltraThink",
+    "label": "Acerca de",
+    "description": "Nuestro conversor monocromático utiliza el algoritmo de detección de bordes UltraThink de vanguardia para crear imágenes perfectas en blanco y negro para paneles de profecía. Preserva detalles finos mientras consigue resultados limpios y de alto contraste.",
+    "image": {
+      "src": "/imgs/features/monochrome-preview.png"
+    },
+    "items": [
+      {
+        "title": "Detección de Bordes UltraThink",
+        "description": "Algoritmo revolucionario que analiza píxeles circundantes para preservar bordes y detalles importantes mientras crea imágenes monocromáticas limpias.",
+        "icon": "RiScanLine"
+      },
+      {
+        "title": "Procesamiento en Tiempo Real",
+        "description": "Ve tus ajustes al instante con nuestro sistema de vista previa en directo. Ajuste fino de umbral, brillo y contraste en tiempo real.",
+        "icon": "RiEyeLine"
+      },
+      {
+        "title": "Múltiples Algoritmos",
+        "description": "Elige entre umbral simple, RGB promedio, luminancia ponderada o nuestro algoritmo UltraThink avanzado para diferentes efectos artísticos.",
+        "icon": "RiSettings3Line"
+      }
+    ]
+  },
+  "usage": {
+    "name": "usage",
+    "title": "Cómo Utilizar el Conversor Monocromático",
+    "description": "Convierte tus imágenes a blanco y negro perfecto en cuatro pasos simples:",
+    "image": {
+      "src": "/imgs/features/monochrome-demo.png"
+    },
+    "image_position": "right",
+    "text_align": "center",
+    "items": [
+      {
+        "title": "Sube Tu Imagen",
+        "description": "Selecciona cualquier archivo de imagen desde tu dispositivo. Soporta formatos JPG, PNG, GIF, WebP y BMP.",
+        "image": {
+          "src": "/imgs/features/upload-step.png"
+        }
+      },
+      {
+        "title": "Elige el Algoritmo",
+        "description": "Selecciona entre nuestros métodos de conversión. Prueba UltraThink para la mejor preservación de bordes y retención de detalles.",
+        "image": {
+          "src": "/imgs/features/algorithm-step.png"
+        }
+      },
+      {
+        "title": "Ajusta la Configuración",
+        "description": "Ajuste fino de umbral, brillo y contraste. Activa inversión para efectos negativos. Todos los cambios aparecen al instante.",
+        "image": {
+          "src": "/imgs/features/settings-step.png"
+        }
+      },
+      {
+        "title": "Descarga y Utiliza",
+        "description": "Guarda tu imagen convertida como PNG o copia al portapapeles. Perfecto para utilizar en el generador de paneles de profecía.",
+        "image": {
+          "src": "/imgs/features/download-step.png"
+        }
+      }
+    ]
+  },
+  "faq": {
+    "name": "faq",
+    "label": "FAQ",
+    "title": "Preguntas Frecuentes sobre Conversión Monocromática",
+    "description": "Aprende más sobre nuestro algoritmo UltraThink y proceso de conversión monocromática.",
+    "items": [
+      {
+        "title": "¿Qué hace especial al algoritmo UltraThink?",
+        "description": "UltraThink es nuestro algoritmo propietario de conversión consciente de bordes que analiza píxeles circundantes para preservar detalles importantes mientras crea imágenes limpias en blanco y negro. A diferencia de métodos simples de umbral, mantiene detalles finos y gradientes suaves cuando es necesario."
+      },
+      {
+        "title": "¿Qué formatos de imagen son compatibles?",
+        "description": "Nuestro conversor monocromático es compatible con todos los principales formatos de imagen incluyendo JPG, JPEG, PNG, GIF, WebP y BMP. La salida es siempre un archivo PNG de alta calidad con transparencia preservada cuando aplica."
+      },
+      {
+        "title": "¿Esta herramienta es completamente gratuita?",
+        "description": "Sí, el conversor de imagen monocromática es completamente gratuito de utilizar sin marcas de agua, límites de tamaño de archivo o registro requerido. Convierte tantas imágenes como necesites para tus paneles de profecía."
+      },
+      {
+        "title": "¿Cómo ayuda esto con los paneles de profecía Deltarune?",
+        "description": "Los paneles de profecía requieren imágenes de alto contraste en blanco y negro como máscaras. Nuestro conversor crea siluetas perfectas que funcionan perfectamente con el Generador de Paneles de Profecía Deltarune, asegurando que tus profecías se vean auténticas y profesionales."
+      },
+      {
+        "title": "¿Puedo utilizar las imágenes convertidas comercialmente?",
+        "description": "Por supuesto, puedes utilizar las imágenes convertidas para cualquier propósito incluyendo proyectos comerciales. El conversor solo procesa tus imágenes subidas - mantienes todos los derechos de tu contenido original."
+      }
+    ]
+  }
+}

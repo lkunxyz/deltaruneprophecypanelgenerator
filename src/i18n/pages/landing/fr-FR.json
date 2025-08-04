@@ -1,0 +1,272 @@
+{
+  "template": "deltarune-prophecy-generator",
+  "theme": "dark",
+  "header": {
+    "brand": {
+      "title": "DeltaruneProphecyPanelGenerator",
+      "logo": {
+        "src": "/logo.png",
+        "alt": "Logo Générateur de Panneaux de Prophétie Deltarune"
+      },
+      "url": "/"
+    },
+    "nav": {
+      "items": [
+        {
+          "title": "Fonctionnalités",
+          "url": "/#feature",
+          "icon": ""
+        },
+        {
+          "title": "Comment Créer",
+          "url": "/#usage",
+          "icon": ""
+        },
+        {
+          "title": "Convertisseur Monochrome",
+          "url": "/monochrome",
+          "icon": ""
+        },
+        {
+          "title": "Exemples",
+          "url": "/#examples",
+          "icon": ""
+        }
+      ]
+    },
+    "show_sign": false,
+    "show_theme": false,
+    "show_locale": true
+  },
+  "introduce": {
+    "name": "introduce",
+    "title": "Créez des Panneaux de Prophétie Mystiques avec le Générateur de Panneaux de Prophétie Deltarune",
+    "label": "À propos",
+    "description": "Le Générateur de Panneaux de Prophétie Deltarune donne vie au style visuel enchanteur du Deltarune de Toby Fox. Concevez des panneaux de prophétie personnalisés avec des textures animées, des superpositions mystiques et une typographie authentique inspirée du jeu qui capture l'essence des mystérieuses prophéties de Deltarune.",
+    "image": {
+      "src": "/imgs/features/prophecy-preview.png"
+    },
+    "items": [
+      {
+        "title": "Esthétique Authentique de Deltarune",
+        "description": "Recréez le style iconique des panneaux de prophétie de Deltarune avec une précision pixel-perfect, présentant des textures et polices originales du jeu.",
+        "icon": "RiPaletteFill"
+      },
+      {
+        "title": "Outils de Personnalisation Interactifs",
+        "description": "Téléchargez des images, rédigez des textes de prophétie et ajustez les paramètres visuels pour créer des panneaux uniques qui racontent votre propre histoire mystique.",
+        "icon": "RiMagicFill"
+      },
+      {
+        "title": "Variations de Thèmes Multiples",
+        "description": "Choisissez entre les thèmes Par Défaut, Monde Sombre de Susie ou La Prophétie Finale, chacun avec des caractéristiques visuelles distinctes du jeu.",
+        "icon": "RiContrastDrop2Fill"
+      }
+    ]
+  },
+  "usage": {
+    "name": "usage",
+    "title": "Comment Utiliser le Générateur de Panneaux de Prophétie Deltarune",
+    "description": "Créez votre propre prophétie mystique en quatre étapes simples avec notre générateur intuitif :",
+    "image": {
+      "src": "/imgs/features/generator-demo.png"
+    },
+    "image_position": "right",
+    "text_align": "center",
+    "items": [
+      {
+        "title": "Téléchargez Votre Image",
+        "description": "Choisissez une image en noir et blanc ou monochrome comme masque de prophétie. Le Générateur de Panneaux de Prophétie Deltarune fonctionne mieux avec des silhouettes à fort contraste.",
+        "image": {
+          "src": "/imgs/features/step1.png"
+        }
+      },
+      {
+        "title": "Rédigez Votre Prophétie",
+        "description": "Saisissez votre texte mystique dans le champ prophétie. Canalisez la sagesse cryptique des prophéties originales de Deltarune ou créez des prédictions entièrement nouvelles.",
+        "image": {
+          "src": "/imgs/features/step2.png"
+        }
+      },
+      {
+        "title": "Personnalisez les Paramètres Visuels",
+        "description": "Ajustez l'échelle de l'image, le décalage vertical et choisissez votre thème préféré. Le générateur offre un aperçu en temps réel pour des résultats parfaits.",
+        "image": {
+          "src": "/imgs/features/step3.png"
+        }
+      },
+      {
+        "title": "Téléchargez et Partagez",
+        "description": "Sauvegardez votre panneau de prophétie terminé comme une image haute qualité. Partagez votre création avec la communauté Deltarune ou utilisez-la dans des projets de fans.",
+        "image": {
+          "src": "/imgs/features/step4.png"
+        }
+      }
+    ]
+  },
+  "prophecyGenerator": {
+    "name": "prophecy-generator",
+    "title": "Générateur de Panneaux de Prophétie Deltarune",
+    "description": "Transformez vos idées en prophéties mystiques avec des effets visuels authentiques de Deltarune, incluant des textures de défilement animées, des superpositions éthérées et l'esthétique pixelisée signature que les fans adorent."
+  },
+  "features": {
+    "name": "features",
+    "title": "Fonctionnalités Professionnelles pour l'Expression Créative",
+    "label": "Fonctionnalités",
+    "description": "Le Générateur de Panneaux de Prophétie Deltarune combine des éléments authentiques du jeu avec des outils de personnalisation puissants, donnant aux créateurs tout ce dont ils ont besoin pour créer des panneaux de prophétie captivants.",
+    "items": [
+      {
+        "title": "Effets Visuels Animés",
+        "description": "Des textures de défilement dynamiques et des effets de mélange donnent vie à vos prophéties, exactement comme dans les scènes originales de Deltarune.",
+        "icon": "RiSparklingFill"
+      },
+      {
+        "title": "Superpositions d'Image Fantôme",
+        "description": "Des animations flottantes subtiles ajoutent de la profondeur et du mystère à vos images téléchargées, créant une atmosphère surnaturelle.",
+        "icon": "RiGhostFill"
+      },
+      {
+        "title": "Rendu Pixel Réactif",
+        "description": "Maintient une qualité nette de pixel art sur toutes les tailles d'écran tout en préservant l'esthétique nostalgique de Deltarune.",
+        "icon": "RiComputerFill"
+      },
+      {
+        "title": "Support de Polices Personnalisées",
+        "description": "Utilise des polices authentiques de Deltarune incluant 8bitoperator et Determination Mono pour un style de texte de prophétie authentique.",
+        "icon": "RiFontSize"
+      },
+      {
+        "title": "Aperçu en Temps Réel",
+        "description": "Voyez vos changements instantanément pendant la création, garantissant que votre panneau de prophétie ressemble exactement à ce que vous avez imaginé.",
+        "icon": "RiEye2Fill"
+      },
+      {
+        "title": "Exportation Haute Qualité",
+        "description": "Téléchargez vos créations en résolution optimale pour partager sur les réseaux sociaux ou incorporer dans des projets de fans.",
+        "icon": "RiDownload2Fill"
+      }
+    ]
+  },
+  "examples": {
+    "name": "examples",
+    "title": "Créations Inspirantes de la Communauté",
+    "label": "Galerie",
+    "description": "Découvrez ce que d'autres fans de Deltarune ont créé avec le Générateur de Panneaux de Prophétie :",
+    "items": []
+  },
+  "faq": {
+    "name": "faq",
+    "label": "FAQ",
+    "title": "Questions Fréquentes sur le Générateur de Panneaux de Prophétie Deltarune",
+    "description": "Apprenez-en plus sur la création de prophéties mystiques avec notre outil générateur.",
+    "items": [
+      {
+        "title": "Qu'est-ce que le Générateur de Panneaux de Prophétie Deltarune et quel est son lien avec le jeu ?",
+        "description": "Le Générateur de Panneaux de Prophétie Deltarune est un outil créatif fait par des fans qui recrée l'esthétique iconique des panneaux de prophétie du Deltarune de Toby Fox. Il permet aux fans de concevoir des panneaux de prophétie personnalisés en utilisant le même style visuel, polices et effets animés que l'on trouve dans les séquences de prophétie mystérieuses du jeu original."
+      },
+      {
+        "title": "Quels formats d'image fonctionnent le mieux avec le générateur ?",
+        "description": "Le Générateur de Panneaux de Prophétie Deltarune fonctionne de manière optimale avec des images en noir et blanc ou monochromes aux formats PNG ou JPG. Les silhouettes à fort contraste produisent les résultats les plus authentiques, imitant l'effet de masque éthéré vu dans les panneaux de prophétie originaux de Deltarune."
+      },
+      {
+        "title": "Puis-je utiliser mes créations pour des projets de fans ou les réseaux sociaux ?",
+        "description": "Oui ! Les panneaux de prophétie créés avec notre générateur sont parfaits pour le fan art, les publications sur les réseaux sociaux et les projets communautaires. Nous encourageons le partage de vos créations mystiques tout en respectant la propriété intellectuelle de Deltarune et en créditant toujours le jeu original de Toby Fox."
+      },
+      {
+        "title": "Quelles sont les différentes options de thème disponibles ?",
+        "description": "Le Générateur de Panneaux de Prophétie Deltarune offre trois thèmes distincts : Par Défaut (style classique de prophétie), Monde Sombre de Susie (tons plus sombres avec des accents violets), et La Prophétie Finale (esthétique dramatique de fin de jeu). Chaque thème inclut des textures et schémas de couleurs uniques de différentes parties de Deltarune."
+      },
+      {
+        "title": "Comment puis-je obtenir les meilleurs résultats visuels ?",
+        "description": "Pour des résultats optimaux avec le Générateur de Panneaux de Prophétie Deltarune, utilisez des images à fort contraste avec des silhouettes claires, gardez le texte de prophétie concis et mystique, expérimentez avec les paramètres d'échelle et de décalage, et essayez différents thèmes pour correspondre à votre vision créative. L'aperçu en temps réel aide à perfectionner votre design."
+      },
+      {
+        "title": "Cet outil est-il officiellement affilié à Deltarune ou Toby Fox ?",
+        "description": "Non, le Générateur de Panneaux de Prophétie Deltarune est un projet fait par des fans créé pour célébrer l'art de Deltarune. Il n'est pas officiellement affilié ou approuvé par Toby Fox ou l'équipe de développement de Deltarune. Tous les éléments du jeu sont crédités à leurs créateurs originaux, et cet outil existe purement pour l'expression créative des fans."
+      }
+    ]
+  },
+  "footer": {
+    "name": "footer",
+    "brand": {
+      "title": "Générateur de Panneaux de Prophétie Deltarune",
+      "description": "Créez des panneaux de prophétie authentiques inspirés de Deltarune avec notre générateur en ligne gratuit. Avec des effets animés, plusieurs thèmes et l'esthétique mystique qui capture la magie du jeu bien-aimé de Toby Fox.",
+      "logo": {
+        "src": "/logo.png",
+        "alt": "Générateur de Panneaux de Prophétie Deltarune"
+      },
+      "url": "/"
+    },
+    "copyright": "© 2025 • Générateur de Panneaux de Prophétie Deltarune fait par des fans • Non affilié à Toby Fox",
+    "nav": {
+      "items": [
+        {
+          "title": "Créer",
+          "children": [
+            {
+              "title": "Fonctionnalités",
+              "url": "/#features",
+              "target": "_self"
+            },
+            {
+              "title": "Tutoriel",
+              "url": "/#usage",
+              "target": "_self"
+            },
+            {
+              "title": "Convertisseur Monochrome",
+              "url": "/monochrome",
+              "target": "_self"
+            }
+          ]
+        },
+        {
+          "title": "Communauté",
+          "children": [
+            {
+              "title": "Reddit Deltarune",
+              "url": "https://reddit.com/r/deltarune",
+              "target": "_blank"
+            },
+            {
+              "title": "Générateur d'Image IA",
+              "url": "https://loraai.io",
+              "target": "_blank"
+            }
+          ]
+        },
+        {
+          "title": "Crédits",
+          "children": [
+            {
+              "title": "Toby Fox",
+              "url": "https://tobyfox.net",
+              "target": "_blank"
+            },
+            {
+              "title": "Panneau de Prophétie Deltarune",
+              "url": "/",
+              "target": "_self"
+            }
+          ]
+        }
+      ]
+    },
+    "agreement": {
+      "items": [
+        {
+          "title": "Politique de Confidentialité",
+          "url": "/privacy-policy"
+        },
+        {
+          "title": "Conditions d'Utilisation",
+          "url": "/terms-of-service"
+        },
+        {
+          "title": "Politique de Contenu de Fans",
+          "url": "/fan-content-policy"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "hero": {
+    "title": "Monochrome Image Converter for Deltarune Prophecy Panels",
+    "description": "Transform your images into stunning black and white art with our advanced monochrome converter. Perfect for creating prophecy panel masks with the exclusive UltraThink edge detection algorithm - sobrang galing ng results!"
+  },
+  "monochromeConverter": {
+    "name": "monochrome-converter",
+    "title": "Free Online Monochrome Image Converter",
+    "description": "Transform your images into stunning black and white art with our advanced UltraThink edge detection algorithm. Perfect for creating high-contrast prophecy panel masks with superior detail preservation - guaranteed quality output!"
+  },
+  "introduce": {
+    "name": "introduce",
+    "title": "Advanced Monochrome Conversion with UltraThink Technology",
+    "label": "About",
+    "description": "Our monochrome converter uses cutting-edge UltraThink edge detection algorithm to create perfect black and white images for prophecy panels. Preserve fine details while achieving clean, high-contrast results - walang hassle, professional quality!",
+    "image": {
+      "src": "/imgs/features/monochrome-preview.png"
+    },
+    "items": [
+      {
+        "title": "UltraThink Edge Detection",
+        "description": "Revolutionary algorithm that analyzes surrounding pixels to preserve important edges and details while creating clean monochrome images - astig na technology!",
+        "icon": "RiScanLine"
+      },
+      {
+        "title": "Real-Time Processing",
+        "description": "See your adjustments instantly with our live preview system. Fine-tune threshold, brightness, and contrast in real-time - convenient and user-friendly!",
+        "icon": "RiEyeLine"
+      },
+      {
+        "title": "Multiple Algorithms",
+        "description": "Choose from simple threshold, average RGB, weighted luminance, or our advanced UltraThink algorithm for different artistic effects - maraming options!",
+        "icon": "RiSettings3Line"
+      }
+    ]
+  },
+  "usage": {
+    "name": "usage",
+    "title": "How to Use the Monochrome Converter",
+    "description": "Convert your images to perfect black and white in four simple steps:",
+    "image": {
+      "src": "/imgs/features/monochrome-demo.png"
+    },
+    "image_position": "right",
+    "text_align": "center",
+    "items": [
+      {
+        "title": "Upload Your Image",
+        "description": "Select any image file from your device. Supports JPG, PNG, GIF, WebP, and BMP formats - lahat pwede!",
+        "image": {
+          "src": "/imgs/features/upload-step.png"
+        }
+      },
+      {
+        "title": "Choose Algorithm",
+        "description": "Select from our conversion methods. Try UltraThink for the best edge preservation and detail retention - recommended talaga!",
+        "image": {
+          "src": "/imgs/features/algorithm-step.png"
+        }
+      },
+      {
+        "title": "Adjust Settings",
+        "description": "Fine-tune threshold, brightness, and contrast. Enable invert for negative effects. All changes appear instantly - real-time feedback!",
+        "image": {
+          "src": "/imgs/features/settings-step.png"
+        }
+      },
+      {
+        "title": "Download & Use",
+        "description": "Save your converted image as PNG or copy to clipboard. Perfect for use in the prophecy panel generator - ready for sharing agad!",
+        "image": {
+          "src": "/imgs/features/download-step.png"
+        }
+      }
+    ]
+  },
+  "faq": {
+    "name": "faq",
+    "label": "FAQ",
+    "title": "Frequently Asked Questions About Monochrome Conversion",
+    "description": "Learn more about our UltraThink algorithm and monochrome conversion process.",
+    "items": [
+      {
+        "title": "What makes UltraThink algorithm special?",
+        "description": "UltraThink is our proprietary edge-aware conversion algorithm that analyzes surrounding pixels to preserve important details while creating clean black and white images. Unlike simple threshold methods, it maintains fine details and smooth gradients where needed - sobrang advanced!"
+      },
+      {
+        "title": "What image formats are supported?",
+        "description": "Our monochrome converter supports all major image formats including JPG, JPEG, PNG, GIF, WebP, and BMP. The output is always a high-quality PNG file with transparency preserved when applicable - compatible with everything!"
+      },
+      {
+        "title": "Is this tool completely free?",
+        "description": "Yes, the monochrome image converter is completely free to use with no watermarks, file size limits, or registration required. Convert as many images as you need for your prophecy panels - walang bayad talaga!"
+      },
+      {
+        "title": "How does this help with Deltarune prophecy panels?",
+        "description": "Prophecy panels require high-contrast black and white images as masks. Our converter creates perfect silhouettes that work seamlessly with the Deltarune Prophecy Panel Generator, ensuring your prophecies look authentic and professional - perfect para sa content creation!"
+      },
+      {
+        "title": "Can I use the converted images commercially?",
+        "description": "Yes, you can use the converted images for any purpose including commercial projects. The converter only processes your uploaded images - you retain all rights to your original content. Perfect for freelancers and content creators!"
+      }
+    ]
+  }
+}

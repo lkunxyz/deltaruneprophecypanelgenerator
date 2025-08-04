@@ -1,0 +1,272 @@
+{
+  "template": "deltarune-prophecy-generator",
+  "theme": "dark",
+  "header": {
+    "brand": {
+      "title": "GeneratorPaneliPrzepowiedniDeltarune",
+      "logo": {
+        "src": "/logo.png",
+        "alt": "Logo Generatora Paneli Przepowiedni Deltarune"
+      },
+      "url": "/"
+    },
+    "nav": {
+      "items": [
+        {
+          "title": "Funkcje",
+          "url": "/#feature",
+          "icon": ""
+        },
+        {
+          "title": "Jak Tworzyć",
+          "url": "/#usage",
+          "icon": ""
+        },
+        {
+          "title": "Konwerter Monochromatyczny",
+          "url": "/monochrome",
+          "icon": ""
+        },
+        {
+          "title": "Przykłady",
+          "url": "/#examples",
+          "icon": ""
+        }
+      ]
+    },
+    "show_sign": false,
+    "show_theme": false,
+    "show_locale": true
+  },
+  "introduce": {
+    "name": "introduce",
+    "title": "Twórz Mistyczne Panele Przepowiedni z Generatorem Paneli Przepowiedni Deltarune",
+    "label": "O Nas",
+    "description": "Generator Paneli Przepowiedni Deltarune ożywia czarujący styl wizualny Deltarune Toby'ego Foxa. Projektuj niestandardowe panele przepowiedni z animowanymi teksturami, mistycznymi nakładkami i autentyczną typografią inspirowaną grą, która oddaje esencję tajemniczych przepowiedni Deltarune.",
+    "image": {
+      "src": "/imgs/features/prophecy-preview.png"
+    },
+    "items": [
+      {
+        "title": "Autentyczna Estetyka Deltarune",
+        "description": "Odtwórz kultowy styl panelu przepowiedni z Deltarune z pikselową precyzją, zawierający oryginalne tekstury i czcionki z gry.",
+        "icon": "RiPaletteFill"
+      },
+      {
+        "title": "Interaktywne Narzędzia Personalizacji",
+        "description": "Przesyłaj obrazy, pisz tekst przepowiedni i dostosowuj ustawienia wizualne, aby tworzyć unikalne panele opowiadające Twoją własną mistyczną historię.",
+        "icon": "RiMagicFill"
+      },
+      {
+        "title": "Wiele Wariantów Motywów",
+        "description": "Wybieraj między motywami Domyślnym, Ciemnym Światem Susie lub Ostateczną Przepowiednią, każdy z charakterystycznymi cechami wizualnymi z gry.",
+        "icon": "RiContrastDrop2Fill"
+      }
+    ]
+  },
+  "usage": {
+    "name": "usage",
+    "title": "Jak Używać Generatora Paneli Przepowiedni Deltarune",
+    "description": "Stwórz swoją własną mistyczną przepowiednię w czterech prostych krokach dzięki naszemu intuicyjnemu generatorowi:",
+    "image": {
+      "src": "/imgs/features/generator-demo.png"
+    },
+    "image_position": "right",
+    "text_align": "center",
+    "items": [
+      {
+        "title": "Prześlij Swój Obraz",
+        "description": "Wybierz czarno-biały lub monochromatyczny obraz jako maskę przepowiedni. Generator Paneli Przepowiedni Deltarune najlepiej działa z sylwetkami o wysokim kontraście.",
+        "image": {
+          "src": "/imgs/features/step1.png"
+        }
+      },
+      {
+        "title": "Napisz Swoją Przepowiednię",
+        "description": "Wprowadź swój mistyczny tekst w polu przepowiedni. Skanalizuj kryptyczną mądrość oryginalnych przepowiedni Deltarune lub stwórz zupełnie nowe przewidywania.",
+        "image": {
+          "src": "/imgs/features/step2.png"
+        }
+      },
+      {
+        "title": "Dostosuj Ustawienia Wizualne",
+        "description": "Dostosuj skalę obrazu, przesunięcie pionowe i wybierz preferowany motyw. Generator oferuje podgląd w czasie rzeczywistym dla idealnych rezultatów.",
+        "image": {
+          "src": "/imgs/features/step3.png"
+        }
+      },
+      {
+        "title": "Pobierz i Udostępnij",
+        "description": "Zapisz swój ukończony panel przepowiedni jako obraz wysokiej jakości. Podziel się swoją kreacją ze społecznością Deltarune lub użyj w projektach fanowskich.",
+        "image": {
+          "src": "/imgs/features/step4.png"
+        }
+      }
+    ]
+  },
+  "prophecyGenerator": {
+    "name": "prophecy-generator",
+    "title": "Generator Paneli Przepowiedni Deltarune",
+    "description": "Przekształć swoje pomysły w mistyczne przepowiednie z autentycznymi efektami wizualnymi Deltarune, w tym animowanymi przewijającymi się teksturami, eterycznymi nakładkami i charakterystyczną pikselową estetyką, którą pokochali fani."
+  },
+  "features": {
+    "name": "features",
+    "title": "Profesjonalne Funkcje dla Twórczej Ekspresji",
+    "label": "Funkcje",
+    "description": "Generator Paneli Przepowiedni Deltarune łączy autentyczne zasoby z gry z potężnymi narzędziami personalizacji, dając twórcom wszystko, co potrzebne do tworzenia przekonujących paneli przepowiedni.",
+    "items": [
+      {
+        "title": "Animowane Efekty Wizualne",
+        "description": "Dynamiczne przewijające się tekstury i efekty mieszania ożywiają Twoje przepowiednie, tak jak w oryginalnych scenach Deltarune.",
+        "icon": "RiSparklingFill"
+      },
+      {
+        "title": "Nakładki Duchowych Obrazów",
+        "description": "Subtelne unoszące się animacje dodają głębi i tajemniczości Twoim przesłanym obrazom, tworząc nieziemską atmosferę.",
+        "icon": "RiGhostFill"
+      },
+      {
+        "title": "Responsywne Renderowanie Pikseli",
+        "description": "Utrzymuje ostrą jakość pixel art na wszystkich rozmiarach ekranu, zachowując nostalgiczną estetykę Deltarune.",
+        "icon": "RiComputerFill"
+      },
+      {
+        "title": "Wsparcie Niestandardowych Czcionek",
+        "description": "Używa autentycznych czcionek Deltarune, w tym 8bitoperator i Determination Mono dla prawdziwego stylizowania tekstu przepowiedni.",
+        "icon": "RiFontSize"
+      },
+      {
+        "title": "Podgląd w Czasie Rzeczywistym",
+        "description": "Zobacz swoje zmiany natychmiast podczas tworzenia, zapewniając, że Twój panel przepowiedni wygląda dokładnie tak, jak sobie wyobraziłeś.",
+        "icon": "RiEye2Fill"
+      },
+      {
+        "title": "Eksport Wysokiej Jakości",
+        "description": "Pobieraj swoje kreacje w optymalnej rozdzielczości do udostępniania w mediach społecznościowych lub włączania do projektów fanowskich.",
+        "icon": "RiDownload2Fill"
+      }
+    ]
+  },
+  "examples": {
+    "name": "examples",
+    "title": "Inspirujące Kreacje od Społeczności",
+    "label": "Galeria",
+    "description": "Zobacz, co inni fani Deltarune stworzyli za pomocą Generatora Paneli Przepowiedni:",
+    "items": []
+  },
+  "faq": {
+    "name": "faq",
+    "label": "FAQ",
+    "title": "Często Zadawane Pytania o Generator Paneli Przepowiedni Deltarune",
+    "description": "Dowiedz się więcej o tworzeniu mistycznych przepowiedni za pomocą naszego narzędzia generatora.",
+    "items": [
+      {
+        "title": "Czym jest Generator Paneli Przepowiedni Deltarune i jak odnosi się do gry?",
+        "description": "Generator Paneli Przepowiedni Deltarune to fanowskie narzędzie kreatywne, które odtwarza kultową estetykę panelu przepowiedni z Deltarune Toby'ego Foxa. Pozwala fanom projektować niestandardowe panele przepowiedni używając tego samego stylu wizualnego, czcionek i animowanych efektów znalezionych w tajemniczych sekwencjach przepowiedni oryginalnej gry."
+      },
+      {
+        "title": "Jakie formaty obrazów najlepiej działają z generatorem?",
+        "description": "Generator Paneli Przepowiedni Deltarune działa optymalnie z czarno-białymi lub monochromatycznymi obrazami w formacie PNG lub JPG. Sylwetki o wysokim kontraście dają najbardziej autentyczne rezultaty, naśladując eteryczny efekt maski widziany w oryginalnych panelach przepowiedni Deltarune."
+      },
+      {
+        "title": "Czy mogę używać swoich kreacji w projektach fanowskich lub mediach społecznościowych?",
+        "description": "Tak! Panele przepowiedni stworzone za pomocą naszego generatora są idealne do fan art, postów w mediach społecznościowych i projektów społecznościowych. Zachęcamy do dzielenia się swoimi mistycznymi kreacjami, jednocześnie szanując własność intelektualną Deltarune i zawsze podając źródło oryginalnej gry Toby'ego Foxa."
+      },
+      {
+        "title": "Jakie są różne opcje motywów dostępne?",
+        "description": "Generator Paneli Przepowiedni Deltarune oferuje trzy różne motywy: Domyślny (klasyczny styl przepowiedni), Ciemny Świat Susie (ciemniejsze tony z fioletowymi akcentami) i Ostateczna Przepowiednia (dramatyczna estetyka końca gry). Każdy motyw zawiera unikalne tekstury i schematy kolorów z różnych części Deltarune."
+      },
+      {
+        "title": "Jak mogę osiągnąć najlepsze rezultaty wizualne?",
+        "description": "Dla optymalnych rezultatów z Generatorem Paneli Przepowiedni Deltarune używaj obrazów o wysokim kontraście z wyraźnymi sylwetami, utrzymuj tekst przepowiedni zwięzły i mistyczny, eksperymentuj z ustawieniami skali i przesunięcia oraz wypróbuj różne motywy dopasowane do Twojej kreatywnej wizji. Podgląd w czasie rzeczywistym pomaga udoskonalić Twój projekt."
+      },
+      {
+        "title": "Czy to narzędzie jest oficjalnie powiązane z Deltarune lub Toby Foxem?",
+        "description": "Nie, Generator Paneli Przepowiedni Deltarune jest projektem fanowskim stworzonym, aby uczcić artyzm Deltarune. Nie jest oficjalnie powiązany z ani wspierany przez Toby'ego Foxa lub zespół rozwojowy Deltarune. Wszystkie zasoby gry są przypisane ich oryginalnym twórcom, a to narzędzie istnieje wyłącznie dla kreatywnej ekspresji fanów."
+      }
+    ]
+  },
+  "footer": {
+    "name": "footer",
+    "brand": {
+      "title": "Generator Paneli Przepowiedni Deltarune",
+      "description": "Twórz autentyczne panele przepowiedni inspirowane Deltarune za pomocą naszego darmowego generatora online. Z animowanymi efektami, wieloma motywami i mistyczną estetyką, która oddaje magię ukochanej gry Toby'ego Foxa.",
+      "logo": {
+        "src": "/logo.png",
+        "alt": "Generator Paneli Przepowiedni Deltarune"
+      },
+      "url": "/"
+    },
+    "copyright": "© 2025 • Fanowski Generator Paneli Przepowiedni Deltarune • Nie powiązany z Toby Foxem",
+    "nav": {
+      "items": [
+        {
+          "title": "Twórz",
+          "children": [
+            {
+              "title": "Funkcje",
+              "url": "/#features",
+              "target": "_self"
+            },
+            {
+              "title": "Samouczek",
+              "url": "/#usage",
+              "target": "_self"
+            },
+            {
+              "title": "Konwerter Monochromatyczny",
+              "url": "/monochrome",
+              "target": "_self"
+            }
+          ]
+        },
+        {
+          "title": "Społeczność",
+          "children": [
+            {
+              "title": "Deltarune Reddit",
+              "url": "https://reddit.com/r/deltarune",
+              "target": "_blank"
+            },
+            {
+              "title": "Generator Obrazów AI",
+              "url": "https://loraai.io",
+              "target": "_blank"
+            }
+          ]
+        },
+        {
+          "title": "Uznania",
+          "children": [
+            {
+              "title": "Toby Fox",
+              "url": "https://tobyfox.net",
+              "target": "_blank"
+            },
+            {
+              "title": "Panel Przepowiedni Deltarune",
+              "url": "/",
+              "target": "_self"
+            }
+          ]
+        }
+      ]
+    },
+    "agreement": {
+      "items": [
+        {
+          "title": "Polityka Prywatności",
+          "url": "/privacy-policy"
+        },
+        {
+          "title": "Warunki Użytkowania",
+          "url": "/terms-of-service"
+        },
+        {
+          "title": "Polityka Treści Fanowskich",
+          "url": "/fan-content-policy"
+        }
+      ]
+    }
+  }
+}

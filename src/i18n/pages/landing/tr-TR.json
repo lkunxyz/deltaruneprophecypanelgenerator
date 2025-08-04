@@ -1,0 +1,272 @@
+{
+  "template": "deltarune-prophecy-generator",
+  "theme": "dark",
+  "header": {
+    "brand": {
+      "title": "DeltaruneProphecyPanelGenerator",
+      "logo": {
+        "src": "/logo.png",
+        "alt": "Deltarune Kehanet Paneli Oluşturucu Logo"
+      },
+      "url": "/"
+    },
+    "nav": {
+      "items": [
+        {
+          "title": "Özellikler",
+          "url": "/#feature",
+          "icon": ""
+        },
+        {
+          "title": "Nasıl Oluşturulur",
+          "url": "/#usage",
+          "icon": ""
+        },
+        {
+          "title": "Monokrom Dönüştürücü",
+          "url": "/monochrome",
+          "icon": ""
+        },
+        {
+          "title": "Örnekler",
+          "url": "/#examples",
+          "icon": ""
+        }
+      ]
+    },
+    "show_sign": false,
+    "show_theme": false,
+    "show_locale": true
+  },
+  "introduce": {
+    "name": "introduce",
+    "title": "Deltarune Kehanet Paneli Oluşturucu ile Mistik Kehanet Panelleri Yarat",
+    "label": "Hakkında",
+    "description": "Deltarune Kehanet Paneli Oluşturucu, Toby Fox'un Deltarune'unun büyüleyici görsel stilini hayata geçirir. Animasyonlu dokular, mistik bindirmeler ve Deltarune'un gizemli kehanetlerinin özünü yakalayan oyun ilhamlı otantik tipografi ile özel kehanet panelleri tasarla.",
+    "image": {
+      "src": "/imgs/features/prophecy-preview.png"
+    },
+    "items": [
+      {
+        "title": "Otantik Deltarune Estetiği",
+        "description": "Deltarune'un ikonik kehanet paneli stilini pixel-perfect hassasiyetle yeniden yarat, orijinal oyun dokularını ve fontlarını sunarak.",
+        "icon": "RiPaletteFill"
+      },
+      {
+        "title": "İnteraktif Özelleştirme Araçları",
+        "description": "Resim yükle, kehanet metni yaz ve kendi mistik hikayeni anlatan benzersiz paneller oluşturmak için görsel ayarları ince ayarla.",
+        "icon": "RiMagicFill"
+      },
+      {
+        "title": "Çoklu Tema Varyasyonları",
+        "description": "Varsayılan, Susie'nin Karanlık Dünyası veya Son Kehanet temalarından seç, her biri oyundan farklı görsel özelliklere sahip.",
+        "icon": "RiContrastDrop2Fill"
+      }
+    ]
+  },
+  "usage": {
+    "name": "usage",
+    "title": "Deltarune Kehanet Paneli Oluşturucu Nasıl Kullanılır",
+    "description": "Sezgisel oluşturucumuzla dört basit adımda kendi mistik kehanetin yarat:",
+    "image": {
+      "src": "/imgs/features/generator-demo.png"
+    },
+    "image_position": "right",
+    "text_align": "center",
+    "items": [
+      {
+        "title": "Resminizi Yükleyin",
+        "description": "Kehanet maskeniz olarak siyah-beyaz veya monokrom bir resim seçin. Deltarune Kehanet Paneli Oluşturucu yüksek kontrastlı silüetlerle en iyi çalışır.",
+        "image": {
+          "src": "/imgs/features/step1.png"
+        }
+      },
+      {
+        "title": "Kehanetin Yaz",
+        "description": "Kehanet alanına mistik metninizi girin. Deltarune'un orijinal kehanetlerinin kriptik bilgeliğini kanalize edin veya tamamen yeni tahminler yarat.",
+        "image": {
+          "src": "/imgs/features/step2.png"
+        }
+      },
+      {
+        "title": "Görsel Ayarları Özelleştir",
+        "description": "Resim ölçeğini, dikey kaydırmayı ayarla ve tercih ettiğin temayı seç. Oluşturucu mükemmel sonuçlar için gerçek zamanlı önizleme sunar.",
+        "image": {
+          "src": "/imgs/features/step3.png"
+        }
+      },
+      {
+        "title": "İndir ve Paylaş",
+        "description": "Tamamlanmış kehanet panelini yüksek kaliteli resim olarak kaydet. Yaratımını Deltarune topluluğuyla paylaş veya fan projelerinde kullan.",
+        "image": {
+          "src": "/imgs/features/step4.png"
+        }
+      }
+    ]
+  },
+  "prophecyGenerator": {
+    "name": "prophecy-generator",
+    "title": "Deltarune Kehanet Paneli Oluşturucu",
+    "description": "Fikirlerinizi animasyonlu kaydırma dokuları, eterik bindirmeler ve fanların sevdiği karakteristik pixelli estetik dahil olmak üzere otantik Deltarune görsel efektleri ile mistik kehanetlere dönüştür."
+  },
+  "features": {
+    "name": "features",
+    "title": "Yaratıcı İfade için Profesyonel Özellikler",
+    "label": "Özellikler",
+    "description": "Deltarune Kehanet Paneli Oluşturucu, otantik oyun varlıklarını güçlü özelleştirme araçlarıyla birleştirir, yaratıcılara büyüleyici kehanet panelleri oluşturmak için ihtiyaç duydukları her şeyi verir.",
+    "items": [
+      {
+        "title": "Animasyonlu Görsel Efektler",
+        "description": "Dinamik kaydırma dokuları ve karıştırma efektleri kehanetlerinizi hayata geçirir, tıpkı orijinal Deltarune sahnelerinde olduğu gibi.",
+        "icon": "RiSparklingFill"
+      },
+      {
+        "title": "Hayalet Resim Bindirileri",
+        "description": "İnce yüzen animasyonlar yüklediğiniz resimlere derinlik ve gizem katar, doğaüstü bir atmosfer yaratır.",
+        "icon": "RiGhostFill"
+      },
+      {
+        "title": "Duyarlı Pixel Render",
+        "description": "Deltarune'un nostaljik estetiğini korurken tüm ekran boyutlarında keskin pixel art kalitesini sürdürür.",
+        "icon": "RiComputerFill"
+      },
+      {
+        "title": "Özel Font Desteği",
+        "description": "Gerçek kehanet metni stillemesi için 8bitoperator ve Determination Mono dahil otantik Deltarune fontları kullanır.",
+        "icon": "RiFontSize"
+      },
+      {
+        "title": "Gerçek Zamanlı Önizleme",
+        "description": "Yaratırken değişikliklerinizi anında görün, kehanet panelinizin tam olarak hayal ettiğiniz gibi görünmesini sağlayın.",
+        "icon": "RiEye2Fill"
+      },
+      {
+        "title": "Yüksek Kaliteli Dışa Aktarım",
+        "description": "Yaratımlarınızı sosyal medyada paylaşmak veya fan projelerine dahil etmek için optimal çözünürlükte indirin.",
+        "icon": "RiDownload2Fill"
+      }
+    ]
+  },
+  "examples": {
+    "name": "examples",
+    "title": "Topluluktan İlham Verici Yaratımlar",
+    "label": "Galeri",
+    "description": "Diğer Deltarune fanlarının Kehanet Paneli Oluşturucu ile neler yarattığını gör:",
+    "items": []
+  },
+  "faq": {
+    "name": "faq",
+    "label": "SSS",
+    "title": "Deltarune Kehanet Paneli Oluşturucu Hakkında Sık Sorulan Sorular",
+    "description": "Oluşturucu aracımızla mistik kehanetler yaratma hakkında daha fazla öğren.",
+    "items": [
+      {
+        "title": "Deltarune Kehanet Paneli Oluşturucu nedir ve oyunla nasıl ilişkilidir?",
+        "description": "Deltarune Kehanet Paneli Oluşturucu, Toby Fox'un Deltarune'unun ikonik kehanet paneli estetiğini yeniden yaratan fan yapımı yaratıcı bir araçtır. Fanların orijinal oyunun gizemli kehanet sekanslarında bulunan aynı görsel stil, fontlar ve animasyonlu efektleri kullanarak özel kehanet panelleri tasarlamasına olanak tanır."
+      },
+      {
+        "title": "Oluşturucu ile hangi resim formatları en iyi çalışır?",
+        "description": "Deltarune Kehanet Paneli Oluşturucu PNG veya JPG formatında siyah-beyaz veya monokrom resimlerle optimal şekilde çalışır. Yüksek kontrastlı silüetler Deltarune'un orijinal kehanet panellerinde görülen eterik maske efektini taklit ederek en otantik sonuçları üretir."
+      },
+      {
+        "title": "Yaratımlarımı fan projeleri veya sosyal medya için kullanabilir miyim?",
+        "description": "Evet! Oluşturucumuzla yaratılan kehanet panelleri fan art, sosyal medya gönderileri ve topluluk projeleri için mükemmeldir. Deltarune'un fikri mülkiyetine saygı gösterirken ve her zaman Toby Fox'un orijinal oyununu kredilendirirken mistik yaratımlarınızı paylaşmanızı teşvik ediyoruz."
+      },
+      {
+        "title": "Mevcut farklı tema seçenekleri nelerdir?",
+        "description": "Deltarune Kehanet Paneli Oluşturucu üç farklı tema sunar: Varsayılan (klasik kehanet stili), Susie'nin Karanlık Dünyası (mor vurgularla daha koyu tonlar) ve Son Kehanet (dramatik oyun sonu estetiği). Her tema Deltarune'un farklı bölümlerinden benzersiz dokular ve renk şemaları içerir."
+      },
+      {
+        "title": "En iyi görsel sonuçları nasıl elde edebilirim?",
+        "description": "Deltarune Kehanet Paneli Oluşturucu ile optimal sonuçlar için net silüetleri olan yüksek kontrastlı resimler kullanın, kehanet metnini kısa ve mistik tutun, ölçek ve kaydırma ayarlarıyla deneyim yapın ve yaratıcı vizyonunuza uygun farklı temaları deneyin. Gerçek zamanlı önizleme tasarımınızı mükemmelleştirmeye yardımcı olur."
+      },
+      {
+        "title": "Bu araç resmi olarak Deltarune veya Toby Fox ile bağlantılı mı?",
+        "description": "Hayır, Deltarune Kehanet Paneli Oluşturucu Deltarune sanatını kutlamak için yaratılmış fan yapımı bir projedir. Toby Fox veya Deltarune geliştirme ekibi tarafından resmi olarak bağlantılı veya onaylanmış değildir. Tüm oyun varlıkları orijinal yaratıcılarına kredilendirilir ve bu araç tamamen fan yaratıcı ifadesi için mevcuttur."
+      }
+    ]
+  },
+  "footer": {
+    "name": "footer",
+    "brand": {
+      "title": "Deltarune Kehanet Paneli Oluşturucu",
+      "description": "Ücretsiz online oluşturucumuzla Deltarune ilhamlı otantik kehanet panelleri yarat. Animasyonlu efektler, çoklu temalar ve Toby Fox'un sevilen oyununun büyüsünü yakalayan mistik estetik ile.",
+      "logo": {
+        "src": "/logo.png",
+        "alt": "Deltarune Kehanet Paneli Oluşturucu"
+      },
+      "url": "/"
+    },
+    "copyright": "© 2025 • Fan yapımı Deltarune Kehanet Paneli Oluşturucu • Toby Fox ile bağlantılı değil",
+    "nav": {
+      "items": [
+        {
+          "title": "Yarat",
+          "children": [
+            {
+              "title": "Özellikler",
+              "url": "/#features",
+              "target": "_self"
+            },
+            {
+              "title": "Öğretici",
+              "url": "/#usage",
+              "target": "_self"
+            },
+            {
+              "title": "Monokrom Dönüştürücü",
+              "url": "/monochrome",
+              "target": "_self"
+            }
+          ]
+        },
+        {
+          "title": "Topluluk",
+          "children": [
+            {
+              "title": "Deltarune Reddit",
+              "url": "https://reddit.com/r/deltarune",
+              "target": "_blank"
+            },
+            {
+              "title": "AI Resim Oluşturucu",
+              "url": "https://loraai.io",
+              "target": "_blank"
+            }
+          ]
+        },
+        {
+          "title": "Kreditler",
+          "children": [
+            {
+              "title": "Toby Fox",
+              "url": "https://tobyfox.net",
+              "target": "_blank"
+            },
+            {
+              "title": "Deltarune Kehanet Paneli",
+              "url": "/",
+              "target": "_self"
+            }
+          ]
+        }
+      ]
+    },
+    "agreement": {
+      "items": [
+        {
+          "title": "Gizlilik Politikası",
+          "url": "/privacy-policy"
+        },
+        {
+          "title": "Kullanım Şartları",
+          "url": "/terms-of-service"
+        },
+        {
+          "title": "Fan İçeriği Politikası",
+          "url": "/fan-content-policy"
+        }
+      ]
+    }
+  }
+}

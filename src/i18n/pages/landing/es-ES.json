@@ -1,0 +1,272 @@
+{
+  "template": "deltarune-prophecy-generator",
+  "theme": "dark",
+  "header": {
+    "brand": {
+      "title": "DeltaruneProphecyPanelGenerator",
+      "logo": {
+        "src": "/logo.png",
+        "alt": "Logo Generador de Paneles de Profecía Deltarune"
+      },
+      "url": "/"
+    },
+    "nav": {
+      "items": [
+        {
+          "title": "Características",
+          "url": "/#feature",
+          "icon": ""
+        },
+        {
+          "title": "Cómo Crear",
+          "url": "/#usage",
+          "icon": ""
+        },
+        {
+          "title": "Conversor Monocromo",
+          "url": "/monochrome",
+          "icon": ""
+        },
+        {
+          "title": "Ejemplos",
+          "url": "/#examples",
+          "icon": ""
+        }
+      ]
+    },
+    "show_sign": false,
+    "show_theme": false,
+    "show_locale": true
+  },
+  "introduce": {
+    "name": "introduce",
+    "title": "Crea Paneles de Profecía Místicos con el Generador de Paneles de Profecía Deltarune",
+    "label": "Acerca de",
+    "description": "El Generador de Paneles de Profecía Deltarune da vida al estilo visual encantador del Deltarune de Toby Fox. Diseña paneles de profecía personalizados con texturas animadas, superposiciones místicas y tipografía auténtica inspirada en el videojuego que captura la esencia de las misteriosas profecías de Deltarune.",
+    "image": {
+      "src": "/imgs/features/prophecy-preview.png"
+    },
+    "items": [
+      {
+        "title": "Estética Auténtica de Deltarune",
+        "description": "Recrea el estilo icónico de los paneles de profecía de Deltarune con precisión pixel-perfect, presentando texturas y fuentes originales del videojuego.",
+        "icon": "RiPaletteFill"
+      },
+      {
+        "title": "Herramientas de Personalización Interactivas",
+        "description": "Sube imágenes, escribe textos de profecía y ajusta configuraciones visuales para crear paneles únicos que cuenten tu propia historia mística.",
+        "icon": "RiMagicFill"
+      },
+      {
+        "title": "Múltiples Variaciones de Tema",
+        "description": "Elige entre los temas Por Defecto, Mundo Oscuro de Susie o La Profecía Final, cada uno con características visuales distintas del videojuego.",
+        "icon": "RiContrastDrop2Fill"
+      }
+    ]
+  },
+  "usage": {
+    "name": "usage",
+    "title": "Cómo Utilizar el Generador de Paneles de Profecía Deltarune",
+    "description": "Crea tu propia profecía mística en cuatro pasos sencillos con nuestro generador intuitivo:",
+    "image": {
+      "src": "/imgs/features/generator-demo.png"
+    },
+    "image_position": "right",
+    "text_align": "center",
+    "items": [
+      {
+        "title": "Sube Tu Imagen",
+        "description": "Elige una imagen en blanco y negro o monocromática como tu máscara de profecía. El Generador de Paneles de Profecía Deltarune funciona mejor con siluetas de alto contraste.",
+        "image": {
+          "src": "/imgs/features/step1.png"
+        }
+      },
+      {
+        "title": "Escribe Tu Profecía",
+        "description": "Introduce tu texto místico en el campo de profecía. Canaliza la sabiduría críptica de las profecías originales de Deltarune o crea predicciones completamente nuevas.",
+        "image": {
+          "src": "/imgs/features/step2.png"
+        }
+      },
+      {
+        "title": "Personaliza la Configuración Visual",
+        "description": "Ajusta la escala de imagen, desplazamiento vertical y elige tu tema preferido. El generador ofrece vista previa en tiempo real para resultados perfectos.",
+        "image": {
+          "src": "/imgs/features/step3.png"
+        }
+      },
+      {
+        "title": "Descarga y Comparte",
+        "description": "Guarda tu panel de profecía completado como una imagen de alta calidad. Comparte tu creación con la comunidad Deltarune o úsala en proyectos de aficionados.",
+        "image": {
+          "src": "/imgs/features/step4.png"
+        }
+      }
+    ]
+  },
+  "prophecyGenerator": {
+    "name": "prophecy-generator",
+    "title": "Generador de Paneles de Profecía Deltarune",
+    "description": "Transforma tus ideas en profecías místicas con efectos visuales auténticos de Deltarune, incluyendo texturas de desplazamiento animadas, superposiciones etéreas y la estética pixelada característica que los aficionados adoran."
+  },
+  "features": {
+    "name": "features",
+    "title": "Características Profesionales para Expresión Creativa",
+    "label": "Características",
+    "description": "El Generador de Paneles de Profecía Deltarune combina elementos auténticos del videojuego con potentes herramientas de personalización, proporcionando a los creadores todo lo necesario para crear paneles de profecía cautivadores.",
+    "items": [
+      {
+        "title": "Efectos Visuales Animados",
+        "description": "Texturas de desplazamiento dinámicas y efectos de mezcla dan vida a tus profecías, tal como en las escenas originales de Deltarune.",
+        "icon": "RiSparklingFill"
+      },
+      {
+        "title": "Superposiciones de Imagen Fantasma",
+        "description": "Animaciones flotantes sutiles añaden profundidad y misterio a tus imágenes subidas, creando una atmósfera sobrenatural.",
+        "icon": "RiGhostFill"
+      },
+      {
+        "title": "Renderizado Pixel Adaptable",
+        "description": "Mantiene calidad nítida de pixel art en todos los tamaños de pantalla mientras preserva la estética nostálgica de Deltarune.",
+        "icon": "RiComputerFill"
+      },
+      {
+        "title": "Soporte de Fuentes Personalizadas",
+        "description": "Utiliza fuentes auténticas de Deltarune incluyendo 8bitoperator y Determination Mono para estilización genuina del texto de profecía.",
+        "icon": "RiFontSize"
+      },
+      {
+        "title": "Vista Previa en Tiempo Real",
+        "description": "Ve tus cambios instantáneamente mientras creas, asegurando que tu panel de profecía se vea exactamente como lo has imaginado.",
+        "icon": "RiEye2Fill"
+      },
+      {
+        "title": "Exportación de Alta Calidad",
+        "description": "Descarga tus creaciones en resolución óptima para compartir en redes sociales o incorporar en proyectos de aficionados.",
+        "icon": "RiDownload2Fill"
+      }
+    ]
+  },
+  "examples": {
+    "name": "examples",
+    "title": "Creaciones Inspiradoras de la Comunidad",
+    "label": "Galería",
+    "description": "Mira lo que otros aficionados de Deltarune han creado con el Generador de Paneles de Profecía:",
+    "items": []
+  },
+  "faq": {
+    "name": "faq",
+    "label": "FAQ",
+    "title": "Preguntas Frecuentes sobre el Generador de Paneles de Profecía Deltarune",
+    "description": "Aprende más sobre crear profecías místicas con nuestra herramienta generadora.",
+    "items": [
+      {
+        "title": "¿Qué es el Generador de Paneles de Profecía Deltarune y cómo se relaciona con el videojuego?",
+        "description": "El Generador de Paneles de Profecía Deltarune es una herramienta creativa hecha por aficionados que recrea la estética icónica de los paneles de profecía del Deltarune de Toby Fox. Permite a los aficionados diseñar paneles de profecía personalizados utilizando el mismo estilo visual, fuentes y efectos animados encontrados en las secuencias de profecía misteriosas del videojuego original."
+      },
+      {
+        "title": "¿Qué formatos de imagen funcionan mejor con el generador?",
+        "description": "El Generador de Paneles de Profecía Deltarune funciona óptimamente con imágenes en blanco y negro o monocromáticas en formato PNG o JPG. Las siluetas de alto contraste producen los resultados más auténticos, imitando el efecto de máscara etérea visto en los paneles de profecía originales de Deltarune."
+      },
+      {
+        "title": "¿Puedo utilizar mis creaciones para proyectos de aficionados o redes sociales?",
+        "description": "¡Por supuesto! Los paneles de profecía creados con nuestro generador son perfectos para fan art, publicaciones en redes sociales y proyectos comunitarios. Animamos a compartir tus creaciones místicas mientras respetas la propiedad intelectual de Deltarune y siempre acreditas el videojuego original de Toby Fox."
+      },
+      {
+        "title": "¿Cuáles son las diferentes opciones de tema disponibles?",
+        "description": "El Generador de Paneles de Profecía Deltarune ofrece tres temas distintos: Por Defecto (estilo clásico de profecía), Mundo Oscuro de Susie (tonos más oscuros con acentos morados), y La Profecía Final (estética dramática de final de videojuego). Cada tema incluye texturas y esquemas de color únicos de diferentes partes de Deltarune."
+      },
+      {
+        "title": "¿Cómo puedo conseguir los mejores resultados visuales?",
+        "description": "Para resultados óptimos con el Generador de Paneles de Profecía Deltarune, utiliza imágenes de alto contraste con siluetas claras, mantén el texto de profecía conciso y místico, experimenta con configuraciones de escala y desplazamiento, y prueba diferentes temas para que coincidan con tu visión creativa. La vista previa en tiempo real ayuda a perfeccionar tu diseño."
+      },
+      {
+        "title": "¿Esta herramienta está oficialmente relacionada con Deltarune o Toby Fox?",
+        "description": "No, el Generador de Paneles de Profecía Deltarune es un proyecto hecho por aficionados creado para celebrar el arte de Deltarune. No está oficialmente relacionado o respaldado por Toby Fox o el equipo de desarrollo de Deltarune. Todos los elementos del videojuego están acreditados a sus creadores originales, y esta herramienta existe puramente para expresión creativa de aficionados."
+      }
+    ]
+  },
+  "footer": {
+    "name": "footer",
+    "brand": {
+      "title": "Generador de Paneles de Profecía Deltarune",
+      "description": "Crea paneles de profecía auténticos inspirados en Deltarune con nuestro generador en línea gratuito. Con efectos animados, múltiples temas y la estética mística que captura la magia del querido videojuego de Toby Fox.",
+      "logo": {
+        "src": "/logo.png",
+        "alt": "Generador de Paneles de Profecía Deltarune"
+      },
+      "url": "/"
+    },
+    "copyright": "© 2025 • Generador de Paneles de Profecía Deltarune hecho por aficionados • No relacionado con Toby Fox",
+    "nav": {
+      "items": [
+        {
+          "title": "Crear",
+          "children": [
+            {
+              "title": "Características",
+              "url": "/#features",
+              "target": "_self"
+            },
+            {
+              "title": "Tutorial",
+              "url": "/#usage",
+              "target": "_self"
+            },
+            {
+              "title": "Conversor Monocromo",
+              "url": "/monochrome",
+              "target": "_self"
+            }
+          ]
+        },
+        {
+          "title": "Comunidad",
+          "children": [
+            {
+              "title": "Reddit Deltarune",
+              "url": "https://reddit.com/r/deltarune",
+              "target": "_blank"
+            },
+            {
+              "title": "Generador de Imagen IA",
+              "url": "https://loraai.io",
+              "target": "_blank"
+            }
+          ]
+        },
+        {
+          "title": "Créditos",
+          "children": [
+            {
+              "title": "Toby Fox",
+              "url": "https://tobyfox.net",
+              "target": "_blank"
+            },
+            {
+              "title": "Panel de Profecía Deltarune",
+              "url": "/",
+              "target": "_self"
+            }
+          ]
+        }
+      ]
+    },
+    "agreement": {
+      "items": [
+        {
+          "title": "Política de Privacidad",
+          "url": "/privacy-policy"
+        },
+        {
+          "title": "Términos de Uso",
+          "url": "/terms-of-service"
+        },
+        {
+          "title": "Política de Contenido de Aficionados",
+          "url": "/fan-content-policy"
+        }
+      ]
+    }
+  }
+}

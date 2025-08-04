@@ -1,0 +1,105 @@
+{
+  "hero": {
+    "title": "Convertisseur d'Image Monochrome pour Panneaux de Prophétie Deltarune",
+    "description": "Transformez vos images en art noir et blanc époustouflant avec notre convertisseur monochrome avancé. Parfait pour créer des masques de panneaux de prophétie avec l'algorithme exclusif de détection de contours UltraThink."
+  },
+  "monochromeConverter": {
+    "name": "monochrome-converter",
+    "title": "Convertisseur d'Image Monochrome En Ligne Gratuit",
+    "description": "Transformez vos images en art noir et blanc époustouflant avec notre algorithme avancé de détection de contours UltraThink. Parfait pour créer des masques de panneaux de prophétie à fort contraste avec une préservation supérieure des détails."
+  },
+  "introduce": {
+    "name": "introduce",
+    "title": "Conversion Monochrome Avancée avec la Technologie UltraThink",
+    "label": "À propos",
+    "description": "Notre convertisseur monochrome utilise l'algorithme de détection de contours UltraThink de pointe pour créer des images parfaites en noir et blanc pour les panneaux de prophétie. Préservez les détails fins tout en obtenant des résultats nets et à fort contraste.",
+    "image": {
+      "src": "/imgs/features/monochrome-preview.png"
+    },
+    "items": [
+      {
+        "title": "Détection de Contours UltraThink",
+        "description": "Algorithme révolutionnaire qui analyse les pixels environnants pour préserver les contours et détails importants tout en créant des images monochromes nettes.",
+        "icon": "RiScanLine"
+      },
+      {
+        "title": "Traitement en Temps Réel",
+        "description": "Voyez vos ajustements instantanément avec notre système d'aperçu en direct. Ajustement fin du seuil, luminosité et contraste en temps réel.",
+        "icon": "RiEyeLine"
+      },
+      {
+        "title": "Algorithmes Multiples",
+        "description": "Choisissez entre seuil simple, RGB moyen, luminance pondérée ou notre algorithme UltraThink avancé pour différents effets artistiques.",
+        "icon": "RiSettings3Line"
+      }
+    ]
+  },
+  "usage": {
+    "name": "usage",
+    "title": "Comment Utiliser le Convertisseur Monochrome",
+    "description": "Convertissez vos images en noir et blanc parfait en quatre étapes simples :",
+    "image": {
+      "src": "/imgs/features/monochrome-demo.png"
+    },
+    "image_position": "right",
+    "text_align": "center",
+    "items": [
+      {
+        "title": "Téléchargez Votre Image",
+        "description": "Sélectionnez n'importe quel fichier image depuis votre appareil. Supporte les formats JPG, PNG, GIF, WebP et BMP.",
+        "image": {
+          "src": "/imgs/features/upload-step.png"
+        }
+      },
+      {
+        "title": "Choisissez l'Algorithme",
+        "description": "Sélectionnez parmi nos méthodes de conversion. Essayez UltraThink pour la meilleure préservation des contours et rétention des détails.",
+        "image": {
+          "src": "/imgs/features/algorithm-step.png"
+        }
+      },
+      {
+        "title": "Ajustez les Paramètres",
+        "description": "Ajustement fin du seuil, luminosité et contraste. Activez l'inversion pour des effets négatifs. Tous les changements apparaissent instantanément.",
+        "image": {
+          "src": "/imgs/features/settings-step.png"
+        }
+      },
+      {
+        "title": "Téléchargez et Utilisez",
+        "description": "Sauvegardez votre image convertie en PNG ou copiez dans le presse-papiers. Parfait pour utiliser dans le générateur de panneaux de prophétie.",
+        "image": {
+          "src": "/imgs/features/download-step.png"
+        }
+      }
+    ]
+  },
+  "faq": {
+    "name": "faq",
+    "label": "FAQ",
+    "title": "Questions Fréquentes sur la Conversion Monochrome",
+    "description": "Apprenez-en plus sur notre algorithme UltraThink et le processus de conversion monochrome.",
+    "items": [
+      {
+        "title": "Qu'est-ce qui rend l'algorithme UltraThink spécial ?",
+        "description": "UltraThink est notre algorithme propriétaire de conversion consciente des contours qui analyse les pixels environnants pour préserver les détails importants tout en créant des images nettes en noir et blanc. Contrairement aux méthodes de seuil simples, il maintient les détails fins et les dégradés lisses quand nécessaire."
+      },
+      {
+        "title": "Quels formats d'image sont supportés ?",
+        "description": "Notre convertisseur monochrome supporte tous les principaux formats d'image incluant JPG, JPEG, PNG, GIF, WebP et BMP. La sortie est toujours un fichier PNG de haute qualité avec la transparence préservée quand applicable."
+      },
+      {
+        "title": "Cet outil est-il complètement gratuit ?",
+        "description": "Oui, le convertisseur d'image monochrome est complètement gratuit à utiliser sans filigranes, limites de taille de fichier ou inscription requise. Convertissez autant d'images que nécessaire pour vos panneaux de prophétie."
+      },
+      {
+        "title": "Comment cela aide-t-il avec les panneaux de prophétie Deltarune ?",
+        "description": "Les panneaux de prophétie nécessitent des images à fort contraste en noir et blanc comme masques. Notre convertisseur crée des silhouettes parfaites qui fonctionnent parfaitement avec le Générateur de Panneaux de Prophétie Deltarune, garantissant que vos prophéties paraissent authentiques et professionnelles."
+      },
+      {
+        "title": "Puis-je utiliser les images converties commercialement ?",
+        "description": "Oui, vous pouvez utiliser les images converties à toute fin incluant les projets commerciaux. Le convertisseur ne fait que traiter vos images téléchargées - vous conservez tous les droits sur votre contenu original."
+      }
+    ]
+  }
+}

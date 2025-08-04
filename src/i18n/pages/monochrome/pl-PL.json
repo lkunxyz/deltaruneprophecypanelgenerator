@@ -1,0 +1,105 @@
+{
+  "hero": {
+    "title": "Konwerter Obrazów Monochromatycznych do Paneli Przepowiedni Deltarune",
+    "description": "Przekształć swoje obrazy w oszałamiającą sztukę czarno-białą za pomocą naszego zaawansowanego konwertera monochromatycznego. Idealny do tworzenia masek paneli przepowiedni z ekskluzywnym algorytmem detekcji krawędzi UltraThink."
+  },
+  "monochromeConverter": {
+    "name": "monochrome-converter",
+    "title": "Darmowy Konwerter Obrazów Monochromatycznych Online",
+    "description": "Przekształć swoje obrazy w oszałamiającą sztukę czarno-białą za pomocą naszego zaawansowanego algorytmu detekcji krawędzi UltraThink. Idealny do tworzenia masek paneli przepowiedni o wysokim kontraście z doskonałym zachowaniem szczegółów."
+  },
+  "introduce": {
+    "name": "introduce",
+    "title": "Zaawansowana Konwersja Monochromatyczna z Technologią UltraThink",
+    "label": "O Nas",
+    "description": "Nasz konwerter monochromatyczny używa najnowocześniejszego algorytmu detekcji krawędzi UltraThink do tworzenia idealnych czarno-białych obrazów do paneli przepowiedni. Zachowaj drobne szczegóły osiągając czyste, wysokokontrastowe rezultaty.",
+    "image": {
+      "src": "/imgs/features/monochrome-preview.png"
+    },
+    "items": [
+      {
+        "title": "Detekcja Krawędzi UltraThink",
+        "description": "Rewolucyjny algorytm, który analizuje okoliczne piksele, aby zachować ważne krawędzie i szczegóły podczas tworzenia czystych obrazów monochromatycznych.",
+        "icon": "RiScanLine"
+      },
+      {
+        "title": "Przetwarzanie w Czasie Rzeczywistym",
+        "description": "Zobacz swoje dostosowania natychmiast dzięki naszemu systemowi podglądu na żywo. Dostrajaj próg, jasność i kontrast w czasie rzeczywistym.",
+        "icon": "RiEyeLine"
+      },
+      {
+        "title": "Wiele Algorytmów",
+        "description": "Wybieraj między prostym progiem, średnim RGB, ważoną luminancją lub naszym zaawansowanym algorytmem UltraThink dla różnych efektów artystycznych.",
+        "icon": "RiSettings3Line"
+      }
+    ]
+  },
+  "usage": {
+    "name": "usage",
+    "title": "Jak Używać Konwertera Monochromatycznego",
+    "description": "Przekonwertuj swoje obrazy na idealną czerń i biel w czterech prostych krokach:",
+    "image": {
+      "src": "/imgs/features/monochrome-demo.png"
+    },
+    "image_position": "right",
+    "text_align": "center",
+    "items": [
+      {
+        "title": "Prześlij Swój Obraz",
+        "description": "Wybierz dowolny plik obrazu z swojego urządzenia. Obsługuje formaty JPG, PNG, GIF, WebP i BMP.",
+        "image": {
+          "src": "/imgs/features/upload-step.png"
+        }
+      },
+      {
+        "title": "Wybierz Algorytm",
+        "description": "Wybierz spośród naszych metod konwersji. Wypróbuj UltraThink dla najlepszego zachowania krawędzi i zachowania szczegółów.",
+        "image": {
+          "src": "/imgs/features/algorithm-step.png"
+        }
+      },
+      {
+        "title": "Dostosuj Ustawienia",
+        "description": "Precyzyjnie dostosuj próg, jasność i kontrast. Włącz odwrócenie dla efektów negatywowych. Wszystkie zmiany pojawiają się natychmiast.",
+        "image": {
+          "src": "/imgs/features/settings-step.png"
+        }
+      },
+      {
+        "title": "Pobierz i Użyj",
+        "description": "Zapisz swój przekonwertowany obraz jako PNG lub skopiuj do schowka. Idealny do użycia w generatorze paneli przepowiedni.",
+        "image": {
+          "src": "/imgs/features/download-step.png"
+        }
+      }
+    ]
+  },
+  "faq": {
+    "name": "faq",
+    "label": "FAQ",
+    "title": "Często Zadawane Pytania o Konwersję Monochromatyczną",
+    "description": "Dowiedz się więcej o naszym algorytmie UltraThink i procesie konwersji monochromatycznej.",
+    "items": [
+      {
+        "title": "Co czyni algorytm UltraThink wyjątkowym?",
+        "description": "UltraThink to nasz zastrzeżony algorytm konwersji świadomy krawędzi, który analizuje okoliczne piksele, aby zachować ważne szczegóły podczas tworzenia czystych czarno-białych obrazów. W przeciwieństwie do prostych metod progowych, zachowuje drobne szczegóły i płynne gradienty tam, gdzie to potrzebne."
+      },
+      {
+        "title": "Jakie formaty obrazów są obsługiwane?",
+        "description": "Nasz konwerter monochromatyczny obsługuje wszystkie główne formaty obrazów, w tym JPG, JPEG, PNG, GIF, WebP i BMP. Wyjście to zawsze wysokiej jakości plik PNG z zachowaną przezroczystością, gdy ma to zastosowanie."
+      },
+      {
+        "title": "Czy to narzędzie jest całkowicie darmowe?",
+        "description": "Tak, konwerter obrazów monochromatycznych jest całkowicie darmowy w użyciu bez znaków wodnych, ograniczeń rozmiaru pliku lub wymaganej rejestracji. Konwertuj tyle obrazów, ile potrzebujesz do swoich paneli przepowiedni."
+      },
+      {
+        "title": "Jak to pomaga z panelami przepowiedni Deltarune?",
+        "description": "Panele przepowiedni wymagają wysokokontrastowych czarno-białych obrazów jako masek. Nasz konwerter tworzy idealne sylwetki, które bezproblemowo współpracują z Generatorem Paneli Przepowiedni Deltarune, zapewniając, że Twoje przepowiednie wyglądają autentycznie i profesjonalnie."
+      },
+      {
+        "title": "Czy mogę używać przekonwertowanych obrazów komercyjnie?",
+        "description": "Tak, możesz używać przekonwertowanych obrazów do dowolnych celów, w tym projektów komercyjnych. Konwerter przetwarza tylko Twoje przesłane obrazy - zachowujesz wszystkie prawa do swojej oryginalnej treści."
+      }
+    ]
+  }
+}

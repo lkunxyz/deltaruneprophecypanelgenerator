@@ -1,0 +1,105 @@
+{
+  "hero": {
+    "title": "Deltarune Kehanet Panelleri için Monokrom Resim Dönüştürücü",
+    "description": "Gelişmiş monokrom dönüştürücümüzle resimlerinizi çarpıcı siyah-beyaz sanata dönüştürün. Özel UltraThink kenar algılama algoritması ile kehanet paneli maskeleri oluşturmak için mükemmel."
+  },
+  "monochromeConverter": {
+    "name": "monochrome-converter",
+    "title": "Ücretsiz Online Monokrom Resim Dönüştürücü",
+    "description": "Gelişmiş UltraThink kenar algılama algoritmamızla resimlerinizi çarpıcı siyah-beyaz sanata dönüştürün. Üstün detay koruması ile yüksek kontrastlı kehanet paneli maskeleri oluşturmak için mükemmel."
+  },
+  "introduce": {
+    "name": "introduce",
+    "title": "UltraThink Teknolojisi ile Gelişmiş Monokrom Dönüşüm",
+    "label": "Hakkında",
+    "description": "Monokrom dönüştürücümüz kehanet panelleri için mükemmel siyah-beyaz resimler oluşturmak üzere son teknoloji UltraThink kenar algılama algoritması kullanır. Temiz, yüksek kontrastlı sonuçlar elde ederken ince detayları korur.",
+    "image": {
+      "src": "/imgs/features/monochrome-preview.png"
+    },
+    "items": [
+      {
+        "title": "UltraThink Kenar Algılama",
+        "description": "Temiz monokrom resimler oluştururken önemli kenarları ve detayları korumak için çevredeki pikselleri analiz eden devrimci algoritma.",
+        "icon": "RiScanLine"
+      },
+      {
+        "title": "Gerçek Zamanlı İşleme",
+        "description": "Canlı önizleme sistemimizle ayarlarınızı anında görün. Eşik, parlaklık ve kontrastı gerçek zamanlı ince ayarlama.",
+        "icon": "RiEyeLine"
+      },
+      {
+        "title": "Çoklu Algoritmalar",
+        "description": "Farklı sanatsal efektler için basit eşik, ortalama RGB, ağırlıklı parlaklık veya gelişmiş UltraThink algoritmamız arasından seçin.",
+        "icon": "RiSettings3Line"
+      }
+    ]
+  },
+  "usage": {
+    "name": "usage",
+    "title": "Monokrom Dönüştürücü Nasıl Kullanılır",
+    "description": "Resimlerinizi dört basit adımda mükemmel siyah-beyaza dönüştürün:",
+    "image": {
+      "src": "/imgs/features/monochrome-demo.png"
+    },
+    "image_position": "right",
+    "text_align": "center",
+    "items": [
+      {
+        "title": "Resminizi Yükleyin",
+        "description": "Cihazınızdan herhangi bir resim dosyası seçin. JPG, PNG, GIF, WebP ve BMP formatlarını destekler.",
+        "image": {
+          "src": "/imgs/features/upload-step.png"
+        }
+      },
+      {
+        "title": "Algoritma Seçin",
+        "description": "Dönüştürme yöntemlerimiz arasından seçin. En iyi kenar koruması ve detay saklama için UltraThink'i deneyin.",
+        "image": {
+          "src": "/imgs/features/algorithm-step.png"
+        }
+      },
+      {
+        "title": "Ayarları Düzenleyin",
+        "description": "Eşik, parlaklık ve kontrastı ince ayarlayın. Negatif efektler için tersini etkinleştirin. Tüm değişiklikler anında görünür.",
+        "image": {
+          "src": "/imgs/features/settings-step.png"
+        }
+      },
+      {
+        "title": "İndirin ve Kullanın",
+        "description": "Dönüştürülmüş resminizi PNG olarak kaydedin veya panoya kopyalayın. Kehanet paneli oluşturucusunda kullanmak için mükemmel.",
+        "image": {
+          "src": "/imgs/features/download-step.png"
+        }
+      }
+    ]
+  },
+  "faq": {
+    "name": "faq",
+    "label": "SSS",
+    "title": "Monokrom Dönüşüm Hakkında Sık Sorulan Sorular",
+    "description": "UltraThink algoritmamız ve monokrom dönüşüm süreci hakkında daha fazla öğrenin.",
+    "items": [
+      {
+        "title": "UltraThink algoritmasını özel kılan nedir?",
+        "description": "UltraThink, temiz siyah-beyaz resimler oluştururken önemli detayları korumak için çevredeki pikselleri analiz eden tescilli kenar-bilinçli dönüşüm algoritmamızdır. Basit eşik yöntemlerinin aksine, gerektiğinde ince detayları ve düzgün gradyanları korur."
+      },
+      {
+        "title": "Hangi resim formatları desteklenir?",
+        "description": "Monokrom dönüştürücümüz JPG, JPEG, PNG, GIF, WebP ve BMP dahil tüm ana resim formatlarını destekler. Çıktı her zaman uygulandığında şeffaflığı korunmuş yüksek kaliteli PNG dosyasıdır."
+      },
+      {
+        "title": "Bu araç tamamen ücretsiz mi?",
+        "description": "Evet, monokrom resim dönüştürücü filigran, dosya boyutu sınırları veya kayıt gerekliliği olmadan tamamen ücretsiz kullanımdır. Kehanet panelleriniz için ihtiyacınız kadar resmi dönüştürün."
+      },
+      {
+        "title": "Bu Deltarune kehanet panelleri ile nasıl yardımcı olur?",
+        "description": "Kehanet panelleri maske olarak yüksek kontrastlı siyah-beyaz resimler gerektirir. Dönüştürücümüz Deltarune Kehanet Paneli Oluşturucu ile kusursuz çalışan mükemmel silüetler oluşturur, kehanetlerinizin otantik ve profesyonel görünmesini sağlar."
+      },
+      {
+        "title": "Dönüştürülmüş resimleri ticari olarak kullanabilir miyim?",
+        "description": "Evet, dönüştürülmüş resimleri ticari projeler dahil herhangi bir amaç için kullanabilirsiniz. Dönüştürücü sadece yüklediğiniz resimleri işler - orijinal içeriğinizin tüm haklarını korursunuz."
+      }
+    ]
+  }
+}

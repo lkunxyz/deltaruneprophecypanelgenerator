@@ -1,0 +1,272 @@
+{
+  "template": "deltarune-prophecy-generator",
+  "theme": "dark",
+  "header": {
+    "brand": {
+      "title": "DeltaruneProphecyPanelGenerator",
+      "logo": {
+        "src": "/logo.png",
+        "alt": "Deltarune Prophecy Panel Generator Logo"
+      },
+      "url": "/"
+    },
+    "nav": {
+      "items": [
+        {
+          "title": "Features",
+          "url": "/#feature",
+          "icon": ""
+        },
+        {
+          "title": "How to Create",
+          "url": "/#usage",
+          "icon": ""
+        },
+        {
+          "title": "Monochrome Converter",
+          "url": "/monochrome",
+          "icon": ""
+        },
+        {
+          "title": "Examples",
+          "url": "/#examples",
+          "icon": ""
+        }
+      ]
+    },
+    "show_sign": false,
+    "show_theme": false,
+    "show_locale": true
+  },
+  "introduce": {
+    "name": "introduce",
+    "title": "Create Amazing Mystical Prophecy Panels with the Deltarune Prophecy Panel Generator",
+    "label": "About",
+    "description": "The Deltarune Prophecy Panel Generator brings the captivating visual style of Toby Fox's Deltarune to life. Design custom prophecy panels with animated textures, mystical overlays, and authentic game-inspired typography that captures the essence of Deltarune's mysterious prophecies - perfect for Filipino gamers and creators!",
+    "image": {
+      "src": "/imgs/features/prophecy-preview.png"
+    },
+    "items": [
+      {
+        "title": "Authentic Deltarune Aesthetics",
+        "description": "Recreate the iconic prophecy panel style from Deltarune with pixel-perfect accuracy, featuring original game textures and fonts that will surely impress your gaming community.",
+        "icon": "RiPaletteFill"
+      },
+      {
+        "title": "Interactive Customization Tools",
+        "description": "Upload images, write prophecy text, and fine-tune visual settings to create unique panels that tell your own mystical story - walang limits sa creativity mo!",
+        "icon": "RiMagicFill"
+      },
+      {
+        "title": "Multiple Theme Variations",
+        "description": "Choose from Default, Susie's Dark World, or The Final Prophecy themes, each with distinct visual characteristics from the game that will make your creations stand out.",
+        "icon": "RiContrastDrop2Fill"
+      }
+    ]
+  },
+  "usage": {
+    "name": "usage",
+    "title": "How to Use the Deltarune Prophecy Panel Generator",
+    "description": "Create your own mystical prophecy in four simple steps with our user-friendly generator:",
+    "image": {
+      "src": "/imgs/features/generator-demo.png"
+    },
+    "image_position": "right",
+    "text_align": "center",
+    "items": [
+      {
+        "title": "Upload Your Image",
+        "description": "Choose a black-and-white or monochrome image as your prophecy mask. The Deltarune Prophecy Panel Generator works best with high-contrast silhouettes - galing talaga!",
+        "image": {
+          "src": "/imgs/features/step1.png"
+        }
+      },
+      {
+        "title": "Write Your Prophecy",
+        "description": "Enter your mystical text in the prophecy field. Channel the cryptic wisdom of Deltarune's original prophecies or create entirely new predictions that will amaze your friends.",
+        "image": {
+          "src": "/imgs/features/step2.png"
+        }
+      },
+      {
+        "title": "Customize Visual Settings",
+        "description": "Adjust image scale, vertical offset, and choose your preferred theme. The generator offers real-time preview for perfect results - sobrang ganda ng output!",
+        "image": {
+          "src": "/imgs/features/step3.png"
+        }
+      },
+      {
+        "title": "Download and Share",
+        "description": "Save your completed prophecy panel as a high-quality image. Share your creation with the Deltarune community or use it in fan projects - ipakita mo sa lahat!",
+        "image": {
+          "src": "/imgs/features/step4.png"
+        }
+      }
+    ]
+  },
+  "prophecyGenerator": {
+    "name": "prophecy-generator",
+    "title": "Deltarune Prophecy Panel Generator",
+    "description": "Transform your ideas into mystical prophecies with authentic Deltarune visual effects, including animated scrolling textures, ethereal overlays, and the signature pixelated aesthetic that Filipino gamers love."
+  },
+  "features": {
+    "name": "features",
+    "title": "Professional Features for Creative Expression",
+    "label": "Features",
+    "description": "The Deltarune Prophecy Panel Generator combines authentic game assets with powerful customization tools, giving Filipino creators everything needed to craft compelling prophecy panels that will surely go viral!",
+    "items": [
+      {
+        "title": "Animated Visual Effects",
+        "description": "Dynamic scrolling textures and blending effects bring your prophecies to life, just like in the original Deltarune scenes - astig na effects!",
+        "icon": "RiSparklingFill"
+      },
+      {
+        "title": "Ghost Image Overlays",
+        "description": "Subtle floating animations add depth and mystery to your uploaded images, creating an otherworldly atmosphere that's perfect for sharing online.",
+        "icon": "RiGhostFill"
+      },
+      {
+        "title": "Responsive Pixel Rendering",
+        "description": "Maintains crisp pixel art quality across all screen sizes while preserving the nostalgic aesthetic of Deltarune - compatible with all devices!",
+        "icon": "RiComputerFill"
+      },
+      {
+        "title": "Custom Font Support",
+        "description": "Uses authentic Deltarune fonts including 8bitoperator and Determination Mono for genuine prophecy text styling that looks professional.",
+        "icon": "RiFontSize"
+      },
+      {
+        "title": "Real-time Preview",
+        "description": "See your changes instantly as you create, ensuring your prophecy panel looks exactly as envisioned - no hassle, pure convenience!",
+        "icon": "RiEye2Fill"
+      },
+      {
+        "title": "High-Quality Export",
+        "description": "Download your creations in optimal resolution for sharing on social media or incorporating into fan projects - ready for posting agad!",
+        "icon": "RiDownload2Fill"
+      }
+    ]
+  },
+  "examples": {
+    "name": "examples",
+    "title": "Inspiring Creations from the Community",
+    "label": "Gallery",
+    "description": "See what fellow Deltarune fans have created with the Prophecy Panel Generator:",
+    "items": []
+  },
+  "faq": {
+    "name": "faq",
+    "label": "FAQ",
+    "title": "Frequently Asked Questions About Deltarune Prophecy Panel Generator",
+    "description": "Learn more about creating mystical prophecies with our generator tool.",
+    "items": [
+      {
+        "title": "What is the Deltarune Prophecy Panel Generator and how does it relate to the game?",
+        "description": "The Deltarune Prophecy Panel Generator is a fan-made creative tool that recreates the iconic prophecy panel aesthetic from Toby Fox's Deltarune. It allows fans to design custom prophecy panels using the same visual style, fonts, and animated effects found in the original game's mysterious prophecy sequences - perfect for Filipino gamers who love creating content!"
+      },
+      {
+        "title": "What image formats work best with the generator?",
+        "description": "The Deltarune Prophecy Panel Generator works optimally with black-and-white or monochrome images in PNG or JPG format. High-contrast silhouettes produce the most authentic results, mimicking the ethereal mask effect seen in Deltarune's original prophecy panels."
+      },
+      {
+        "title": "Can I use my creations for fan projects or social media?",
+        "description": "Absolutely! Prophecy panels created with our generator are perfect for fan art, social media posts, and community projects. We encourage sharing your mystical creations while respecting Deltarune's intellectual property and always crediting the original game by Toby Fox."
+      },
+      {
+        "title": "What are the different theme options available?",
+        "description": "The Deltarune Prophecy Panel Generator offers three distinct themes: Default (classic prophecy style), Susie's Dark World (darker tones with purple accents), and The Final Prophecy (dramatic end-game aesthetic). Each theme includes unique textures and color schemes from different parts of Deltarune."
+      },
+      {
+        "title": "How can I achieve the best visual results?",
+        "description": "For optimal results with the Deltarune Prophecy Panel Generator, use high-contrast images with clear silhouettes, keep prophecy text concise and mystical, experiment with scale and offset settings, and try different themes to match your creative vision. The real-time preview helps perfect your design - sulit talaga!"
+      },
+      {
+        "title": "Is this tool officially affiliated with Deltarune or Toby Fox?",
+        "description": "No, the Deltarune Prophecy Panel Generator is a fan-made project created to celebrate the artistry of Deltarune. It's not officially affiliated with or endorsed by Toby Fox or the Deltarune development team. All game assets are credited to their original creators, and this tool exists purely for creative fan expression."
+      }
+    ]
+  },
+  "footer": {
+    "name": "footer",
+    "brand": {
+      "title": "Deltarune Prophecy Panel Generator",
+      "description": "Create authentic Deltarune-inspired prophecy panels with our free online generator. Featuring animated effects, multiple themes, and the mystical aesthetic that captures the magic of Toby Fox's beloved game - made for the Filipino gaming community!",
+      "logo": {
+        "src": "/logo.png",
+        "alt": "Deltarune Prophecy Panel Generator"
+      },
+      "url": "/"
+    },
+    "copyright": "© 2025 • Fan-made Deltarune Prophecy Panel Generator • Not affiliated with Toby Fox",
+    "nav": {
+      "items": [
+        {
+          "title": "Create",
+          "children": [
+            {
+              "title": "Features",
+              "url": "/#features",
+              "target": "_self"
+            },
+            {
+              "title": "Tutorial",
+              "url": "/#usage",
+              "target": "_self"
+            },
+            {
+              "title": "Monochrome Converter",
+              "url": "/monochrome",
+              "target": "_self"
+            }
+          ]
+        },
+        {
+          "title": "Community",
+          "children": [
+            {
+              "title": "Deltarune Reddit",
+              "url": "https://reddit.com/r/deltarune",
+              "target": "_blank"
+            },
+            {
+              "title": "AI Image Generator",
+              "url": "https://loraai.io",
+              "target": "_blank"
+            }
+          ]
+        },
+        {
+          "title": "Credits",
+          "children": [
+            {
+              "title": "Toby Fox",
+              "url": "https://tobyfox.net",
+              "target": "_blank"
+            },
+            {
+              "title": "Deltarune Prophecy Panel",
+              "url": "/",
+              "target": "_self"
+            }
+          ]
+        }
+      ]
+    },
+    "agreement": {
+      "items": [
+        {
+          "title": "Privacy Policy",
+          "url": "/privacy-policy"
+        },
+        {
+          "title": "Terms of Use",
+          "url": "/terms-of-service"
+        },
+        {
+          "title": "Fan Content Policy",
+          "url": "/fan-content-policy"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "hero": {
+    "title": "Monochrom-Bildkonverter für Deltarune Prophezeiungspanele",
+    "description": "Verwandle deine Bilder in atemberaubende Schwarz-Weiß-Kunst mit unserem fortschrittlichen Monochrom-Konverter. Perfekt zum Erstellen von Prophezeiungspanel-Masken mit dem exklusiven UltraThink Kantenerkennung-Algorithmus."
+  },
+  "monochromeConverter": {
+    "name": "monochrome-converter",
+    "title": "Kostenloser Online Monochrom-Bildkonverter",
+    "description": "Verwandle deine Bilder in atemberaubende Schwarz-Weiß-Kunst mit unserem fortschrittlichen UltraThink Kantenerkennung-Algorithmus. Perfekt zum Erstellen kontrastreicher Prophezeiungspanel-Masken mit überlegener Detailerhaltung."
+  },
+  "introduce": {
+    "name": "introduce",
+    "title": "Fortschrittliche Monochrom-Konvertierung mit UltraThink-Technologie",
+    "label": "Über uns",
+    "description": "Unser Monochrom-Konverter verwendet den hochmodernen UltraThink Kantenerkennung-Algorithmus, um perfekte Schwarz-Weiß-Bilder für Prophezeiungspanele zu erstellen. Bewahre feine Details während du saubere, kontrastreiche Ergebnisse erzielst.",
+    "image": {
+      "src": "/imgs/features/monochrome-preview.png"
+    },
+    "items": [
+      {
+        "title": "UltraThink Kantenerkennung",
+        "description": "Revolutionärer Algorithmus, der umgebende Pixel analysiert, um wichtige Kanten und Details zu bewahren, während saubere monochrome Bilder erstellt werden.",
+        "icon": "RiScanLine"
+      },
+      {
+        "title": "Echtzeit-Verarbeitung",
+        "description": "Sieh deine Anpassungen sofort mit unserem Live-Vorschau-System. Feinabstimmung von Schwellenwert, Helligkeit und Kontrast in Echtzeit.",
+        "icon": "RiEyeLine"
+      },
+      {
+        "title": "Mehrere Algorithmen",
+        "description": "Wähle zwischen einfachem Schwellenwert, durchschnittlichem RGB, gewichteter Luminanz oder unserem fortschrittlichen UltraThink-Algorithmus für verschiedene künstlerische Effekte.",
+        "icon": "RiSettings3Line"
+      }
+    ]
+  },
+  "usage": {
+    "name": "usage",
+    "title": "So Verwendest Du den Monochrom-Konverter",
+    "description": "Konvertiere deine Bilder in perfektes Schwarz-Weiß in vier einfachen Schritten:",
+    "image": {
+      "src": "/imgs/features/monochrome-demo.png"
+    },
+    "image_position": "right",
+    "text_align": "center",
+    "items": [
+      {
+        "title": "Lade Dein Bild Hoch",
+        "description": "Wähle eine beliebige Bilddatei von deinem Gerät. Unterstützt JPG-, PNG-, GIF-, WebP- und BMP-Formate.",
+        "image": {
+          "src": "/imgs/features/upload-step.png"
+        }
+      },
+      {
+        "title": "Wähle Algorithmus",
+        "description": "Wähle aus unseren Konvertierungsmethoden. Probiere UltraThink für die beste Kantenerhaltung und Detailbeibehaltung aus.",
+        "image": {
+          "src": "/imgs/features/algorithm-step.png"
+        }
+      },
+      {
+        "title": "Passe Einstellungen An",
+        "description": "Feinabstimmung von Schwellenwert, Helligkeit und Kontrast. Aktiviere Umkehrung für Negativeffekte. Alle Änderungen erscheinen sofort.",
+        "image": {
+          "src": "/imgs/features/settings-step.png"
+        }
+      },
+      {
+        "title": "Herunterladen & Verwenden",
+        "description": "Speichere dein konvertiertes Bild als PNG oder kopiere es in die Zwischenablage. Perfekt zur Verwendung im Prophezeiungspanel-Generator.",
+        "image": {
+          "src": "/imgs/features/download-step.png"
+        }
+      }
+    ]
+  },
+  "faq": {
+    "name": "faq",
+    "label": "FAQ",
+    "title": "Häufig Gestellte Fragen zur Monochrom-Konvertierung",
+    "description": "Erfahre mehr über unseren UltraThink-Algorithmus und Monochrom-Konvertierungsprozess.",
+    "items": [
+      {
+        "title": "Was macht den UltraThink-Algorithmus besonders?",
+        "description": "UltraThink ist unser proprietärer kantenbewusster Konvertierungsalgorithmus, der umgebende Pixel analysiert, um wichtige Details zu bewahren, während saubere Schwarz-Weiß-Bilder erstellt werden. Im Gegensatz zu einfachen Schwellenwert-Methoden behält er feine Details und glatte Farbverläufe bei, wo es nötig ist."
+      },
+      {
+        "title": "Welche Bildformate werden unterstützt?",
+        "description": "Unser Monochrom-Konverter unterstützt alle gängigen Bildformate einschließlich JPG, JPEG, PNG, GIF, WebP und BMP. Die Ausgabe ist immer eine hochqualitative PNG-Datei mit bewahrter Transparenz, wo zutreffend."
+      },
+      {
+        "title": "Ist dieses Tool völlig kostenlos?",
+        "description": "Ja, der Monochrom-Bildkonverter ist völlig kostenlos zu verwenden ohne Wasserzeichen, Dateigrößenbeschränkungen oder erforderliche Registrierung. Konvertiere so viele Bilder wie du für deine Prophezeiungspanele benötigst."
+      },
+      {
+        "title": "Wie hilft das bei Deltarune-Prophezeiungspanelen?",
+        "description": "Prophezeiungspanele benötigen kontrastreiche Schwarz-Weiß-Bilder als Masken. Unser Konverter erstellt perfekte Silhouetten, die nahtlos mit dem Deltarune Prophezeiungspanel-Generator funktionieren und sicherstellen, dass deine Prophezeiungen authentisch und professionell aussehen."
+      },
+      {
+        "title": "Kann ich die konvertierten Bilder kommerziell verwenden?",
+        "description": "Ja, du kannst die konvertierten Bilder für jeden Zweck verwenden, einschließlich kommerzieller Projekte. Der Konverter verarbeitet nur deine hochgeladenen Bilder - du behältst alle Rechte an deinem ursprünglichen Inhalt."
+      }
+    ]
+  }
+}
