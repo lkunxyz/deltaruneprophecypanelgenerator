@@ -707,21 +707,31 @@ export default function ProphecyGenerator({ section }: { section: Section }) {
         
         <textarea
           id="textInput" 
-          placeholder="Enter prophecy text"
+          placeholder="Enter prophecy text... Use \n for new lines"
           value={prophecyText}
           onChange={(e) => setProphecyText(e.target.value)}
           style={{ 
             width: '85vw',
             maxWidth: '640px',
-            height: '50px',
+            height: '80px',
             resize: 'vertical',
             fontFamily: 'DTMSans, sans-serif',
-            backgroundColor: 'black',
+            backgroundColor: 'rgba(0, 0, 0, 0.8)',
             color: 'white',
             border: '2px solid white',
-            borderRadius: '0',
-            padding: '4px 6px',
-            marginTop: '6px'
+            borderRadius: '4px',
+            padding: '10px 12px',
+            marginTop: '10px',
+            transition: 'all 0.2s ease',
+            boxShadow: '0 2px 8px rgba(255, 255, 255, 0.1)'
+          }}
+          onFocus={(e) => {
+            e.target.style.backgroundColor = 'rgba(0, 0, 0, 0.9)';
+            e.target.style.boxShadow = '0 4px 12px rgba(255, 255, 255, 0.2)';
+          }}
+          onBlur={(e) => {
+            e.target.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+            e.target.style.boxShadow = '0 2px 8px rgba(255, 255, 255, 0.1)';
           }}
         />
         
