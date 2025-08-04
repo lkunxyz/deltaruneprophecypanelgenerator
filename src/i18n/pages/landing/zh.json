@@ -3,10 +3,10 @@
   "theme": "light",
   "header": {
     "brand": {
-      "title": "ShipAny",
+      "title": "DeltaruneProphecyPanelGenerator",
       "logo": {
         "src": "/logo.png",
-        "alt": "ShipAny"
+        "alt": "Deltarune 预言面板生成器 Logo"
       },
       "url": "/"
     },
@@ -15,36 +15,27 @@
         {
           "title": "功能特点",
           "url": "/#feature",
-          "icon": "RiSparkling2Line"
+          "icon": ""
         },
         {
-          "title": "定价",
-          "url": "/pricing",
-          "icon": "RiMoneyDollarCircleLine"
+          "title": "如何创建",
+          "url": "/#usage",
+          "icon": ""
         },
         {
-          "title": "案例展示",
-          "url": "/showcase",
-          "icon": "RiApps2Line"
+          "title": "黑白转换器",
+          "url": "/monochrome",
+          "icon": ""
         },
         {
-          "title": "文档",
-          "url": "/docs",
-          "icon": "RiBookOpenLine"
+          "title": "示例",
+          "url": "/#examples",
+          "icon": ""
         }
       ]
     },
-    "buttons": [
-      {
-        "title": "获取 ShipAny",
-        "url": "https://deltaruneprophecypanelgenerator.com",
-        "target": "_blank",
-        "variant": "link",
-        "icon": "RiArrowRightUpLine"
-      }
-    ],
-    "show_sign": true,
-    "show_theme": true,
+    "show_sign": false,
+    "show_theme": false,
     "show_locale": true
   },
   "hero": {

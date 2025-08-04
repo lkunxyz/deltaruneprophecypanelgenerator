@@ -918,6 +918,9 @@ export default function ProphecyGenerator({ section }: { section: Section }) {
         {/* Directions */}
         <div id="directions">
           <p>{section.description || "Upload a white-only or black-and-white image above to begin. Type your prophecy text in the box. You can use \\n to move to a new line."}</p>
+          <p style={{ marginTop: '10px', fontSize: '14px' }}>
+            Need to convert your image to monochrome? Try our <a href="/monochrome" style={{ color: '#a78bfa', textDecoration: 'underline' }}>Monochrome Converter</a> with advanced UltraThink edge detection.
+          </p>
         </div>
         
         {/* Download Button */}

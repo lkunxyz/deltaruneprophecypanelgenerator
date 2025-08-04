@@ -23,6 +23,11 @@
           "icon": ""
         },
         {
+          "title": "Monochrome Converter",
+          "url": "/monochrome",
+          "icon": ""
+        },
+        {
           "title": "Examples",
           "url": "/#examples",
           "icon": ""
@@ -206,6 +211,11 @@
             {
               "title": "Tutorial",
               "url": "/#usage",
+              "target": "_self"
+            },
+            {
+              "title": "Monochrome Converter",
+              "url": "/monochrome",
               "target": "_self"
             }
           ]

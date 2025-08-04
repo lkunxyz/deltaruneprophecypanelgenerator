@@ -1,0 +1,105 @@
+{
+  "hero": {
+    "title": "Deltarune预言面板黑白图像转换器",
+    "description": "使用我们的高级黑白转换器将您的图像转换为惊艳的黑白艺术。配备独家UltraThink边缘检测算法，完美创建预言面板蒙版。"
+  },
+  "monochromeConverter": {
+    "name": "monochrome-converter",
+    "title": "免费在线黑白图像转换器",
+    "description": "使用我们先进的UltraThink边缘检测算法将您的图像转换为令人惊艳的黑白艺术。完美创建具有卓越细节保留能力的高对比度预言面板蒙版。"
+  },
+  "introduce": {
+    "name": "introduce",
+    "title": "UltraThink技术的高级黑白转换",
+    "label": "关于",
+    "description": "我们的黑白转换器使用尖端的UltraThink边缘检测算法，为预言面板创建完美的黑白图像。在保持精细细节的同时实现干净的高对比度效果。",
+    "image": {
+      "src": "/imgs/features/monochrome-preview.png"
+    },
+    "items": [
+      {
+        "title": "UltraThink边缘检测",
+        "description": "革命性算法，分析周围像素以保留重要边缘和细节，同时创建干净的黑白图像。",
+        "icon": "RiScanLine"
+      },
+      {
+        "title": "实时处理",
+        "description": "通过我们的实时预览系统立即查看您的调整。实时微调阈值、亮度和对比度。",
+        "icon": "RiEyeLine"
+      },
+      {
+        "title": "多种算法",
+        "description": "从简单阈值、RGB平均值、加权亮度或我们的高级UltraThink算法中选择，获得不同的艺术效果。",
+        "icon": "RiSettings3Line"
+      }
+    ]
+  },
+  "usage": {
+    "name": "usage",
+    "title": "如何使用黑白转换器",
+    "description": "通过四个简单步骤将您的图像转换为完美的黑白色：",
+    "image": {
+      "src": "/imgs/features/monochrome-demo.png"
+    },
+    "image_position": "right",
+    "text_align": "center",
+    "items": [
+      {
+        "title": "上传您的图像",
+        "description": "从您的设备选择任何图像文件。支持JPG、PNG、GIF、WebP和BMP格式。",
+        "image": {
+          "src": "/imgs/features/upload-step.png"
+        }
+      },
+      {
+        "title": "选择算法",
+        "description": "从我们的转换方法中选择。尝试UltraThink以获得最佳的边缘保持和细节保留效果。",
+        "image": {
+          "src": "/imgs/features/algorithm-step.png"
+        }
+      },
+      {
+        "title": "调整设置",
+        "description": "微调阈值、亮度和对比度。启用反转以获得负片效果。所有更改立即显示。",
+        "image": {
+          "src": "/imgs/features/settings-step.png"
+        }
+      },
+      {
+        "title": "下载和使用",
+        "description": "将转换后的图像保存为PNG或复制到剪贴板。完美适用于预言面板生成器。",
+        "image": {
+          "src": "/imgs/features/download-step.png"
+        }
+      }
+    ]
+  },
+  "faq": {
+    "name": "faq",
+    "label": "FAQ",
+    "title": "黑白转换常见问题",
+    "description": "了解更多关于我们的UltraThink算法和黑白转换过程。",
+    "items": [
+      {
+        "title": "UltraThink算法有什么特别之处？",
+        "description": "UltraThink是我们专有的边缘感知转换算法，它分析周围像素以保留重要细节，同时创建干净的黑白图像。与简单的阈值方法不同，它在需要的地方保持精细细节和平滑渐变。"
+      },
+      {
+        "title": "支持哪些图像格式？",
+        "description": "我们的黑白转换器支持所有主要图像格式，包括JPG、JPEG、PNG、GIF、WebP和BMP。输出始终是高质量的PNG文件，在适用时保留透明度。"
+      },
+      {
+        "title": "这个工具完全免费吗？",
+        "description": "是的，黑白图像转换器完全免费使用，没有水印、文件大小限制或注册要求。您可以为预言面板转换任意数量的图像。"
+      },
+      {
+        "title": "这如何帮助Deltarune预言面板？",
+        "description": "预言面板需要高对比度的黑白图像作为蒙版。我们的转换器创建完美的轮廓，与Deltarune预言面板生成器无缝配合，确保您的预言看起来真实和专业。"
+      },
+      {
+        "title": "我可以商业使用转换后的图像吗？",
+        "description": "是的，您可以将转换后的图像用于任何目的，包括商业项目。转换器只处理您上传的图像 - 您保留对原始内容的所有权利。"
+      }
+    ]
+  }
+}
